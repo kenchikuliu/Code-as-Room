@@ -1,0 +1,20 @@
+{
+  "image_path": "/Users/yangyixuan/Code-as-Room_github/example/example1.png",
+  "start_stage": 1,
+  "end_stage": 12,
+  "model": "gemini-3.1-pro-preview-thinking",
+  "stage3_model": null,
+  "stage5_model": "gemini-3.1-pro-preview-thinking",
+  "stage6_model": "gpt-5.5",
+  "stage7_small_objects_model": null,
+  "stage8_small_describe_model": "gemini-3.1-pro-preview-thinking",
+  "stage9_small_geometry_model": null,
+  "stage10_material_model": null,
+  "max_iterations": 5,
+  "stage3_iterate": true,
+  "stage3_target_score": 0.85,
+  "compress_image": true,
+  "image_target_kb": 500,
+  "timestamp": "2026-05-21T10:43:58.381094",
+  "output_dir": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1"
+}

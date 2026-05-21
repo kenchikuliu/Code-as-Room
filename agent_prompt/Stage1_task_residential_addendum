@@ -1,0 +1,284 @@
+[STAGE 1 — RESIDENTIAL / OFFICE / RETAIL ADDENDUM]
+
+This addendum is appended to the Stage 1 base prompt for indoor scenes that
+are NOT laboratories — i.e. residential homes (apartments, houses), home
+offices, commercial offices, retail / hospitality / cafe spaces, and the
+generic "other" fallback. It OVERRIDES the base prompt where they conflict;
+the base prompt still applies for everything else (zone coverage, wall-
+mounted sweep, etc.).
+
+WHY THIS ADDENDUM EXISTS
+Vision models systematically UNDER-estimate residential and office room
+dimensions, especially for furniture-rich rooms (e.g. a home office with
+a U-desk + lounge corner + drafting table + storage). The base prompt
+has only a one-line scale instruction, which is not enough — the result
+gets a tiny room with overlapping furniture and no aisles.
+
+==============================================================================
+A. ROOM-SCALE PRIORS FOR RESIDENTIAL / OFFICE SCENES
+==============================================================================
+
+A.0 OUTPUT-FIELD AXIS CONTRACT (READ THIS FIRST — STRICT)
+The downstream pipeline interprets `estimated_dimensions = "W m × D m"`
+along FIXED world axes that are tied to the image, not to the room's
+"long edge". You MUST follow this contract:
+
+  - W (the FIRST number) = horizontal extent of the room in the image.
+      It is the east-west span, between the LEFT (west) wall and the
+      RIGHT (east) wall, measured in metres.
+  - D (the SECOND number) = vertical extent of the room in the image.
+      It is the north-south span, between the TOP (north) wall and the
+      BOTTOM (south) wall, measured in metres.
+
+This means:
+  - A room that looks WIDER than TALL in the image  →  W > D.
+  - A room that looks TALLER than WIDE in the image  →  D > W.
+  - If you mentally measured "long edge" first, you must still figure
+    out which IMAGE AXIS that long edge runs along, and place it in
+    the correct slot (W or D).
+
+PIXEL-RATIO SANITY CHECK (perform this every time before returning)
+  1. Identify the four interior wall corners of the room in the image.
+  2. Measure the horizontal pixel span (px_W) of the room's interior
+     floor area, and the vertical pixel span (px_D).
+  3. The ratio you write MUST satisfy BOTH conditions:
+       (a) Same orientation:  (W > D) ⇔ (px_W > px_D), i.e. they cannot
+           disagree on which side is longer.
+       (b) Approximate match:  | (W/D) / (px_W/px_D) − 1 |  <  0.30
+           (the metric ratio may differ from the pixel ratio by ≤ 30 %).
+  4. If your draft inverts the orientation (room is visibly wider than
+     tall in the image, but you wrote D > W), SWAP W and D before
+     returning.
+
+A.1 STANDARD RESIDENTIAL / OFFICE FURNITURE DIMENSIONS
+Use these as scale references when measuring pixels-per-metre. Listed
+from most-reliable (almost universal) to less-reliable (varies by region
+and design). Prefer items NEAR THE CENTRE of the image — perspective
+distortion is smallest there.
+
+DOORS AND OPENINGS (PRIMARY ANCHOR — almost always present)
+- Standard interior door:               W 0.80–0.90 m  (use 0.85 m)
+- Standard exterior / front door:       W 0.90–1.00 m
+- Double door:                          W 1.50–1.80 m
+- Sliding patio door (panel width):     W 0.90–1.20 m
+
+BEDROOM
+- Twin / single bed:                    W 1.00 m, L 1.90 m
+- Full / double bed:                    W 1.40 m, L 2.00 m
+- Queen bed:                            W 1.50–1.60 m, L 2.00 m
+- King bed:                             W 1.80–1.90 m, L 2.00 m
+- Nightstand / bedside table:           W 0.45 m, D 0.40 m
+- 2-door wardrobe:                      W 1.00 m, D 0.60 m
+- 4-door wardrobe / armoire:            W 2.00 m, D 0.60 m
+- Dresser / chest of drawers:           W 1.20 m, D 0.50 m
+
+LIVING / LOUNGE
+- 2-seater sofa / loveseat:             W 1.50–1.70 m, D 0.90 m
+- 3-seater sofa:                        W 2.00–2.20 m, D 0.90 m
+- 4-seater sofa:                        W 2.40–2.60 m, D 0.90 m
+- Sectional / L-shaped sofa:            W 2.50–3.00 m on long arm
+- Armchair / accent chair / recliner:   W 0.85–1.00 m, D 0.90 m
+- Coffee table (rectangular):           W 1.20 m, D 0.60 m
+- Coffee table (round):                 ⌀ 0.90 m
+- Side / end table:                     W 0.50 m, D 0.50 m
+- TV console / media unit:              W 1.40–2.00 m, D 0.40 m
+- Wall-mounted TV (visible bracket):    W 1.00 m (40") / 1.25 m (55") / 1.65 m (65")
+
+DINING
+- 2-person dining table:                W 0.80 m, D 0.80 m
+- 4-person dining table (square):       W 1.00 m, D 1.00 m
+- 4-person dining table (rectangular):  W 1.40 m, D 0.80 m
+- 6-person dining table:                W 1.80 m, D 0.90 m
+- 8-person dining table:                W 2.20 m, D 1.00 m
+- Dining chair:                         W 0.45 m, D 0.45 m
+- Bar stool:                            ⌀ 0.40 m, total H 0.75 m
+
+KITCHEN
+- Standard kitchen base cabinet:        D 0.60 m
+- Standard kitchen worktop run:         D 0.65 m
+- Refrigerator:                         W 0.60–0.90 m, D 0.65 m
+- Dishwasher:                           W 0.60 m, D 0.60 m
+- Range / cooker / oven:                W 0.60 m, D 0.60 m
+- Kitchen island (typical):             W 1.20 m, D 0.90 m
+- Kitchen island (large):               W 2.40 m, D 1.20 m
+- Sink (single bowl):                   W 0.60 m, D 0.45 m
+
+BATHROOM
+- Toilet:                               W 0.40 m, D 0.65 m
+- Bathroom sink / vanity:               W 0.60–1.20 m, D 0.50 m
+- Standard bathtub:                     W 1.70 m, D 0.75 m
+- Shower stall:                         W 0.90 m, D 0.90 m
+
+OFFICE / HOME OFFICE (COMMON ANCHORS — pay attention to these for offices)
+- Office chair:                         W 0.60 m, D 0.60 m, total H 1.10 m
+- Standard desk:                        W 1.20–1.60 m, D 0.60–0.70 m
+- Large executive desk:                 W 1.80–2.00 m, D 0.80 m
+- L-shaped desk:                        each arm 1.50 × 0.60 m
+- U-shaped desk (single user):          envelope W 2.20–2.40 m, D 1.80–2.00 m
+- 4-drawer filing cabinet:              W 0.40 m, D 0.60 m
+- Bookcase (5-shelf):                   W 0.80 m, D 0.30 m
+- Drafting table:                       W 1.00–1.20 m, D 0.70 m
+- Conference table (6-seat):            W 1.80 m, D 0.90 m
+- Conference table (10-seat):           W 3.00 m, D 1.20 m
+
+RETAIL / HOSPITALITY
+- Cafe table (2-top):                   ⌀ 0.70 m
+- Restaurant 4-top:                     W 0.80 m, D 0.80 m
+- Bar counter run:                      D 0.65 m
+- Display shelf (free-standing):        W 0.90 m, D 0.45 m
+- Cash desk / POS counter:              W 1.20 m, D 0.65 m
+
+A.2 CIRCULATION RULES (these set the MINIMUM room footprint)
+A room must accommodate not just the furniture but also the aisles and
+clearances around it. Violating these makes the room unusable.
+
+- Primary walking aisle (corridor / hallway):              ≥ 0.90 m
+- Secondary aisle (between sofa and coffee table):         ≥ 0.40 m
+- Pulled-out dining / desk chair clearance:                ≥ 0.70 m
+- Both sides of a bed (each side, for getting in/out):     ≥ 0.60 m
+                              (single-occupancy bed needs only ONE side)
+- In front of an open wardrobe / closet door:              ≥ 0.75 m
+- In front of an open kitchen appliance / fridge:          ≥ 1.00 m
+- Around a dining table (each side):                       ≥ 0.90 m
+- Sofa-to-TV viewing distance (rule of thumb 2× screen W): ≥ 2.00 m
+- Doorway swing radius (in front of an inswing door):      ≥ 0.90 m
+
+A.3 ROOM-SIZE LOWER BOUNDS DERIVED FROM A.1 + A.2 (DO NOT GO BELOW)
+The table below is given as `long_edge × short_edge` (NOT W × D). It only
+describes the room footprint in metric terms and is independent of how
+the room is oriented in the image. Once you pick an entry, use A.0's
+pixel-ratio sanity check to decide which edge is W and which is D.
+
+Pick the row that BEST matches the visible MAJOR floor furniture in the
+image. If two rows seem to apply, take the LARGER one — under-estimating
+costs more than over-estimating.
+
+| Scene type / visible major furniture                               | long × short minimum |
+|--------------------------------------------------------------------|----------------------|
+| Tiny powder room (toilet + sink only)                              |  ~1.8 × 1.2 m        |
+| Basic bathroom (toilet + sink + shower OR tub)                     |  ~2.6 × 1.8 m        |
+| Full bathroom (toilet + sink + tub + shower)                       |  ~3.0 × 2.2 m        |
+| Single-occupant bedroom (single bed + 1 wardrobe + 1 nightstand)   |  ~3.5 × 2.8 m        |
+| Standard bedroom (queen bed + wardrobe + nightstands × 2)          |  ~4.2 × 3.5 m        |
+| Master bedroom (king bed + dresser + accent chair + en-suite door) |  ~5.5 × 4.0 m        |
+| Walk-in closet / dressing room                                     |  ~3.0 × 2.0 m        |
+| Galley / one-wall kitchen                                          |  ~3.0 × 2.4 m        |
+| L-shaped kitchen + small dining nook                               |  ~4.5 × 3.5 m        |
+| Kitchen with central island + dining area                          |  ~5.5 × 4.0 m        |
+| Compact living room (sofa + coffee table + TV)                     |  ~4.5 × 3.5 m        |
+| Living room with full sofa set + media wall                        |  ~5.5 × 4.0 m        |
+| Open-plan living + dining (no kitchen)                             |  ~6.5 × 4.5 m        |
+| Open-plan living + dining + kitchen (LDK)                          |  ~8.0 × 5.0 m        |
+| Studio apartment (one of everything)                               |  ~6.0 × 5.0 m        |
+| Single-desk home office (desk + chair + 1 bookcase)                |  ~3.5 × 3.0 m        |
+| Multi-zone home office (work-desk + lounge / drafting / storage)   |  ~7.5 × 5.5 m        |
+| Conference / meeting room (6-seat table)                           |  ~5.0 × 4.0 m        |
+| Conference / meeting room (10-seat table)                          |  ~7.0 × 4.5 m        |
+| Open-plan office bullpen (≥ 4 desks)                               |  ~7.0 × 5.5 m        |
+| Cafe / coffee shop (≥ 4 seating clusters)                          |  ~7.0 × 5.5 m        |
+| Restaurant dining floor (≥ 6 tables visible)                       |  ~8.0 × 6.0 m        |
+| Small retail store (≥ 2 display fixtures + counter)                |  ~6.0 × 4.5 m        |
+
+⚠️  COMMON ERROR — UNDER-ESTIMATING A FURNITURE-RICH ROOM
+A room that visibly contains MULTIPLE FUNCTIONAL ZONES (e.g. a home
+office that ALSO has a lounge corner with sofa+armchairs, a drafting
+table, and bookcases on the walls) belongs in the "multi-zone" /
+"open-plan" rows of the table above. Do NOT pick the "single-desk
+home office" 3.5 × 3.0 m row for such a scene — that is for a tiny
+office cubby with one desk and nothing else.
+
+Walk through the math for a multi-zone home office:
+  - U-shaped desk + chair envelope:                          ≈ 2.4 × 2.0 m
+  - 3-seater sofa + 2 armchairs + coffee table cluster:      ≈ 3.0 × 2.5 m
+  - Drafting table + stool:                                  ≈ 1.5 × 1.5 m
+  - Wall-side bookcases / filing cabinet on perimeter:       depth ~0.4 m
+  - Two main aisles separating the three clusters:           ≥ 0.9 m each
+Adding aisles, the absolute minimum is ≈ 7.5 × 5.5 m. A 6.5 × 4.5 m
+estimate for that layout is wrong; the furniture would be overlapping.
+
+A.4 SCALE REFERENCE PROCEDURE (do this BEFORE writing estimated_dimensions)
+1. Find at least ONE object whose real-world width you know — prefer in
+   this priority order, picking whichever is visible AND clearly
+   measurable:
+     (i)   An interior or exterior door (W 0.85–0.95 m). Most reliable
+           because doors are highly standardised across regions and
+           styles. ALWAYS use the door as anchor if one is visible.
+     (ii)  A queen or king bed (W 1.5 / 1.8 m respectively).
+     (iii) A 3-seater sofa (W 2.1 m).
+     (iv)  A standard refrigerator (W 0.7 m).
+     (v)   An office chair footprint (W 0.6 m).
+     (vi)  A dining chair footprint (W 0.45 m).
+2. Measure that object's WIDTH in pixels in the top-down image.
+3. Compute pixels-per-metre = anchor_pixel_width / anchor_real_width.
+4. Measure room interior horizontal pixel span (px_W) and vertical pixel
+   span (px_D). Divide each by pixels-per-metre → metric W and D.
+5. Round to the nearest 0.5 m — do NOT systematically round up or down,
+   either direction is acceptable.
+6. CROSS-CHECK A.3: locate the row in A.3 that best matches the visible
+   major furniture, and ensure that
+     long_edge = max(W, D) ≥ table_long_edge AND
+     short_edge = min(W, D) ≥ table_short_edge.
+   If either is below, BUMP it up to the table value and note the cue
+   that drove the bump in `scale_reference_objects`. Do NOT keep an
+   under-sized estimate just because that's what your pixel measurement
+   gave you — perspective distortion and image cropping commonly
+   compress room sizes in top-down renders.
+7. CROSS-CHECK A.0: confirm the W/D orientation matches the image.
+8. List your evidence in `scale_reference_objects` as an array of short
+   strings, including:
+   - the anchor object you used (e.g. "interior door (assumed 0.85 m)")
+   - any A.3 row you applied (e.g. "multi-zone home office row → ≥7.5×5.5 m")
+   - any other corroborating reference (e.g. "queen bed cross-checked at 1.5 m")
+
+A.5 VISUAL-ARTIFACT WARNINGS
+- Many residential / office images use an isometric / 3-quarter top-down
+  perspective rather than a strict orthographic view. In that view, the
+  FAR side of the room (e.g. the north wall) is visually compressed. Do
+  NOT use pixel measurements taken on the far side; prefer reference
+  objects sitting in the MIDDLE of the room.
+- Wide-angle camera lenses can stretch room corners and make a small
+  room look spacious. The opposite is also possible (long-focal-length
+  flattening makes a large room look cramped). When in doubt, fall back
+  on the A.3 lower-bound table.
+- Some renders show a single room with the camera ZOOMED IN tight, so
+  the room appears to fill the entire image — but the actual floor area
+  is smaller than that aspect ratio suggests because there is no margin
+  visible. Always use reference-object measurement, not "the room fills
+  the image".
+- The image may have rounded corners or a faded border due to image
+  processing. These are NOT actual architectural features; treat the
+  room as having 4 straight rectangular walls.
+
+A.6 UPPER-BOUND SANITY CHECK (PREVENT OVER-ESTIMATION)
+After writing estimated_dimensions, verify it is not absurdly large:
+- If your estimate exceeds 14 m × 12 m (≥ 168 m²), check that AT LEAST
+  ONE of the following is true:
+    (a) You can count ≥ 3 SEPARATE FUNCTIONAL ZONES (e.g. living +
+        dining + kitchen + bedroom).
+    (b) The image clearly shows a multi-room apartment / loft layout
+        with interior partition walls, not a single-room space.
+    (c) The long-edge pixel span divided by the typical anchor pixel
+        span is ≥ 8.
+- If NEITHER of the above holds, you over-estimated. Re-run A.4 with a
+  different scale anchor and shrink the estimate. A typical
+  single-zone residential room is rarely larger than 8 × 6 m.
+
+==============================================================================
+B. FINAL RESIDENTIAL-SPECIFIC VALIDATION CHECK
+==============================================================================
+Before returning, verify in this order:
+1. AXIS CONTRACT (A.0): the FIRST number in estimated_dimensions is W
+   (horizontal/east-west); the SECOND is D (vertical/north-south).
+   - The orientation matches the image: a visually wider room has W > D,
+     a visually taller room has D > W.
+   - The pixel ratio sanity check (A.0) holds within ±30 %.
+2. LOWER BOUND (A.3): treating the two numbers as long_edge / short_edge,
+   each is at or above the row corresponding to the visible major
+   furniture mix. A multi-zone room MUST use a multi-zone row, not a
+   single-zone row. When in doubt, take the LARGER row.
+3. UPPER BOUND (A.6): if your estimate exceeds 14 × 12 m, the conditions
+   in A.6 are satisfied; otherwise shrink it.
+4. SCALE EVIDENCE: `scale_reference_objects` contains at least one
+   anchor entry with the assumed real-world width, plus the A.3 row used.
+5. ANCHOR PRIORITY: if a door is visible, you used the door. Otherwise
+   you used the next item from A.4's priority list.

@@ -1,0 +1,130 @@
+{
+  "lighting_analysis": {
+    "overall_mood": "warm_cozy",
+    "primary_light_source": {
+      "type": "mixed",
+      "direction": "west",
+      "color_temperature": 4000,
+      "intensity": "medium"
+    },
+    "light_sources": [
+      {
+        "id": "window_light_west",
+        "type": "area",
+        "blender_type": "AREA",
+        "position": {
+          "x": -3.7,
+          "y": 0.0,
+          "z": 1.5
+        },
+        "color_rgb": [
+          245,
+          250,
+          255
+        ],
+        "energy": 300,
+        "size": 4.0,
+        "notes": "Natural light coming from the west windows"
+      },
+      {
+        "id": "floor_lamp",
+        "type": "point",
+        "blender_type": "POINT",
+        "position": {
+          "x": -3.45,
+          "y": 2.2,
+          "z": 1.4
+        },
+        "color_rgb": [
+          255,
+          214,
+          170
+        ],
+        "energy": 50,
+        "size": 0.1,
+        "notes": "Warm floor lamp in the top-left corner"
+      },
+      {
+        "id": "bedside_lamp_left",
+        "type": "point",
+        "blender_type": "POINT",
+        "position": {
+          "x": -1.2,
+          "y": 2.247,
+          "z": 0.75
+        },
+        "color_rgb": [
+          255,
+          214,
+          170
+        ],
+        "energy": 40,
+        "size": 0.1,
+        "notes": "Left bedside table lamp"
+      },
+      {
+        "id": "bedside_lamp_right",
+        "type": "point",
+        "blender_type": "POINT",
+        "position": {
+          "x": 1.2,
+          "y": 2.247,
+          "z": 0.75
+        },
+        "color_rgb": [
+          255,
+          214,
+          170
+        ],
+        "energy": 40,
+        "size": 0.1,
+        "notes": "Right bedside table lamp"
+      },
+      {
+        "id": "ceiling_fill_main",
+        "type": "area",
+        "blender_type": "AREA",
+        "position": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 2.75
+        },
+        "color_rgb": [
+          255,
+          245,
+          235
+        ],
+        "energy": 150,
+        "size": 5.0,
+        "notes": "General ambient ceiling fill for the main bedroom area"
+      },
+      {
+        "id": "ceiling_fill_closet",
+        "type": "area",
+        "blender_type": "AREA",
+        "position": {
+          "x": 2.5,
+          "y": 1.0,
+          "z": 2.75
+        },
+        "color_rgb": [
+          255,
+          245,
+          235
+        ],
+        "energy": 100,
+        "size": 3.0,
+        "notes": "Ceiling fill for the walk-in closet area on the east"
+      }
+    ],
+    "ambient_light": {
+      "color_rgb": [
+        255,
+        250,
+        245
+      ],
+      "strength": 0.2
+    },
+    "shadow_softness": "soft"
+  }
+}

@@ -1,0 +1,288 @@
+[STAGE 3 — LABORATORY-SPECIFIC ADDENDUM]
+
+This addendum is appended to the Stage 3 base system prompt ONLY when the
+scene was classified as "lab". It overrides the base prompt where they
+conflict and adds new composite-geometry rules for lab benches.
+
+==============================================================================
+A. LAB STANDARD DIMENSIONS (OVERRIDE / EXTEND THE BASE TABLE)
+==============================================================================
+
+A.1 OVERRIDE the base [Standard Dimensions — Floor Objects] table for lab
+furniture. When the Stage 1/2 data describes any of the following object
+types, use these dimensions instead of the residential defaults:
+
+| Object Type                            | Dimensions (W × D × H)               |
+|----------------------------------------|--------------------------------------|
+| Standard Lab Bench (wall-side)         | 2.4 m × 0.75 m × 0.9 m               |
+| Long Lab Bench (wall-side)             | 3.6 m × 0.75 m × 0.9 m               |
+| Island Lab Bench (double-sided)        | 2.4–3.6 m × 1.5 m × 0.9 m            |
+| Oversized Island Bench                 | 3.6–4.8 m × 1.5 m × 0.9 m            |
+| Lab Stool                              | 0.4 m × 0.4 m × 0.7 m                |
+| Office Chair (lab)                     | 0.6 m × 0.6 m × 0.9 m                |
+| Fume Hood                              | 1.5 m × 0.8 m × 2.2 m                |
+| Biosafety Cabinet                      | 1.5 m × 0.8 m × 2.0 m                |
+| Chemical Storage Cabinet (tall)        | 0.9 m × 0.6 m × 1.8 m                |
+| Equipment Rack / Chromatography Stack  | 0.6 m × 0.6 m × 1.8 m                |
+| Optical Table                          | 1.2–2.4 m × 1.8–3.6 m × 0.9 m        |
+| Safety Shower / Eyewash Combo          | 0.4 m × 0.4 m × 2.2 m                |
+| Reagent Bottle (on shelf or worktop)   | 0.08 m × 0.08 m × 0.25 m             |
+| Glassware Cluster (footprint approx)   | 0.3 m × 0.3 m × 0.3 m                |
+| Hot Plate / Stirrer / Balance          | 0.3 m × 0.3 m × 0.15 m               |
+
+A.2 LAB MATERIAL COLORS (extend the base material color table)
+
+| Type                | RGBA                              |
+|---------------------|-----------------------------------|
+| Lab Bench Worktop   | (0.20, 0.20, 0.22, 1.0) Dark Gray |
+| Lab Bench Frame     | (0.85, 0.85, 0.88, 1.0) Off-White |
+| Stainless Steel     | (0.78, 0.78, 0.80, 1.0)           |
+| Fume Hood Glass     | (0.70, 0.85, 0.90, 0.4)           |
+| Reagent Bottle      | (0.80, 0.50, 0.30, 0.7)           |
+| Lab Floor (epoxy)   | (0.78, 0.78, 0.80, 1.0) Light Gray|
+
+==============================================================================
+B. LAB BENCH COMPOSITE-GEOMETRY RULES (CRITICAL — NEW)
+==============================================================================
+
+B.1 WHEN TO APPLY
+Stage 1 may attach an OPTIONAL field `structure_hint` to a lab bench's entry
+in `object_hierarchy`. The allowed values are:
+   - "double_deck"           : worktop + upper reagent shelf
+   - "oversized_island"      : single-deck island bench, length > 2.4 m
+   - "double_deck_oversized" : both at once
+
+The Stage 1 data may also be missing this field even when the image clearly
+shows a double-deck or oversized bench. Apply these rules whenever EITHER
+the structure_hint is present OR the object's name explicitly includes
+"double-deck", "double deck", "reagent shelf", "central divider rack",
+"oversized island", or similar. When in doubt and the bench depth is ≥ 1.4 m
+(i.e., a double-sided island), prefer the double-deck composite.
+
+B.2 DOUBLE-DECK BENCH COMPOSITE (4 boxes minimum, 5 boxes preferred)
+
+⚠️  HARD RULE — INLINE EMISSION ONLY
+Do NOT define any helper function that wraps `create_box` (e.g.
+`def create_double_deck_bench(...)`). The downstream parser only
+recognises top-level `create_box(...)` calls whose first argument is a
+LITERAL string. f-strings, `+` concatenation, and unbound parameters
+inside helper bodies will be silently dropped, which makes the entire
+bench invisible to Stage 5/6/7/10/11/12.
+
+Emit each part as a SEPARATE top-level `create_box(...)` call directly
+inside `run_layout_engine()`. Names MUST be literal strings such as
+`"IslandBench_worktop"`, `"IslandBench_post_L"`, etc.
+
+⚠️  REFERENCE FRAME (READ CAREFULLY — common bug source)
+- ALL z values below are WORLD coordinates with z = 0 being the FLOOR.
+- `cx, cy` are world (x, y) coordinates of the bench's vertical centerline,
+  taken at FLOOR level.
+- When you call `create_box(name, location, dim, ...)`, Blender places the
+  CENTER of the box at `location` and stretches it to `dim` in each axis.
+  Therefore a worktop with TOP at z = H_work has CENTER at z = H_work / 2,
+  NOT at z = 0. Putting the worktop center at z = 0 sinks it half into the
+  floor — that is a BUG.
+
+A double-deck bench is ONE physical piece made of:
+  Part 1 (worktop body, merged)  : full footprint cabinet+worktop slab
+  Part 2 (left shelf post)        : vertical post rising from worktop top
+  Part 3 (right shelf post)       : vertical post rising from worktop top
+  Part 4 (upper shelf board)      : horizontal board ≈ 0.3 m deep, centered
+                                    along the bench's long axis
+  Part 5 (OPTIONAL back panel)    : vertical panel between the two posts
+                                    behind the upper shelf; only for
+                                    double-sided islands when the image
+                                    clearly shows a centerline divider
+
+Geometry constants (use the literal numbers below in your `create_box`
+calls; do NOT factor them into a helper):
+   H_work   = 0.9      worktop top height           → worktop center z = 0.45
+   H_shelf  = 1.4      upper shelf TOP height       → shelf center z   = 1.38
+   T_shelf  = 0.04     shelf board thickness
+   D_shelf  = 0.30     shelf board depth (along bench short axis)
+   W_post   = 0.05     post cross-section side
+   H_post   = 0.5      post height (= H_shelf - H_work)
+                                                    → post center z    = 1.15
+
+REQUIRED INLINE TEMPLATE (copy/paste this block, then rename `IslandBench`
+to the bench's actual name from Stage 1/2 such as `EastBench`, `PrepBench`,
+etc.; substitute concrete numbers for `bench_cx`, `bench_cy`, `bench_L`,
+`bench_D`, `bench_yaw`; rotation MUST be the same `(0, 0, bench_yaw)`
+tuple for all 5 parts).
+
+```python
+import mathutils
+
+# --- Bench transform (set these per bench from Stage 1/2 data) -------
+bench_cx, bench_cy = -0.5, 0.0     # floor-level XY center
+bench_L, bench_D   = 3.6, 1.5      # length × depth (long × short axis)
+bench_yaw          = 0.0           # radians, Z-rotation, same for all parts
+bench_rot          = (0.0, 0.0, bench_yaw)
+rot_mat            = mathutils.Euler(bench_rot, 'XYZ').to_matrix()
+
+# --- Part 1: worktop body (cabinet + slab merged) --------------------
+create_box("IslandBench_worktop",
+           (bench_cx, bench_cy, 0.45),                # H_work / 2
+           (bench_L, bench_D, 0.9),
+           bench_rot, mat_bench_top, coll_01)
+
+# --- Part 2: left post (local x = -L/2 + W_post/2, local y = 0) ------
+post_off_L = rot_mat @ mathutils.Vector(
+    (-(bench_L / 2.0 - 0.05 / 2.0), 0.0, 0.0))
+create_box("IslandBench_post_L",
+           (bench_cx + post_off_L.x,
+            bench_cy + post_off_L.y,
+            1.15),                                    # H_work + H_post/2
+           (0.05, 0.05, 0.5),
+           bench_rot, mat_bench_frame, coll_01,
+           show_direction=False)
+
+# --- Part 3: right post (local x = +L/2 - W_post/2, local y = 0) -----
+post_off_R = rot_mat @ mathutils.Vector(
+    ( (bench_L / 2.0 - 0.05 / 2.0), 0.0, 0.0))
+create_box("IslandBench_post_R",
+           (bench_cx + post_off_R.x,
+            bench_cy + post_off_R.y,
+            1.15),
+           (0.05, 0.05, 0.5),
+           bench_rot, mat_bench_frame, coll_01,
+           show_direction=False)
+
+# --- Part 4: upper reagent shelf (depth = D_shelf, NOT bench depth) --
+create_box("IslandBench_upper_shelf",
+           (bench_cx, bench_cy, 1.38),                # H_shelf - T_shelf/2
+           (bench_L, 0.30, 0.04),
+           bench_rot, mat_bench_top, coll_01,
+           show_direction=False)
+
+# --- OPTIONAL Part 5: centerline back panel --------------------------
+# Only emit when the image clearly shows a vertical divider between the
+# two operator sides on a double-sided island.
+create_box("IslandBench_back_panel",
+           (bench_cx, bench_cy, 1.15),                # (H_work + H_shelf) / 2
+           (bench_L, 0.02, 0.5),
+           bench_rot, mat_bench_frame, coll_01,
+           show_direction=False)
+```
+
+⚠️  Z-VALUE LOOKUP TABLE (must hold EXACTLY for every double-deck bench)
+
+| Part            | center z | half-height | top z | bottom z |
+|-----------------|----------|-------------|-------|----------|
+| worktop         | 0.45     | 0.45        | 0.90  | 0.00     |
+| post_L / post_R | 1.15     | 0.25        | 1.40  | 0.90     |
+| upper_shelf     | 1.38     | 0.02        | 1.40  | 1.36     |
+| back_panel*     | 1.15     | 0.25        | 1.40  | 0.90     |
+
+⚠️  NAMING RULE
+- Replace `"IslandBench"` with the bench's actual name from Stage 1 / Stage 2
+  (e.g. `"EastBench"`, `"PrepBench"`, `"NorthBench"`).
+- Each bench's 4–5 parts MUST share that prefix and have the suffixes
+  `_worktop`, `_post_L`, `_post_R`, `_upper_shelf`, optionally `_back_panel`.
+- DO NOT use f-strings or `+` concatenation; every name is a literal
+  string.
+- If the scene has multiple double-deck benches, repeat the entire 5-call
+  block (with fresh transform variables) for each one. Use distinct
+  prefixes (e.g. `"IslandBench"` vs `"EastBench"`) so their parts never
+  collide.
+
+⚠️  ROTATION RULE
+- Every part of the SAME bench shares the SAME `(0, 0, bench_yaw)` tuple.
+- The post offsets are computed in bench-local frame and rotated into
+  world via
+  `mathutils.Euler(bench_rot, 'XYZ').to_matrix() @ mathutils.Vector((dx, dy, 0))`
+  BEFORE adding to `(bench_cx, bench_cy)`. Posts and shelves stay
+  anchored to the rotated worktop.
+- For axis-aligned benches (`bench_yaw == 0`) the post offsets simplify to
+  pure ±X offsets from `bench_cx`; you may write the post locations
+  inline as `(bench_cx ± (bench_L/2 - 0.025), bench_cy, 1.15)` instead of
+  using `rot_mat @ Vector(...)`.
+
+⚠️  COMMON BUG TO AVOID
+Do NOT pass `(bench_cx, bench_cy, 0)` as the worktop's `location`
+argument expecting Blender to "lift" it. `create_box` puts the CENTER
+of the box at `location`, so a worktop center at z = 0 sinks half the
+slab into the floor and leaves the posts and shelf floating in mid-air.
+The worktop center MUST be at z = 0.45.
+
+B.3 OVERSIZED ISLAND BENCH
+When `structure_hint == "oversized_island"` (no upper shelf):
+- Allow L in [3.6, 4.8] m. Pick L from the image scale; do not clamp to 2.4 m.
+- D = 1.5 m (double-sided island).
+- Generate ONE box  (L, D, 0.9)  for the bench worktop+cabinet body.
+- Place 2–4 lab stools / chairs along EACH long side, spaced 0.8–1.2 m apart.
+
+B.4 DOUBLE-DECK + OVERSIZED COMBO
+Apply B.2 with L in [3.6, 4.8] m and D = 1.5 m. Add at least 4 chairs (two
+per side). Upper shelf board length = full L (it is what makes the bench
+look two-tier even when oversized).
+
+B.5 ROTATION / ORIENTATION RULES
+- For a wall-side bench: long axis runs ALONG the wall; bench depth points
+  away from the wall. Operator chair sits on the away-from-wall side.
+- For an island bench: long axis is the longer in-plan dimension; chairs sit
+  on BOTH long sides facing the bench.
+- Apply rotation around Z so that the long axis matches the orientation
+  visible in the reference image. The upper shelf board rotates with the
+  bench (it shares the same parent rotation).
+- All parts of one bench MUST share the same world Z baseline (floor) and
+  the same world rotation. Do NOT rotate the upper shelf independently of
+  the worktop.
+
+B.6 POST-WRITE CHECKLIST FOR EVERY DOUBLE-DECK BENCH
+
+Vertical anchoring (HARD numerical assertions — verify each one before
+returning the script; if any one fails, the bench will be visibly broken):
+[ ] worktop_center_z  ==  H_work / 2.0          (= 0.45 m)
+[ ] worktop_top_z     ==  H_work                (= 0.9  m)  ← TOP at 0.9
+[ ] post_bottom_z     ==  H_work                (= 0.9  m)  ← sits ON worktop top
+[ ] post_top_z        ==  H_shelf               (= 1.4  m)  ← reaches shelf top
+[ ] post_center_z     ==  H_work + H_post / 2.0 (= 1.15 m)
+[ ] post_height_z     ==  H_post                (= 0.5  m)
+[ ] shelf_top_z       ==  H_shelf               (= 1.4  m)
+[ ] shelf_bottom_z    ==  H_shelf - T_shelf     (= 1.36 m)  ← rests on posts
+[ ] shelf_center_z    ==  H_shelf - T_shelf / 2 (= 1.38 m)
+
+Horizontal & material:
+[ ] Upper shelf board length matches worktop length (same L).
+[ ] Upper shelf board depth = D_shelf = 0.30 m, centered on bench long-axis
+    centerline (local-y offset = 0 in bench frame).
+[ ] No part of the upper shelf overhangs the worktop edges.
+[ ] Posts sit at the SHORT ends of the bench (local-x = ±(L/2 − W_post/2),
+    local-y = 0).
+[ ] Same material on worktop top + shelf board (mat_bench_top).
+[ ] Posts use mat_bench_frame (off-white / metal), not mat_bench_top.
+[ ] All 4–5 parts share the SAME `rotation` tuple (rotated as a rigid body).
+
+If Stage 1/2 reports the bench position as a 3-tuple like `(x, y, 0)`,
+treat it as `bench_cx = x, bench_cy = y` and IGNORE the third component;
+the worktop center z is fixed at 0.45 by the inline template above.
+Surface objects sitting on the bench worktop must use world
+z = H_work + obj_height/2 = 0.9 + h/2 (NOT 0.45 + h/2).
+
+==============================================================================
+C. LAB CIRCULATION CONSTRAINTS (must be respected when placing benches)
+==============================================================================
+- Aisle between two parallel island benches:                       ≥ 1.5 m
+- Aisle between a bench (or fume hood) and a wall:                 ≥ 1.0 m
+- Clearance in front of fume hood / biosafety cabinet face:        ≥ 1.5 m
+- Clearance in front of any chair pulled out from a bench:         ≥ 0.8 m
+
+If the room dimensions from Stage 1 are tight, distribute the spacing
+proportionally; never overlap furniture. If you find that meeting these
+constraints requires a room larger than what Stage 1 reported, prefer to
+slightly shrink bench length over violating circulation rules.
+
+==============================================================================
+D. LAB-SPECIFIC FURNITURE PLACEMENT HINTS
+==============================================================================
+- Fume hoods almost always sit AGAINST a wall, with their front face into
+  the room aisle. Operators stand in front; do NOT place a chair touching
+  the hood.
+- Chemical storage cabinets line the perimeter walls between benches.
+- Optical tables sit ISOLATED with ≥ 1.0 m of clearance on all four sides
+  (vibration-sensitive; nothing should mechanically couple to them).
+- Safety showers/eyewash stations sit near doorways or aisles, not behind
+  benches.
+- Reagent bottles, glassware, hot plates, balances → place ON the worktop
+  (placement_type=="surface"); do not float them in space.

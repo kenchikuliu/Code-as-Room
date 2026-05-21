@@ -1,0 +1,2374 @@
+{
+  "meta": {
+    "stage": "stage2_object_centric_graph",
+    "north_is": "up",
+    "notes": "Generated object-centric spatial graph. Assumed West=Left, East=Right. Bed is on the North wall, Lounge is West, Closet is East.",
+    "main_graph_scope": "major_and_architecture_only",
+    "minor_objects_count": 15
+  },
+  "zone_relations": [
+    {
+      "source_zone": "zone_01",
+      "target_zone": "zone_02",
+      "relation": "adjacent_to",
+      "direction": "east",
+      "visual_evidence": "The lounge transitions into the bedroom through a wide open passage framed by partial walls."
+    },
+    {
+      "source_zone": "zone_02",
+      "target_zone": "zone_03",
+      "relation": "adjacent_to",
+      "direction": "east",
+      "visual_evidence": "The bedroom connects to the walk-in closet via a doorway in the full partition wall."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "corner_NE",
+      "node_kind": "architecture",
+      "label": "Northeast corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "NE",
+      "is_virtual": true,
+      "visual_attributes": [
+        "virtual anchor",
+        "room corner"
+      ]
+    },
+    {
+      "id": "corner_NW",
+      "node_kind": "architecture",
+      "label": "Northwest corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "NW",
+      "is_virtual": true,
+      "visual_attributes": [
+        "virtual anchor",
+        "room corner"
+      ]
+    },
+    {
+      "id": "corner_SE",
+      "node_kind": "architecture",
+      "label": "Southeast corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "SE",
+      "is_virtual": true,
+      "visual_attributes": [
+        "virtual anchor",
+        "room corner"
+      ]
+    },
+    {
+      "id": "corner_SW",
+      "node_kind": "architecture",
+      "label": "Southwest corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "SW",
+      "is_virtual": true,
+      "visual_attributes": [
+        "virtual anchor",
+        "room corner"
+      ]
+    },
+    {
+      "id": "feat_001",
+      "node_kind": "architecture",
+      "label": "Outer boundary wall enclosing the entire space.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": "",
+      "visual_attributes": [
+        "white painted",
+        "continuous perimeter boundary"
+      ]
+    },
+    {
+      "id": "feat_002",
+      "node_kind": "architecture",
+      "label": "Partial wall separating the lounge area from the main bedroom.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": "N",
+      "visual_attributes": [
+        "short partition",
+        "white painted",
+        "north side"
+      ]
+    },
+    {
+      "id": "feat_003",
+      "node_kind": "architecture",
+      "label": "Partial wall separating the lounge area from the main bedroom.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": "S",
+      "visual_attributes": [
+        "short partition",
+        "white painted",
+        "south side"
+      ]
+    },
+    {
+      "id": "feat_004",
+      "node_kind": "architecture",
+      "label": "Large open passage between the lounge area and the main bedroom.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "doorway",
+      "location": "",
+      "visual_attributes": [
+        "wide opening",
+        "unobstructed walkway"
+      ]
+    },
+    {
+      "id": "feat_005",
+      "node_kind": "architecture",
+      "label": "Full interior partition wall separating the main bedroom from the walk-in closet.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": "",
+      "visual_attributes": [
+        "full height",
+        "solid interior wall",
+        "white"
+      ]
+    },
+    {
+      "id": "feat_006",
+      "node_kind": "architecture",
+      "label": "Large window on the west wall in the lounge area.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "window",
+      "location": "W",
+      "visual_attributes": [
+        "large window",
+        "floor-to-ceiling drapery"
+      ]
+    },
+    {
+      "id": "feat_007",
+      "node_kind": "architecture",
+      "label": "Main entrance door to the suite, located in the walk-in closet area.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "door",
+      "location": "S",
+      "visual_attributes": [
+        "standard wood door",
+        "suite entrance"
+      ]
+    },
+    {
+      "id": "feat_008",
+      "node_kind": "architecture",
+      "label": "Open passage connecting the main bedroom and the walk-in closet.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "doorway",
+      "location": "S",
+      "visual_attributes": [
+        "open passage",
+        "doorless frame"
+      ]
+    },
+    {
+      "id": "obj_001",
+      "node_kind": "object",
+      "label": "Armchair (North)",
+      "zone_id": "zone_01",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "light beige",
+        "upholstered",
+        "angled placement"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.18,
+          "y_norm": 0.35
+        },
+        "orientation_deg": -45
+      }
+    },
+    {
+      "id": "obj_002",
+      "node_kind": "object",
+      "label": "Armchair (South)",
+      "zone_id": "zone_01",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "light beige",
+        "upholstered",
+        "angled placement"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.18,
+          "y_norm": 0.65
+        },
+        "orientation_deg": 45
+      }
+    },
+    {
+      "id": "obj_003",
+      "node_kind": "object",
+      "label": "Side Table",
+      "zone_id": "zone_01",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "square",
+        "compact"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.16,
+          "y_norm": 0.5
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_007",
+      "node_kind": "object",
+      "label": "Bed",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "queen size",
+        "white bedding",
+        "upholstered headboard",
+        "beige throw"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.47,
+          "y_norm": 0.35
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_008",
+      "node_kind": "object",
+      "label": "Nightstand (North)",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "rectangular",
+        "single drawer"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.36,
+          "y_norm": 0.22
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_011",
+      "node_kind": "object",
+      "label": "Nightstand (South)",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "rectangular",
+        "single drawer"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.58,
+          "y_norm": 0.22
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_014",
+      "node_kind": "object",
+      "label": "Bench",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "light beige",
+        "upholstered",
+        "rectangular seat"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.47,
+          "y_norm": 0.58
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_016",
+      "node_kind": "object",
+      "label": "Media Console",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "low profile",
+        "rectangular console"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.47,
+          "y_norm": 0.8
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_020",
+      "node_kind": "object",
+      "label": "Built-in Wardrobe (L-shape)",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "L-shaped built-in",
+        "open shelving",
+        "hanging clothes"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.82,
+          "y_norm": 0.25
+        },
+        "orientation_deg": 0
+      }
+    },
+    {
+      "id": "obj_021",
+      "node_kind": "object",
+      "label": "Closet Bench/Island",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "narrow rectangular",
+        "storage surface"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.7,
+          "y_norm": 0.45
+        },
+        "orientation_deg": 90
+      }
+    },
+    {
+      "id": "obj_024",
+      "node_kind": "object",
+      "label": "Dresser",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "wood finish",
+        "rectangular dresser",
+        "drawer fronts"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.85,
+          "y_norm": 0.5
+        },
+        "orientation_deg": 90
+      }
+    },
+    {
+      "id": "obj_027",
+      "node_kind": "object",
+      "label": "Floor Mirror",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "visual_attributes": [
+        "large rectangular",
+        "wood frame",
+        "freestanding mirror"
+      ],
+      "geometry_hint": {
+        "centroid": {
+          "x_norm": 0.88,
+          "y_norm": 0.72
+        },
+        "orientation_deg": 90
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "obj_001",
+      "target": "obj_003",
+      "relation": "north_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The north armchair is placed directly above the side table.",
+      "edge_id": "e_0001"
+    },
+    {
+      "source": "obj_003",
+      "target": "obj_001",
+      "relation": "south_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_001 -(north_of)-> obj_003.",
+      "_auto_generated": true,
+      "edge_id": "e_0002"
+    },
+    {
+      "source": "obj_001",
+      "target": "obj_002",
+      "relation": "part_of_set",
+      "relation_category": "grouping",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Both armchairs form a matching seating pair in the lounge.",
+      "edge_id": "e_0003"
+    },
+    {
+      "source": "obj_002",
+      "target": "obj_001",
+      "relation": "part_of_set",
+      "relation_category": "grouping",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_001 -(part_of_set)-> obj_002.",
+      "_auto_generated": true,
+      "edge_id": "e_0004"
+    },
+    {
+      "source": "obj_001",
+      "target": "feat_006",
+      "relation": "along_window",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The armchair sits near the large west window.",
+      "edge_id": "e_0005"
+    },
+    {
+      "source": "feat_006",
+      "target": "obj_001",
+      "relation": "along_window",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_001 -(along_window)-> feat_006.",
+      "_auto_generated": true,
+      "edge_id": "e_0006"
+    },
+    {
+      "source": "obj_002",
+      "target": "obj_003",
+      "relation": "south_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The south armchair is located below the central side table.",
+      "edge_id": "e_0007"
+    },
+    {
+      "source": "obj_003",
+      "target": "obj_002",
+      "relation": "north_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_002 -(south_of)-> obj_003.",
+      "_auto_generated": true,
+      "edge_id": "e_0008"
+    },
+    {
+      "source": "obj_002",
+      "target": "feat_003",
+      "relation": "near_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The south armchair is positioned close to the lower partial dividing wall.",
+      "edge_id": "e_0009"
+    },
+    {
+      "source": "feat_003",
+      "target": "obj_002",
+      "relation": "near_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_002 -(near_wall)-> feat_003.",
+      "_auto_generated": true,
+      "edge_id": "e_0010"
+    },
+    {
+      "source": "obj_002",
+      "target": "feat_006",
+      "relation": "along_window",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The lower armchair faces outward next to the large window.",
+      "edge_id": "e_0011"
+    },
+    {
+      "source": "feat_006",
+      "target": "obj_002",
+      "relation": "along_window",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_002 -(along_window)-> feat_006.",
+      "_auto_generated": true,
+      "edge_id": "e_0012"
+    },
+    {
+      "source": "obj_003",
+      "target": "feat_006",
+      "relation": "along_window",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "The side table sits between the chairs along the western window wall.",
+      "edge_id": "e_0013"
+    },
+    {
+      "source": "feat_006",
+      "target": "obj_003",
+      "relation": "along_window",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_003 -(along_window)-> feat_006.",
+      "_auto_generated": true,
+      "edge_id": "e_0014"
+    },
+    {
+      "source": "obj_003",
+      "target": "feat_004",
+      "relation": "near",
+      "relation_category": "distance",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "The side table is centrally aligned with the open passage leading to the bedroom.",
+      "edge_id": "e_0015"
+    },
+    {
+      "source": "feat_004",
+      "target": "obj_003",
+      "relation": "near",
+      "relation_category": "distance",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_003 -(near)-> feat_004.",
+      "_auto_generated": true,
+      "edge_id": "e_0016"
+    },
+    {
+      "source": "obj_003",
+      "target": "obj_007",
+      "relation": "west_of",
+      "relation_category": "position",
+      "scope": "inter_zone",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The lounge table sits directly across the room from the main bed.",
+      "edge_id": "e_0017"
+    },
+    {
+      "source": "obj_007",
+      "target": "obj_003",
+      "relation": "east_of",
+      "relation_category": "position",
+      "scope": "inter_zone",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_003 -(west_of)-> obj_007.",
+      "_auto_generated": true,
+      "edge_id": "e_0018"
+    },
+    {
+      "source": "obj_007",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The bed's headboard is resting flat against the northern boundary wall.",
+      "edge_id": "e_0019"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_007",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_007 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0020"
+    },
+    {
+      "source": "obj_007",
+      "target": "obj_008",
+      "relation": "adjacent_to",
+      "relation_category": "distance",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "The bed is immediately next to its left nightstand.",
+      "edge_id": "e_0021"
+    },
+    {
+      "source": "obj_008",
+      "target": "obj_007",
+      "relation": "adjacent_to",
+      "relation_category": "distance",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_007 -(adjacent_to)-> obj_008.",
+      "_auto_generated": true,
+      "edge_id": "e_0022"
+    },
+    {
+      "source": "obj_007",
+      "target": "obj_011",
+      "relation": "adjacent_to",
+      "relation_category": "distance",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "The bed is immediately next to its right nightstand.",
+      "edge_id": "e_0023"
+    },
+    {
+      "source": "obj_011",
+      "target": "obj_007",
+      "relation": "adjacent_to",
+      "relation_category": "distance",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_007 -(adjacent_to)-> obj_011.",
+      "_auto_generated": true,
+      "edge_id": "e_0024"
+    },
+    {
+      "source": "obj_007",
+      "target": "obj_014",
+      "relation": "grouped_with",
+      "relation_category": "grouping",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "partial"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The bench and bed function together as a unified sleeping/seating unit.",
+      "edge_id": "e_0025"
+    },
+    {
+      "source": "obj_014",
+      "target": "obj_007",
+      "relation": "grouped_with",
+      "relation_category": "grouping",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "partial"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_007 -(grouped_with)-> obj_014.",
+      "_auto_generated": true,
+      "edge_id": "e_0026"
+    },
+    {
+      "source": "obj_008",
+      "target": "obj_011",
+      "relation": "aligned_top",
+      "relation_category": "alignment",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Both nightstands sit perfectly level with each other against the back wall.",
+      "edge_id": "e_0027"
+    },
+    {
+      "source": "obj_011",
+      "target": "obj_008",
+      "relation": "aligned_top",
+      "relation_category": "alignment",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_008 -(aligned_top)-> obj_011.",
+      "_auto_generated": true,
+      "edge_id": "e_0028"
+    },
+    {
+      "source": "obj_008",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The west nightstand is pushed flat against the northern exterior wall.",
+      "edge_id": "e_0029"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_008",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_008 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0030"
+    },
+    {
+      "source": "obj_008",
+      "target": "feat_002",
+      "relation": "near_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The nightstand sits closely inward from the top partial wall.",
+      "edge_id": "e_0031"
+    },
+    {
+      "source": "feat_002",
+      "target": "obj_008",
+      "relation": "near_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_008 -(near_wall)-> feat_002.",
+      "_auto_generated": true,
+      "edge_id": "e_0032"
+    },
+    {
+      "source": "obj_011",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The east nightstand is pushed flat against the northern exterior wall.",
+      "edge_id": "e_0033"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_011",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_011 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0034"
+    },
+    {
+      "source": "obj_011",
+      "target": "feat_005",
+      "relation": "near_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The right nightstand is situated near the full partition wall separating the closet.",
+      "edge_id": "e_0035"
+    },
+    {
+      "source": "feat_005",
+      "target": "obj_011",
+      "relation": "near_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_011 -(near_wall)-> feat_005.",
+      "_auto_generated": true,
+      "edge_id": "e_0036"
+    },
+    {
+      "source": "obj_011",
+      "target": "feat_008",
+      "relation": "near",
+      "relation_category": "distance",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "SE",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The right nightstand sits near the corner leading to the closet doorway.",
+      "edge_id": "e_0037"
+    },
+    {
+      "source": "feat_008",
+      "target": "obj_011",
+      "relation": "near",
+      "relation_category": "distance",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "NW",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_011 -(near)-> feat_008.",
+      "_auto_generated": true,
+      "edge_id": "e_0038"
+    },
+    {
+      "source": "obj_014",
+      "target": "obj_007",
+      "relation": "touching",
+      "relation_category": "distance",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The bench physically touches the footboard of the bed.",
+      "edge_id": "e_0039"
+    },
+    {
+      "source": "obj_007",
+      "target": "obj_014",
+      "relation": "touching",
+      "relation_category": "distance",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_014 -(touching)-> obj_007.",
+      "_auto_generated": true,
+      "edge_id": "e_0040"
+    },
+    {
+      "source": "obj_014",
+      "target": "obj_016",
+      "relation": "north_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The bench is located directly above the media console in the top-down perspective.",
+      "edge_id": "e_0041"
+    },
+    {
+      "source": "obj_016",
+      "target": "obj_014",
+      "relation": "south_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_014 -(north_of)-> obj_016.",
+      "_auto_generated": true,
+      "edge_id": "e_0042"
+    },
+    {
+      "source": "obj_014",
+      "target": "feat_004",
+      "relation": "east_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "The bench sits centrally in the room, to the east of the open passage.",
+      "edge_id": "e_0043"
+    },
+    {
+      "source": "feat_004",
+      "target": "obj_014",
+      "relation": "west_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_014 -(east_of)-> feat_004.",
+      "_auto_generated": true,
+      "edge_id": "e_0044"
+    },
+    {
+      "source": "obj_016",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The media console is placed flush against the south boundary wall.",
+      "edge_id": "e_0045"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_016",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_016 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0046"
+    },
+    {
+      "source": "obj_016",
+      "target": "obj_007",
+      "relation": "aligned_center_x",
+      "relation_category": "alignment",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The console is perfectly centered horizontally with the bed.",
+      "edge_id": "e_0047"
+    },
+    {
+      "source": "obj_007",
+      "target": "obj_016",
+      "relation": "aligned_center_x",
+      "relation_category": "alignment",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "center",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_016 -(aligned_center_x)-> obj_007.",
+      "_auto_generated": true,
+      "edge_id": "e_0048"
+    },
+    {
+      "source": "obj_016",
+      "target": "feat_005",
+      "relation": "west_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The console sits to the left of the central partition wall.",
+      "edge_id": "e_0049"
+    },
+    {
+      "source": "feat_005",
+      "target": "obj_016",
+      "relation": "east_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_016 -(west_of)-> feat_005.",
+      "_auto_generated": true,
+      "edge_id": "e_0050"
+    },
+    {
+      "source": "obj_020",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The large L-shaped wardrobe hugs the north and east boundary walls of the closet.",
+      "edge_id": "e_0051"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_020",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_020 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0052"
+    },
+    {
+      "source": "obj_020",
+      "target": "obj_024",
+      "relation": "north_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "right",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The built-in wardrobe is positioned above the dresser along the east wall.",
+      "edge_id": "e_0053"
+    },
+    {
+      "source": "obj_024",
+      "target": "obj_020",
+      "relation": "south_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "left",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_020 -(north_of)-> obj_024.",
+      "_auto_generated": true,
+      "edge_id": "e_0054"
+    },
+    {
+      "source": "obj_020",
+      "target": "obj_021",
+      "relation": "north_east_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "SW",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The main wardrobe occupies the upper corner, northeast of the narrow bench.",
+      "edge_id": "e_0055"
+    },
+    {
+      "source": "obj_021",
+      "target": "obj_020",
+      "relation": "south_west_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "NE",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_020 -(north_east_of)-> obj_021.",
+      "_auto_generated": true,
+      "edge_id": "e_0056"
+    },
+    {
+      "source": "obj_021",
+      "target": "feat_005",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The narrow closet bench sits flat against the interior partition wall.",
+      "edge_id": "e_0057"
+    },
+    {
+      "source": "feat_005",
+      "target": "obj_021",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_021 -(against_wall)-> feat_005.",
+      "_auto_generated": true,
+      "edge_id": "e_0058"
+    },
+    {
+      "source": "obj_021",
+      "target": "obj_024",
+      "relation": "west_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "The bench is positioned directly across the dressing space from the dresser.",
+      "edge_id": "e_0059"
+    },
+    {
+      "source": "obj_024",
+      "target": "obj_021",
+      "relation": "east_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "center"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_021 -(west_of)-> obj_024.",
+      "_auto_generated": true,
+      "edge_id": "e_0060"
+    },
+    {
+      "source": "obj_021",
+      "target": "feat_007",
+      "relation": "north_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The narrow bench is located inwards from the main suite entrance door.",
+      "edge_id": "e_0061"
+    },
+    {
+      "source": "feat_007",
+      "target": "obj_021",
+      "relation": "south_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_021 -(north_of)-> feat_007.",
+      "_auto_generated": true,
+      "edge_id": "e_0062"
+    },
+    {
+      "source": "obj_024",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The dresser is placed squarely against the east boundary wall.",
+      "edge_id": "e_0063"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_024",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_024 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0064"
+    },
+    {
+      "source": "obj_024",
+      "target": "obj_027",
+      "relation": "north_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "right",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The dresser is situated just above the floor mirror on the east wall.",
+      "edge_id": "e_0065"
+    },
+    {
+      "source": "obj_027",
+      "target": "obj_024",
+      "relation": "south_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "left",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_024 -(north_of)-> obj_027.",
+      "_auto_generated": true,
+      "edge_id": "e_0066"
+    },
+    {
+      "source": "obj_024",
+      "target": "obj_020",
+      "relation": "aligned_right",
+      "relation_category": "alignment",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "right",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Both the dresser and the wardrobe share the same eastern wall alignment.",
+      "edge_id": "e_0067"
+    },
+    {
+      "source": "obj_020",
+      "target": "obj_024",
+      "relation": "aligned_right",
+      "relation_category": "alignment",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "left",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_024 -(aligned_right)-> obj_020.",
+      "_auto_generated": true,
+      "edge_id": "e_0068"
+    },
+    {
+      "source": "obj_027",
+      "target": "feat_001",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The large floor mirror is propped flat against the east exterior wall.",
+      "edge_id": "e_0069"
+    },
+    {
+      "source": "feat_001",
+      "target": "obj_027",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_027 -(against_wall)-> feat_001.",
+      "_auto_generated": true,
+      "edge_id": "e_0070"
+    },
+    {
+      "source": "obj_027",
+      "target": "obj_021",
+      "relation": "south_east_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "NW",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The mirror is located in the bottom-right corner of the dressing area, southeast of the bench.",
+      "edge_id": "e_0071"
+    },
+    {
+      "source": "obj_021",
+      "target": "obj_027",
+      "relation": "north_west_of",
+      "relation_category": "position",
+      "scope": "intra_zone",
+      "spatial_signature": {
+        "direction_8": "SE",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_027 -(south_east_of)-> obj_021.",
+      "_auto_generated": true,
+      "edge_id": "e_0072"
+    },
+    {
+      "source": "obj_027",
+      "target": "feat_007",
+      "relation": "east_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "W",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "The mirror sits just to the right of the main entrance door.",
+      "edge_id": "e_0073"
+    },
+    {
+      "source": "feat_007",
+      "target": "obj_027",
+      "relation": "west_of",
+      "relation_category": "position",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "E",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_027 -(east_of)-> feat_007.",
+      "_auto_generated": true,
+      "edge_id": "e_0074"
+    },
+    {
+      "source": "obj_008",
+      "target": "feat_002",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto-derived: hint centroid (0.36, 0.22) sits 0.22 norm from the N wall (< 0.22); flush against feat_002.",
+      "_derived_wall": true,
+      "edge_id": "e_0075"
+    },
+    {
+      "source": "feat_002",
+      "target": "obj_008",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_008 -(against_wall)-> feat_002.",
+      "_auto_generated": true,
+      "edge_id": "e_0076"
+    },
+    {
+      "source": "obj_011",
+      "target": "feat_002",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto-derived: hint centroid (0.58, 0.22) sits 0.22 norm from the N wall (< 0.22); flush against feat_002.",
+      "_derived_wall": true,
+      "edge_id": "e_0077"
+    },
+    {
+      "source": "feat_002",
+      "target": "obj_011",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_011 -(against_wall)-> feat_002.",
+      "_auto_generated": true,
+      "edge_id": "e_0078"
+    },
+    {
+      "source": "obj_016",
+      "target": "feat_003",
+      "relation": "against_wall",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "S",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto-derived: hint centroid (0.47, 0.80) sits 0.20 norm from the S wall (< 0.22); flush against feat_003.",
+      "_derived_wall": true,
+      "edge_id": "e_0079"
+    },
+    {
+      "source": "feat_003",
+      "target": "obj_016",
+      "relation": "supports",
+      "relation_category": "architecture",
+      "scope": "object_to_architecture",
+      "spatial_signature": {
+        "direction_8": "N",
+        "overlap": {
+          "type": "none"
+        },
+        "alignment": {
+          "x": "none",
+          "y": "none"
+        }
+      },
+      "visual_reasoning": "Auto inverse of obj_016 -(against_wall)-> feat_003.",
+      "_auto_generated": true,
+      "edge_id": "e_0080"
+    }
+  ],
+  "zone_graphs": [
+    {
+      "zone_id": "zone_01",
+      "zone_label": "Lounge Area",
+      "zone_function": "Relaxation and seating",
+      "node_ids": [
+        "obj_001",
+        "obj_002",
+        "obj_003"
+      ],
+      "edge_ids": [
+        "e_0001",
+        "e_0002",
+        "e_0003",
+        "e_0004",
+        "e_0007",
+        "e_0008"
+      ]
+    },
+    {
+      "zone_id": "zone_02",
+      "zone_label": "Main Bedroom Area",
+      "zone_function": "Sleeping and resting",
+      "node_ids": [
+        "obj_007",
+        "obj_008",
+        "obj_011",
+        "obj_014",
+        "obj_016"
+      ],
+      "edge_ids": [
+        "e_0021",
+        "e_0022",
+        "e_0023",
+        "e_0024",
+        "e_0025",
+        "e_0026",
+        "e_0027",
+        "e_0028",
+        "e_0039",
+        "e_0040",
+        "e_0041",
+        "e_0042",
+        "e_0047",
+        "e_0048"
+      ]
+    },
+    {
+      "zone_id": "zone_03",
+      "zone_label": "Walk-in Closet / Dressing Area",
+      "zone_function": "Clothing storage and dressing",
+      "node_ids": [
+        "obj_020",
+        "obj_021",
+        "obj_024",
+        "obj_027"
+      ],
+      "edge_ids": [
+        "e_0053",
+        "e_0054",
+        "e_0055",
+        "e_0056",
+        "e_0059",
+        "e_0060",
+        "e_0065",
+        "e_0066",
+        "e_0067",
+        "e_0068",
+        "e_0071",
+        "e_0072"
+      ]
+    }
+  ],
+  "global_graph": {
+    "node_ids": [
+      "corner_NE",
+      "corner_NW",
+      "corner_SE",
+      "corner_SW",
+      "feat_001",
+      "feat_002",
+      "feat_003",
+      "feat_004",
+      "feat_005",
+      "feat_006",
+      "feat_007",
+      "feat_008",
+      "obj_001",
+      "obj_002",
+      "obj_003",
+      "obj_007",
+      "obj_008",
+      "obj_011",
+      "obj_014",
+      "obj_016",
+      "obj_020",
+      "obj_021",
+      "obj_024",
+      "obj_027"
+    ],
+    "edge_ids": [
+      "e_0001",
+      "e_0002",
+      "e_0003",
+      "e_0004",
+      "e_0005",
+      "e_0006",
+      "e_0007",
+      "e_0008",
+      "e_0009",
+      "e_0010",
+      "e_0011",
+      "e_0012",
+      "e_0013",
+      "e_0014",
+      "e_0015",
+      "e_0016",
+      "e_0017",
+      "e_0018",
+      "e_0019",
+      "e_0020",
+      "e_0021",
+      "e_0022",
+      "e_0023",
+      "e_0024",
+      "e_0025",
+      "e_0026",
+      "e_0027",
+      "e_0028",
+      "e_0029",
+      "e_0030",
+      "e_0031",
+      "e_0032",
+      "e_0033",
+      "e_0034",
+      "e_0035",
+      "e_0036",
+      "e_0037",
+      "e_0038",
+      "e_0039",
+      "e_0040",
+      "e_0041",
+      "e_0042",
+      "e_0043",
+      "e_0044",
+      "e_0045",
+      "e_0046",
+      "e_0047",
+      "e_0048",
+      "e_0049",
+      "e_0050",
+      "e_0051",
+      "e_0052",
+      "e_0053",
+      "e_0054",
+      "e_0055",
+      "e_0056",
+      "e_0057",
+      "e_0058",
+      "e_0059",
+      "e_0060",
+      "e_0061",
+      "e_0062",
+      "e_0063",
+      "e_0064",
+      "e_0065",
+      "e_0066",
+      "e_0067",
+      "e_0068",
+      "e_0069",
+      "e_0070",
+      "e_0071",
+      "e_0072",
+      "e_0073",
+      "e_0074",
+      "e_0075",
+      "e_0076",
+      "e_0077",
+      "e_0078",
+      "e_0079",
+      "e_0080"
+    ]
+  },
+  "minor_objects": [
+    {
+      "id": "obj_004",
+      "label": "Book",
+      "zone_id": "zone_01",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_003",
+      "parent_label": "Side Table",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_005",
+      "label": "Floor Lamp",
+      "zone_id": "zone_01",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_006",
+      "label": "Curtains",
+      "zone_id": "zone_01",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_009",
+      "label": "Table Lamp (North)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_008",
+      "parent_label": "Nightstand (North)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_010",
+      "label": "Small Decor (North Nightstand)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_008",
+      "parent_label": "Nightstand (North)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_012",
+      "label": "Table Lamp (South)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_011",
+      "parent_label": "Nightstand (South)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_013",
+      "label": "Small Decor (South Nightstand)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_011",
+      "parent_label": "Nightstand (South)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_015",
+      "label": "Area Rug",
+      "zone_id": "zone_02",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_017",
+      "label": "Decor Item (Console)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_016",
+      "parent_label": "Media Console",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_018",
+      "label": "Potted Plant",
+      "zone_id": "zone_02",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_019",
+      "label": "Wall Art (South)",
+      "zone_id": "zone_02",
+      "placement_type": "wall",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_022",
+      "label": "Decor Item (Closet Bench)",
+      "zone_id": "zone_03",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_021",
+      "parent_label": "Closet Bench/Island",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_023",
+      "label": "Runner Rug",
+      "zone_id": "zone_03",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_025",
+      "label": "Small Decor (Dresser)",
+      "zone_id": "zone_03",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_024",
+      "parent_label": "Dresser",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_026",
+      "label": "Wall Mirror",
+      "zone_id": "zone_03",
+      "placement_type": "wall",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    }
+  ]
+}

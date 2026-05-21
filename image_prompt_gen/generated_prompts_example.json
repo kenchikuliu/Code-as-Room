@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "model": "gpt-4o",
+    "count": 18,
+    "generated_at": "2026-04-24T17:03:21.128955",
+    "template": "Top-down orthographic view of a richly furnished {room_type}, camera at 90 degrees straight down. Designed for {user_type}. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: {key_furniture}. Decorations and accessories: {decorations}. Zones: {zones}. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. {style} style, {palette} palette, {floor_material} flooring. Room shape: {room_shape}. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+  },
+  "prompts": [
+    {
+      "id": 1,
+      "params": {
+        "room_type": "cafe",
+        "user_type": "urban hipsters",
+        "key_furniture": "4 tables, 16 chairs, 2 sofas, bar counter, 8 bar stools, coffee station, 2 bookshelves, coat rack, cashier station, communal table",
+        "decorations": "hanging pendant lights, potted plants, framed art prints, chalkboard menu, coffee jar display, glassware collection, table centerpieces",
+        "zones": "dining area, lounge area, coffee preparation area, cashier zone",
+        "style": "industrial chic",
+        "palette": "deep grey, exposed brick red, dark wood",
+        "floor_material": "concrete",
+        "room_shape": "rectangular 10m x 8m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished cafe, camera at 90 degrees straight down. Designed for urban hipsters. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 4 tables, 16 chairs, 2 sofas, bar counter, 8 bar stools, coffee station, 2 bookshelves, coat rack, cashier station, communal table. Decorations and accessories: hanging pendant lights, potted plants, framed art prints, chalkboard menu, coffee jar display, glassware collection, table centerpieces. Zones: dining area, lounge area, coffee preparation area, cashier zone. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. industrial chic style, deep grey, exposed brick red, dark wood palette, concrete flooring. Room shape: rectangular 10m x 8m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 2,
+      "params": {
+        "room_type": "retail store",
+        "user_type": "fashion-forward millennials",
+        "key_furniture": "8 clothing racks, display counter, 3 mannequins, full-length mirror, fitting room partition, cashier desk, 5 shelving units",
+        "decorations": "spotlights, decorative vases, seasonal decor, signage, plant accents, table-top lookbooks",
+        "zones": "clothing display area, fitting room, payment counter, accessory display",
+        "style": "modern minimalist",
+        "palette": "black, white, cool taupe",
+        "floor_material": "polished concrete",
+        "room_shape": "rectangular 7m x 12m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished retail store, camera at 90 degrees straight down. Designed for fashion-forward millennials. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 8 clothing racks, display counter, 3 mannequins, full-length mirror, fitting room partition, cashier desk, 5 shelving units. Decorations and accessories: spotlights, decorative vases, seasonal decor, signage, plant accents, table-top lookbooks. Zones: clothing display area, fitting room, payment counter, accessory display. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. modern minimalist style, black, white, cool taupe palette, polished concrete flooring. Room shape: rectangular 7m x 12m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 3,
+      "params": {
+        "room_type": "coworking space",
+        "user_type": "freelancers and small startups",
+        "key_furniture": "long communal table, 10 office chairs, 3 lounge chairs, 2 desks, large bookshelf, coffee station, conference table, 6 stools, reception desk",
+        "decorations": "hanging plants, motivational posters, table lamps, bulletin boards, wall clocks, magazine baskets",
+        "zones": "open workspace, relaxation area, meeting corner, reception area",
+        "style": "Scandinavian",
+        "palette": "light birch wood, soft pastels, white",
+        "floor_material": "light birch hardwood",
+        "room_shape": "near-rectangular 10m x 8m with small recess"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished coworking space, camera at 90 degrees straight down. Designed for freelancers and small startups. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: long communal table, 10 office chairs, 3 lounge chairs, 2 desks, large bookshelf, coffee station, conference table, 6 stools, reception desk. Decorations and accessories: hanging plants, motivational posters, table lamps, bulletin boards, wall clocks, magazine baskets. Zones: open workspace, relaxation area, meeting corner, reception area. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. Scandinavian style, light birch wood, soft pastels, white palette, light birch hardwood flooring. Room shape: near-rectangular 10m x 8m with small recess. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 4,
+      "params": {
+        "room_type": "office meeting room",
+        "user_type": "corporate executives",
+        "key_furniture": "long conference table, 10 office chairs, sideboard, credenza, projection screen, 2 small tables, smart board, coat stand",
+        "decorations": "plant pots, decorative art, large clock, conference phone, award plaques, document organizers",
+        "zones": "main meeting area, presentation zone, entry area",
+        "style": "corporate professional",
+        "palette": "navy blue, walnut brown, steel grey",
+        "floor_material": "carpet tiles",
+        "room_shape": "rectangular 8m x 6m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished office meeting room, camera at 90 degrees straight down. Designed for corporate executives. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: long conference table, 10 office chairs, sideboard, credenza, projection screen, 2 small tables, smart board, coat stand. Decorations and accessories: plant pots, decorative art, large clock, conference phone, award plaques, document organizers. Zones: main meeting area, presentation zone, entry area. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. corporate professional style, navy blue, walnut brown, steel grey palette, carpet tiles flooring. Room shape: rectangular 8m x 6m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 5,
+      "params": {
+        "room_type": "yoga studio",
+        "user_type": "fitness enthusiasts",
+        "key_furniture": "8 yoga mats, shelving unit, 6 bolster pillows, meditation cushions, reception desk, 8 floor chairs",
+        "decorations": "ambient lights, incense holders, silk wall hangings, mirrors, plant arrangements, crystal display",
+        "zones": "yoga practice area, meditation corner, reception zone",
+        "style": "Zen minimalist",
+        "palette": "calming neutrals, natural fiber tones",
+        "floor_material": "bamboo flooring",
+        "room_shape": "near-rectangular 9m x 5m with slight taper"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished yoga studio, camera at 90 degrees straight down. Designed for fitness enthusiasts. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 8 yoga mats, shelving unit, 6 bolster pillows, meditation cushions, reception desk, 8 floor chairs. Decorations and accessories: ambient lights, incense holders, silk wall hangings, mirrors, plant arrangements, crystal display. Zones: yoga practice area, meditation corner, reception zone. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. Zen minimalist style, calming neutrals, natural fiber tones palette, bamboo flooring flooring. Room shape: near-rectangular 9m x 5m with slight taper. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 6,
+      "params": {
+        "room_type": "coworking space",
+        "user_type": "tech startups",
+        "key_furniture": "8 desks, 16 office chairs, 2 conference tables, 16 task chairs, reception desk, 2 sofas, 4 armchairs, coffee table, bookshelf, cabinet",
+        "decorations": "world map mural, motivational posters, desk plants, magazine rack, whiteboards, cork boards, paper stack, stationery set, filing trays, area rug",
+        "zones": "workstations, meeting area, reception, relaxation zone",
+        "style": "modern corporate",
+        "palette": "white, slate blue, warm walnut",
+        "floor_material": "gray carpet tiles",
+        "room_shape": "rectangular 15m x 9m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished coworking space, camera at 90 degrees straight down. Designed for tech startups. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 8 desks, 16 office chairs, 2 conference tables, 16 task chairs, reception desk, 2 sofas, 4 armchairs, coffee table, bookshelf, cabinet. Decorations and accessories: world map mural, motivational posters, desk plants, magazine rack, whiteboards, cork boards, paper stack, stationery set, filing trays, area rug. Zones: workstations, meeting area, reception, relaxation zone. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. modern corporate style, white, slate blue, warm walnut palette, gray carpet tiles flooring. Room shape: rectangular 15m x 9m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 7,
+      "params": {
+        "room_type": "boutique fashion store",
+        "user_type": "fashion enthusiasts",
+        "key_furniture": "4 display racks, 3 mannequins, checkout counter, 2 mirrors, shoe display shelves, accessory cabinet, seating bench, fitting rooms, wall shelves, storage cabinet",
+        "decorations": "spotlighting tracks, large mirror, potted palms, fashion posters, decorative bowls, scattered cushions, curtain dividers, store signage, faux fur rug, jewelry displays",
+        "zones": "display area, fitting rooms, cashier area, window display",
+        "style": "bohemian eclectic",
+        "palette": "earthy brown, ivory, muted rose",
+        "floor_material": "light oak hardwood",
+        "room_shape": "rectangular 10m x 6m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished boutique fashion store, camera at 90 degrees straight down. Designed for fashion enthusiasts. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 4 display racks, 3 mannequins, checkout counter, 2 mirrors, shoe display shelves, accessory cabinet, seating bench, fitting rooms, wall shelves, storage cabinet. Decorations and accessories: spotlighting tracks, large mirror, potted palms, fashion posters, decorative bowls, scattered cushions, curtain dividers, store signage, faux fur rug, jewelry displays. Zones: display area, fitting rooms, cashier area, window display. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. bohemian eclectic style, earthy brown, ivory, muted rose palette, light oak hardwood flooring. Room shape: rectangular 10m x 6m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 8,
+      "params": {
+        "room_type": "art gallery exhibition room",
+        "user_type": "art patrons",
+        "key_furniture": "16 display pedestals, 4 benches, reception desk, coat rack, brochure stand, high table, stools, storage cabinet, track lighting, sculptures",
+        "decorations": "artwork on walls, spotlights on exhibits, informational plaques, decorative bowls, catalog stands, hanging plants, ceiling strips, floor guides, art posters, audio guide sets",
+        "zones": "exhibit area, sitting area, information desk, entrance",
+        "style": "contemporary minimalist",
+        "palette": "white, light ash, deep garnet",
+        "floor_material": "white polished tiles",
+        "room_shape": "rectangular 14m x 8m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished art gallery exhibition room, camera at 90 degrees straight down. Designed for art patrons. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 16 display pedestals, 4 benches, reception desk, coat rack, brochure stand, high table, stools, storage cabinet, track lighting, sculptures. Decorations and accessories: artwork on walls, spotlights on exhibits, informational plaques, decorative bowls, catalog stands, hanging plants, ceiling strips, floor guides, art posters, audio guide sets. Zones: exhibit area, sitting area, information desk, entrance. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. contemporary minimalist style, white, light ash, deep garnet palette, white polished tiles flooring. Room shape: rectangular 14m x 8m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 9,
+      "params": {
+        "room_type": "corporate boardroom",
+        "user_type": "executives",
+        "key_furniture": "large conference table, 16 executive chairs, presentation board, 2 credenzas, buffet cabinet, audiovisual unit, sideboard, coffee station, coat hook stand, side tables",
+        "decorations": "pendant lighting, wall art, indoor plants, leather desk pads, digital clock, book arrangements, glass centerpiece, document trays, soundproof panels, sculptures",
+        "zones": "meeting area, presentation space, refreshment station, entry",
+        "style": "mid-century modern",
+        "palette": "walnut, teal, soft gray",
+        "floor_material": "dark walnut parquet",
+        "room_shape": "rectangular 12m x 9m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished corporate boardroom, camera at 90 degrees straight down. Designed for executives. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: large conference table, 16 executive chairs, presentation board, 2 credenzas, buffet cabinet, audiovisual unit, sideboard, coffee station, coat hook stand, side tables. Decorations and accessories: pendant lighting, wall art, indoor plants, leather desk pads, digital clock, book arrangements, glass centerpiece, document trays, soundproof panels, sculptures. Zones: meeting area, presentation space, refreshment station, entry. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. mid-century modern style, walnut, teal, soft gray palette, dark walnut parquet flooring. Room shape: rectangular 12m x 9m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 10,
+      "params": {
+        "room_type": "coworking space",
+        "user_type": "freelancers and small startups",
+        "key_furniture": "4 long worktables, 16 office chairs, sofa, 4 armchairs, 2 low coffee tables, high counter with stools, bookshelf, whiteboard wall",
+        "decorations": "desk lamps, indoor plants, motivational posters, stack of magazines, stationary holders, area rug, wall clock",
+        "zones": "open workspace, lounge area, brainstorming corner, high-bar work zone",
+        "style": "modern professional",
+        "palette": "cool grey, white, navy blue",
+        "floor_material": "light grey carpet",
+        "room_shape": "rectangular 11m x 8m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished coworking space, camera at 90 degrees straight down. Designed for freelancers and small startups. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: 4 long worktables, 16 office chairs, sofa, 4 armchairs, 2 low coffee tables, high counter with stools, bookshelf, whiteboard wall. Decorations and accessories: desk lamps, indoor plants, motivational posters, stack of magazines, stationary holders, area rug, wall clock. Zones: open workspace, lounge area, brainstorming corner, high-bar work zone. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. modern professional style, cool grey, white, navy blue palette, light grey carpet flooring. Room shape: rectangular 11m x 8m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 11,
+      "params": {
+        "room_type": "retail boutique",
+        "user_type": "fashion-conscious shoppers",
+        "key_furniture": "display racks, 3 mannequins, cashier counter, fitting room partition, round display tables, sofa, 2 accent chairs",
+        "decorations": "tabletop mirrors, jewelry display, glass vases, potted flowers, hanging pendant lights, wall mirrors",
+        "zones": "display area, customer seating, fitting rooms, checkout counter",
+        "style": "contemporary high street",
+        "palette": "pearl white, blush pink, gold accents",
+        "floor_material": "polished white marble",
+        "room_shape": "rectangular 9m x 6m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished retail boutique, camera at 90 degrees straight down. Designed for fashion-conscious shoppers. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: display racks, 3 mannequins, cashier counter, fitting room partition, round display tables, sofa, 2 accent chairs. Decorations and accessories: tabletop mirrors, jewelry display, glass vases, potted flowers, hanging pendant lights, wall mirrors. Zones: display area, customer seating, fitting rooms, checkout counter. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. contemporary high street style, pearl white, blush pink, gold accents palette, polished white marble flooring. Room shape: rectangular 9m x 6m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 12,
+      "params": {
+        "room_type": "art gallery room",
+        "user_type": "art enthusiasts and collectors",
+        "key_furniture": "long benches, 3 pedestal stands, reception desk, archival lighting tracks, storage cabinet, display cubes, armchair",
+        "decorations": "abstract sculptures, canvas paintings, spotlights, wall labels, informational brochures, potted bonsai",
+        "zones": "exhibition space, seating area, reception, sculpture corner",
+        "style": "minimalist modern",
+        "palette": "pure white, charcoal black, muted taupe",
+        "floor_material": "grey polished cement",
+        "room_shape": "rectangular 12m x 7m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished art gallery room, camera at 90 degrees straight down. Designed for art enthusiasts and collectors. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: long benches, 3 pedestal stands, reception desk, archival lighting tracks, storage cabinet, display cubes, armchair. Decorations and accessories: abstract sculptures, canvas paintings, spotlights, wall labels, informational brochures, potted bonsai. Zones: exhibition space, seating area, reception, sculpture corner. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. minimalist modern style, pure white, charcoal black, muted taupe palette, grey polished cement flooring. Room shape: rectangular 12m x 7m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 13,
+      "params": {
+        "room_type": "meeting room",
+        "user_type": "corporate executives",
+        "key_furniture": "large conference table, 14 executive chairs, multimedia cabinet, podium, sideboard, 2 armchairs, credenza, whiteboard",
+        "decorations": "pendant lights, digital screen, globe sculpture, wall clock, framed company art, bookshelf decor",
+        "zones": "conference area, presentation space, side discussion seating, technology corner",
+        "style": "corporate modern",
+        "palette": "slate grey, walnut, deep blue",
+        "floor_material": "dark cherry wood",
+        "room_shape": "rectangular 10m x 8m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished meeting room, camera at 90 degrees straight down. Designed for corporate executives. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: large conference table, 14 executive chairs, multimedia cabinet, podium, sideboard, 2 armchairs, credenza, whiteboard. Decorations and accessories: pendant lights, digital screen, globe sculpture, wall clock, framed company art, bookshelf decor. Zones: conference area, presentation space, side discussion seating, technology corner. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. corporate modern style, slate grey, walnut, deep blue palette, dark cherry wood flooring. Room shape: rectangular 10m x 8m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 14,
+      "params": {
+        "room_type": "cafe",
+        "user_type": "urban professionals",
+        "key_furniture": "cafe tables, 12 dining chairs, counter bar, barstools, lounge seating, corner banquette, sideboard, display shelf, coffee station, cashier counter",
+        "decorations": "hanging pendant lights, potted plants, wall art, chalkboard menu, table centerpieces, framed photos, area rugs, throw cushions, ceiling fans, decorative bowls",
+        "zones": "seating area, bar counter, lounge area, coffee station",
+        "style": "modern industrial",
+        "palette": "charcoal gray, brick red, natural wood, black accents",
+        "floor_material": "polished concrete",
+        "room_shape": "rectangular 12m x 8m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished cafe, camera at 90 degrees straight down. Designed for urban professionals. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: cafe tables, 12 dining chairs, counter bar, barstools, lounge seating, corner banquette, sideboard, display shelf, coffee station, cashier counter. Decorations and accessories: hanging pendant lights, potted plants, wall art, chalkboard menu, table centerpieces, framed photos, area rugs, throw cushions, ceiling fans, decorative bowls. Zones: seating area, bar counter, lounge area, coffee station. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. modern industrial style, charcoal gray, brick red, natural wood, black accents palette, polished concrete flooring. Room shape: rectangular 12m x 8m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 15,
+      "params": {
+        "room_type": "office meeting room",
+        "user_type": "corporate team",
+        "key_furniture": "large conference table, 12 office chairs, credenza, side table, media console, whiteboard, projector screen, 2 armchairs, storage cabinet, bookshelf",
+        "decorations": "table centerpiece, potted plants, wall clock, framed certificates, decorative vases, area rug, art prints, table lamp, technology hub",
+        "zones": "conference area, presentation zone, breakout corner, storage space",
+        "style": "contemporary corporate",
+        "palette": "navy blue, light gray, white, walnut brown",
+        "floor_material": "commercial carpet tiles",
+        "room_shape": "rectangular 10m x 6m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished office meeting room, camera at 90 degrees straight down. Designed for corporate team. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: large conference table, 12 office chairs, credenza, side table, media console, whiteboard, projector screen, 2 armchairs, storage cabinet, bookshelf. Decorations and accessories: table centerpiece, potted plants, wall clock, framed certificates, decorative vases, area rug, art prints, table lamp, technology hub. Zones: conference area, presentation zone, breakout corner, storage space. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. contemporary corporate style, navy blue, light gray, white, walnut brown palette, commercial carpet tiles flooring. Room shape: rectangular 10m x 6m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 16,
+      "params": {
+        "room_type": "retail store",
+        "user_type": "fashion enthusiasts",
+        "key_furniture": "clothing racks, display tables, checkout counter, fitting booths, mannequin stands, wall shelves, seating bench, pedestal displays, accessory shelves, 2 mirrors",
+        "decorations": "store signage, pendant lighting, potted plants, clothing hooks, decorative bowls, framed art, display boxes, decorative ceramics, price tags, mannequins",
+        "zones": "display area, checkout counter, fitting room area, accessory section",
+        "style": "modern chic",
+        "palette": "white, gold, blush pink, soft gray",
+        "floor_material": "glossy ceramic tiles",
+        "room_shape": "rectangular 15m x 10m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished retail store, camera at 90 degrees straight down. Designed for fashion enthusiasts. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: clothing racks, display tables, checkout counter, fitting booths, mannequin stands, wall shelves, seating bench, pedestal displays, accessory shelves, 2 mirrors. Decorations and accessories: store signage, pendant lighting, potted plants, clothing hooks, decorative bowls, framed art, display boxes, decorative ceramics, price tags, mannequins. Zones: display area, checkout counter, fitting room area, accessory section. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. modern chic style, white, gold, blush pink, soft gray palette, glossy ceramic tiles flooring. Room shape: rectangular 15m x 10m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 17,
+      "params": {
+        "room_type": "co-working space",
+        "user_type": "freelancers and startups",
+        "key_furniture": "shared desks, ergonomic chairs, small conference table, lounge couches, coffee tables, private booths, bookshelf, communal kitchen unit, storage lockers, standing desks",
+        "decorations": "task lamps, motivational posters, indoor plants, books, wall-mounted TVs, area rugs, decorative cushions, whiteboards, table lamps, hanging lamps",
+        "zones": "work stations, lounge area, collaborative zone, kitchen corner",
+        "style": "bohemian industrial",
+        "palette": "copper, teal, reclaimed wood, light gray",
+        "floor_material": "reclaimed wood plank",
+        "room_shape": "rectangular 14m x 9m"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished co-working space, camera at 90 degrees straight down. Designed for freelancers and startups. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: shared desks, ergonomic chairs, small conference table, lounge couches, coffee tables, private booths, bookshelf, communal kitchen unit, storage lockers, standing desks. Decorations and accessories: task lamps, motivational posters, indoor plants, books, wall-mounted TVs, area rugs, decorative cushions, whiteboards, table lamps, hanging lamps. Zones: work stations, lounge area, collaborative zone, kitchen corner. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. bohemian industrial style, copper, teal, reclaimed wood, light gray palette, reclaimed wood plank flooring. Room shape: rectangular 14m x 9m. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    },
+    {
+      "id": 18,
+      "params": {
+        "room_type": "salon",
+        "user_type": "modern clientele",
+        "key_furniture": "stylist stations, styling chairs, reception desk, waiting area seating, washbasins, trolley stands, product display shelves, mirror walls, massage chair, storage cupboards",
+        "decorations": "vintage signs, hanging lights, floor mats, wall clocks, decorative plants, mirrors, product displays, magazine racks, vases, framed artwork",
+        "zones": "stylist area, reception desk, waiting area, washbasin section",
+        "style": "glamorous vintage",
+        "palette": "steel blue, cream, gold accents, burgundy",
+        "floor_material": "marble tiles",
+        "room_shape": "near-rectangular 10m x 8m with small recess"
+      },
+      "prompt": "Top-down orthographic view of a richly furnished salon, camera at 90 degrees straight down. Designed for modern clientele. Complete room visible, centered, all walls shown, plain white background. Architectural structure must be explicit and readable from above: perimeter wall layout clearly defined, door openings clearly visible as distinct gaps or door slabs on walls, windows clearly visible as glazed strips or panels on exterior walls, wall thickness and corners crisp, no fused or ambiguous wall masses. Main furniture: stylist stations, styling chairs, reception desk, waiting area seating, washbasins, trolley stands, product display shelves, mirror walls, massage chair, storage cupboards. Decorations and accessories: vintage signs, hanging lights, floor mats, wall clocks, decorative plants, mirrors, product displays, magazine racks, vases, framed artwork. Zones: stylist area, reception desk, waiting area, washbasin section. The room should feel lived-in and realistically dense with objects, every functional zone should have appropriate furniture AND small accessories on surfaces. glamorous vintage style, steel blue, cream, gold accents, burgundy palette, marble tiles flooring. Room shape: near-rectangular 10m x 8m with small recess. Prefer a clean rectangular or near-rectangular floor plan footprint with mostly orthogonal walls. Photorealistic textures, flat overhead view, no perspective, no isometric, no 3D angle. No text, no labels, no legends, no annotations, no dimensions, no arrows, no icons, no watermarks."
+    }
+  ]
+}

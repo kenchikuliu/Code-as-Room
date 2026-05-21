@@ -1,0 +1,9 @@
+{
+  "stage": "stage4",
+  "scope": "wall_mounted",
+  "wall_object_names": [
+    "Wall_Art_South",
+    "Wall_Mirror_East"
+  ],
+  "count": 2
+}

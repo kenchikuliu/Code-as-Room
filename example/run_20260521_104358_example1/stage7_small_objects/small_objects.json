@@ -1,0 +1,213 @@
+{
+  "items": [
+    {
+      "name": "Media_Console__top__Console_Book_1",
+      "item_type": "book",
+      "shape": "box",
+      "parent_name": "Media_Console",
+      "plane_id": "Media_Console__top",
+      "plane_type": "top",
+      "world_location": [
+        0.36000000000000004,
+        -2.2075,
+        0.515
+      ],
+      "size": [
+        0.22,
+        0.15,
+        0.03
+      ],
+      "rotation_z": 3.141592653589793,
+      "color_hint": "Dark taupe",
+      "description": "A dark book lying flat next to the existing decor to form a cohesive cluster.",
+      "stack_index": 0
+    },
+    {
+      "name": "Media_Console__top__Console_Sphere_1",
+      "item_type": "decorative sphere",
+      "shape": "box",
+      "parent_name": "Media_Console",
+      "plane_id": "Media_Console__top",
+      "plane_type": "top",
+      "world_location": [
+        0.36000000000000004,
+        -2.2075,
+        0.5800000000000001
+      ],
+      "size": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "rotation_z": 3.141592653589793,
+      "color_hint": "Matte black",
+      "description": "A small dark decorative sphere resting on top of the book.",
+      "stack_index": 1
+    },
+    {
+      "name": "Closet_Bench__top__Hat_Box_1",
+      "item_type": "decorative box",
+      "shape": "cylinder",
+      "parent_name": "Closet_Bench",
+      "plane_id": "Closet_Bench__top",
+      "plane_type": "top",
+      "world_location": [
+        2.75,
+        0.18000000000000002,
+        0.525
+      ],
+      "size": [
+        0.25,
+        0.25,
+        0.15
+      ],
+      "rotation_z": 0.0,
+      "color_hint": "beige",
+      "description": "A round beige hat box placed on the bench, matching the room's neutral palette.",
+      "stack_index": 0
+    },
+    {
+      "name": "Closet_Bench__top__Small_Dark_Box_1",
+      "item_type": "decorative box",
+      "shape": "box",
+      "parent_name": "Closet_Bench",
+      "plane_id": "Closet_Bench__top",
+      "plane_type": "top",
+      "world_location": [
+        2.75,
+        -0.18000000000000002,
+        0.47500000000000003
+      ],
+      "size": [
+        0.2,
+        0.15,
+        0.05
+      ],
+      "rotation_z": 0.0,
+      "color_hint": "dark brown",
+      "description": "A small dark rectangular item, possibly a jewelry box or accessory case, resting on the bench.",
+      "stack_index": 0
+    },
+    {
+      "name": "Nightstand_North__top__Nightstand_Book_1",
+      "item_type": "book",
+      "shape": "box",
+      "parent_name": "Nightstand_North",
+      "plane_id": "Nightstand_North__top",
+      "plane_type": "top",
+      "world_location": [
+        -1.025,
+        2.2476,
+        0.51
+      ],
+      "size": [
+        0.1,
+        0.15,
+        0.02
+      ],
+      "rotation_z": 0.0,
+      "color_hint": "Dark brown",
+      "description": "A small dark book resting flat on the nightstand next to the lamp, easily accessible from the bed.",
+      "stack_index": 0
+    },
+    {
+      "name": "Nightstand_South__top__Book_Dark_1",
+      "item_type": "book",
+      "shape": "box",
+      "parent_name": "Nightstand_South",
+      "plane_id": "Nightstand_South__top",
+      "plane_type": "top",
+      "world_location": [
+        1.035,
+        2.2399999999999998,
+        0.51
+      ],
+      "size": [
+        0.1,
+        0.15,
+        0.02
+      ],
+      "rotation_z": 0.0,
+      "color_hint": "dark brown",
+      "description": "A small dark book lying flat on the left side of the nightstand, matching the dark item seen in the reference image.",
+      "stack_index": 0
+    },
+    {
+      "name": "Dresser__top__Cosmetic_Box",
+      "item_type": "decorative_box",
+      "shape": "box",
+      "parent_name": "Dresser",
+      "plane_id": "Dresser__top",
+      "plane_type": "top",
+      "world_location": [
+        3.5,
+        -1.22,
+        0.94
+      ],
+      "size": [
+        0.15,
+        0.1,
+        0.08
+      ],
+      "rotation_z": -1.5707963267948966,
+      "color_hint": "Taupe",
+      "description": "A small taupe decorative box for cosmetics or jewelry, placed near the edge.",
+      "stack_index": 0
+    },
+    {
+      "name": "Dresser__top__Perfume_Bottle_1",
+      "item_type": "bottle",
+      "shape": "cylinder",
+      "parent_name": "Dresser",
+      "plane_id": "Dresser__top",
+      "plane_type": "top",
+      "world_location": [
+        3.425,
+        -1.064,
+        0.96
+      ],
+      "size": [
+        0.05,
+        0.05,
+        0.12
+      ],
+      "rotation_z": -1.5707963267948966,
+      "color_hint": "Clear glass with gold cap",
+      "description": "A small clear glass perfume bottle.",
+      "stack_index": 0
+    },
+    {
+      "name": "Dresser__top__Perfume_Bottle_2",
+      "item_type": "bottle",
+      "shape": "cylinder",
+      "parent_name": "Dresser",
+      "plane_id": "Dresser__top",
+      "plane_type": "top",
+      "world_location": [
+        3.575,
+        -1.064,
+        0.9749999999999999
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.15
+      ],
+      "rotation_z": -1.5707963267948966,
+      "color_hint": "Frosted glass",
+      "description": "A small frosted glass cosmetic bottle.",
+      "stack_index": 0
+    }
+  ],
+  "summary": {
+    "total_items": 9,
+    "total_planes": 12,
+    "by_plane_type": {
+      "seat": 4,
+      "top": 8
+    },
+    "base_code_path": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/stage6_geometry/geometry_output.py",
+    "image_path": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/compressed_images/example1_compressed.jpg",
+    "generated_at": "2026-05-21T11:18:50"
+  }
+}

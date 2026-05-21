@@ -1,0 +1,12 @@
+```json
+{
+  "parent_name": "Wardrobe_East",
+  "planes": [
+    {
+      "plane_id": "Wardrobe_East__top",
+      "plane_type": "top",
+      "items": []
+    }
+  ]
+}
+```

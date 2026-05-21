@@ -1,0 +1,335 @@
+[STAGE 1 — LABORATORY-SPECIFIC ADDENDUM]
+
+This addendum is appended to the Stage 1 base prompt ONLY when the scene is
+classified as "lab" (research / chemistry / biology / pharma-GMP / physics /
+optics / metrology / electronics R&D). It OVERRIDES the base prompt where they
+conflict; the base prompt still applies for everything else.
+
+WHY THIS ADDENDUM EXISTS
+Vision models systematically under-estimate laboratory room dimensions and
+mis-classify the upper "reagent shelf / divider rack" of a double-deck lab
+bench as a small surface-top accessory. Both errors break downstream geometry.
+
+==============================================================================
+A. ROOM-SCALE PRIORS FOR LAB SCENES (USE THESE BEFORE GUESSING)
+==============================================================================
+
+A.0 OUTPUT-FIELD AXIS CONTRACT (READ THIS FIRST — STRICT)
+The downstream pipeline interprets `estimated_dimensions = "W m × D m"`
+along FIXED world axes that are tied to the image, not to the room's
+"long edge". You MUST follow this contract:
+
+  - W (the FIRST number) = horizontal extent of the room in the image.
+      It is the east-west span, between the LEFT (west) wall and the
+      RIGHT (east) wall, measured in metres.
+  - D (the SECOND number) = vertical extent of the room in the image.
+      It is the north-south span, between the TOP (north) wall and the
+      BOTTOM (south) wall, measured in metres.
+
+This means:
+  - A room that looks WIDER than TALL in the image  →  W > D.
+  - A room that looks TALLER than WIDE in the image  →  D > W.
+  - If you mentally measured "long edge" first, you must still figure
+    out which IMAGE AXIS that long edge runs along, and place it in
+    the correct slot (W or D).
+
+PIXEL-RATIO SANITY CHECK (perform this every time before returning)
+  1. Identify the four interior wall corners of the room in the image.
+  2. Measure the horizontal pixel span (px_W) of the room's interior
+     floor area, and the vertical pixel span (px_D).
+  3. The ratio you write MUST satisfy BOTH conditions:
+       (a) Same orientation:  (W > D) ⇔ (px_W > px_D), i.e. they cannot
+           disagree on which side is longer.
+       (b) Approximate match:  | (W/D) / (px_W/px_D) − 1 |  <  0.30
+           (the metric ratio may differ from the pixel ratio by ≤ 30 %).
+  4. If your draft inverts the orientation (room is visibly wider than
+     tall in the image, but you wrote D > W), SWAP W and D before
+     returning. Do NOT keep an inverted ratio "because the long edge
+     felt like the depth".
+  5. NOTE: Many lab images are rendered in an isometric / 3-quarter
+     perspective rather than a strict orthographic top-down. The pixel
+     ratio is therefore only an APPROXIMATE prior — small deviations
+     (within ±30 %) are normal, but a flipped orientation is NOT.
+
+A.1 STANDARD LAB FURNITURE DIMENSIONS (use as scale references)
+- Standard wall-side lab bench:        L 2.4 m, D 0.75 m, H 0.9 m
+- Long wall-side lab bench:            L 3.6 m, D 0.75 m
+- Island lab bench (double-sided):     L 2.4–4.8 m, D 1.5 m, H 0.9 m
+- Fume hood:                           W 1.5–1.8 m, D 0.8 m, H 2.2 m
+- Biosafety cabinet:                   W 1.2–1.8 m, D 0.8 m, H 2.0 m
+- Lab stool:                           seat 0.4 m, total H 0.6–0.8 m
+- Office chair (lab use):              0.6 × 0.6 × 0.9 m
+- Standard interior door:              W 0.9 m
+- Optical table:                       W 1.2–2.4 m, L 1.8–3.6 m
+- Equipment rack / chromatography unit: W 0.6 m, D 0.6 m, H 1.8–2.0 m
+
+A.2 LAB CIRCULATION RULES (these govern minimum room footprint)
+- Aisle between two parallel benches (people working back-to-back):  ≥ 1.5 m
+- Aisle between a bench and a wall:                                  ≥ 1.0 m
+- Clearance in front of a fume hood (operator + cart):               ≥ 1.5 m
+- Clearance in front of a chair pulled out from a bench:             ≥ 0.8 m
+- Emergency egress aisle in any GMP / safety-rated lab:              ≥ 1.2 m
+
+A.3 ROOM-SIZE TYPICAL FOOTPRINTS (TARGETS — TREAT AS GUIDES, NOT FLOORS)
+The table below is given as `long_edge × short_edge` (NOT W × D), because
+it only describes the room's footprint in metric terms and is independent
+of how the room is oriented in the image. Once you pick an entry from
+this table, you still have to decide which side of the room is the
+horizontal (W) one and which is the vertical (D) one in the image, using
+A.0's pixel-ratio sanity check.
+
+The numbers below are TYPICAL footprints for compact / small-to-medium
+academic and R&D labs, NOT absolute floors. A real lab can be ~1 m
+smaller on either side if circulation is tight. Bias DOWN, not up, when
+the image is ambiguous.
+
+| Lab type                                       | long × short typical |
+|------------------------------------------------|----------------------|
+| Single wall-bench teaching / prep lab          |  ~5 m × 4 m          |
+| One island bench + perimeter benches           |  ~6 m × 5 m          |
+| Two parallel island benches (research lab)     |  ~8 m × 6 m          |
+| GMP / pharma QC lab with hoods + prep benches  | ~10 m × 7 m          |
+| Optics / laser lab with full optical tables    | ~10 m × 7 m          |
+| Metrology / precision-measurement lab          |  ~8 m × 6 m          |
+
+STRICT DEFINITION — "TWO PARALLEL ISLAND BENCHES"
+Use the "two parallel island" row ONLY if BOTH of the following are true:
+  (i)  You can clearly identify TWO benches that are each DOUBLE-SIDED
+       workstations (i.e., usable from both long sides, no wall behind),
+       each with length ≥ 2.4 m and depth ≥ 1.2 m.
+  (ii) There is a central aisle between the two benches that is wider
+       than ~1.2 m and clearly used for circulation (no furniture in it).
+
+A common error is to read "one central island bench + one wall-side
+bench bank" as "two parallel islands". That layout is NOT two islands;
+it is "One island bench + perimeter benches" → use the smaller
+~6 m × 5 m typical, not ~8 m × 6 m.
+
+⚠️  A "4 m × 4 m" estimate for any lab that genuinely contains TWO
+   parallel island benches (per the strict definition above) is almost
+   always wrong. Walk through the math:
+     two islands (1.2 m deep each) = 2.4 m
+     center aisle between them      = 1.2 m
+     side aisles to walls (×2)      = 1.6 m  (0.8 m each, tight)
+     total minimum short edge       = 5.2 m
+   plus long edge: each island ≥ 2.4 m + 0.8 m clearance on both ends
+   ≥ 4.0 m. The TYPICAL value listed above (~8 m × 6 m) already builds
+   in a small extra margin on top of the tight minimum; do NOT inflate
+   beyond it without visible evidence of a third bench bank or a full
+   set of equipment racks on a separate wall.
+
+A.4 SCALE REFERENCE PROCEDURE (do this BEFORE writing estimated_dimensions)
+1. Find at least ONE object whose real-world width you know:
+   - door (0.9 m), lab bench short side (0.75 m), office chair (0.6 m),
+     fume hood width (1.5 m), lab stool footprint (0.4 m).
+2. Measure that object in pixels in the top-down image.
+3. Compute pixels-per-metre.
+4. Measure room interior horizontal pixel span (px_W) and vertical pixel
+   span (px_D). Divide each by pixels-per-metre → metric W and D.
+5. Round to the nearest 0.5 m (do NOT systematically round up or down —
+   either direction is acceptable; over-estimating is just as bad as
+   under-estimating because it cascades into oversized furniture and
+   wasted floor area).
+6. Cross-check against table A.3, treating your two numbers as
+   long_edge = max(W, D) and short_edge = min(W, D):
+   - Table A.3 values are TYPICAL footprints, NOT hard floors. If your
+     measured estimate is within ±1.5 m of the typical row for the
+     visible lab layout, KEEP your measured value — do not snap up to
+     the table value.
+   - If your measured estimate is MORE THAN 1.5 m ABOVE the typical
+     row on either side AND you cannot clearly identify a third bench
+     bank / extra equipment row / wide circulation aisle that justifies
+     the extra space, you over-estimated. Re-measure with a different
+     reference object and shrink toward the typical value.
+   - If your measured estimate is MORE THAN 1.5 m BELOW the typical
+     row on either side AND circulation requirements in A.2 cannot fit
+     in that footprint, you under-estimated. Re-measure and grow toward
+     the typical value, recording the cue in `scale_reference_objects`.
+   - When two measurements bracket the typical value, prefer the
+     smaller one. Over-estimating wastes floor area and cascades into
+     oversized furniture and empty-looking renders.
+7. Re-check A.0's PIXEL-RATIO SANITY CHECK:
+   - The first number you write (W) must correspond to the horizontal
+     image extent; the second number (D) to the vertical extent.
+   - If your long_edge happens to run vertically in the image, it must
+     go into the D slot, not the W slot.
+8. In `estimated_dimensions`, write a string like  "9 m × 7 m"  (use ×
+   not x). The first number is W (horizontal/east-west), the second is
+   D (vertical/north-south).
+
+A.5 VISUAL-ARTIFACT WARNINGS SPECIFIC TO LABS
+- Many lab images are rendered with extra-narrow aspect ratios (the bench
+  zone fills the image edge-to-edge). Do NOT shrink the room to bench size.
+  The room MUST include the operator-aisle area on both sides of every island.
+- Stainless-steel floor reflections and grid-tile patterns can look like
+  small-tile residential floors; do not infer a "small bedroom-sized" room
+  from the tile spacing alone.
+- Many lab images use an isometric / 3-quarter perspective camera rather
+  than a strict orthographic top-down. In that view the FAR side of the
+  room (e.g. the north wall) is visually compressed compared to the
+  near side. Do NOT take pixel measurements at face value on the far
+  side; prefer reference objects sitting in the MIDDLE of the room for
+  pixels-per-metre calibration.
+
+A.6 UPPER-BOUND SANITY CHECK (PREVENT OVER-ESTIMATION)
+After writing estimated_dimensions, verify it is not absurdly large:
+- If your estimate exceeds 12 m × 10 m (≥ 120 m²), check that AT LEAST
+  ONE of the following is true:
+    (a) You can count ≥ 3 separate workstations / bench banks / island
+        units / fume-hood bays in the image.
+    (b) The long-edge pixel span divided by the typical bench pixel
+        span is ≥ 5 (i.e., the room is at least five bench-widths long).
+- If NEITHER (a) nor (b) holds, you over-estimated. Re-run A.4 with a
+  different scale reference and shrink the estimate. A typical
+  single-island research lab is ~6 m × 5 m, NOT 10 m × 8 m. A typical
+  two-island research lab is ~8 m × 6 m, NOT 12 m × 10 m.
+
+==============================================================================
+B. LAB BENCH STRUCTURE: DOUBLE-DECK / OVERSIZED ISLAND DETECTION
+==============================================================================
+
+B.1 WHAT A DOUBLE-DECK LAB BENCH LOOKS LIKE FROM ABOVE
+A double-deck lab bench is ONE physical piece of furniture but has:
+- a lower WORKTOP (the surface people work on, knee-to-elbow height ≈ 0.9 m), and
+- an UPPER REAGENT SHELF (a horizontal board running along the bench centerline,
+  supported by 2–4 vertical posts, height ≈ 1.2–1.5 m), often with
+  bottles, racks, small instruments sitting ON the upper shelf.
+
+In a top-down image the upper shelf appears as a NARROW HORIZONTAL STRIP
+running along the LONG CENTER LINE of the bench. It commonly looks like:
+- a "central divider rack" cutting the bench into two operator sides, OR
+- a row of tall thin objects (reagent bottles, glassware) lined up exactly
+  along the bench centerline.
+
+B.2 CRITICAL CLASSIFICATION RULE — DO NOT SPLIT A DOUBLE-DECK BENCH
+If you see a long, narrow strip of "objects" running exactly along the
+centerline of an island lab bench, those are MOST LIKELY items resting on
+the upper shelf of a double-deck bench. The upper shelf itself is PART OF
+THE BENCH STRUCTURE, not a separate surface object.
+
+❌ DO NOT do this:
+   - Emit the bench as one major floor object
+   - Then emit "Central Divider Rack" as a minor surface object on top of it
+   - Then emit reagent bottles as surface objects on top of the rack
+
+✅ DO this instead:
+   - Emit the bench as ONE major floor object whose `name` makes the
+     double-deck nature clear (e.g., "West Island Lab Bench (double-deck)").
+   - Add the OPTIONAL field `structure_hint` to that object entry:
+       "structure_hint": "double_deck"
+   - Items VISIBLY sitting on the UPPER shelf may still be emitted as surface
+     objects parented to the bench, but their semantics is "on upper shelf",
+     reflected in the object name (e.g., "Reagent Bottle on upper shelf").
+   - The "rack / divider" itself is NOT a separate object. It is bench
+     structure.
+
+B.3 OVERSIZED-ISLAND DETECTION
+If a single island bench visibly extends across more than ~60% of the room
+length, OR is clearly longer than 2.4 m relative to the standard scale, it
+is an "oversized island". Add the OPTIONAL field:
+    "structure_hint": "oversized_island"
+to that object entry. Stage 3 will use this to allow long composite-piece
+geometry (up to ~4.8 m) instead of clamping to 2.4 m.
+
+B.4 COMBINED HINT
+A bench that is BOTH double-deck AND oversized → use:
+    "structure_hint": "double_deck_oversized"
+
+B.5 STRUCTURE_HINT FIELD CONTRACT
+- Field name:   "structure_hint"
+- Position:     inside an object entry of object_hierarchy.
+- Type:         string. Allowed values:
+                  "double_deck" | "oversized_island" | "double_deck_oversized"
+- Optional:     yes (omit when none of the above apply)
+- ONLY emit on objects with category=="major" and placement_type=="floor".
+- ONLY emit on lab bench / island workstation objects. Do NOT emit on
+  fume hoods, biosafety cabinets, optical tables, equipment racks.
+
+==============================================================================
+C. LAB OBJECT-CATEGORY ADJUSTMENTS
+==============================================================================
+
+C.1 CATEGORY OVERRIDES (these supersede the base prompt for lab scenes)
+- "lab bench / island workstation"           → category = "major", placement = "floor"
+- "fume hood / biosafety cabinet"            → category = "major", placement = "floor"
+- "chemical / solvent storage cabinet"       → category = "major", placement = "floor"
+- "equipment rack / chromatography stack"    → category = "major", placement = "floor"
+- "optical table"                            → category = "major", placement = "floor"
+- "lab stool"                                → category = "major", placement = "floor"
+- "glassware cluster (flasks/beakers)"       → category = "minor", placement = "surface"
+- "hot plate / stirrer / balance / centrifuge" → category = "minor", placement = "surface"
+- "reagent bottle / spray bottle / sample"   → category = "minor", placement = "surface"
+- "safety shower / eyewash"                  → category = "major", placement = "floor"
+
+C.2 LAB-WALL OBJECTS
+Most labs have FEW wall-mounted decorative items but DO often have:
+- a clock above the door
+- a fire-safety / hazard pictogram poster
+- a wall-mounted gas / electric panel
+- a wall-mounted phone or intercom
+- a wall-mounted whiteboard near the door
+Emit visible ones with placement_type="wall". DO NOT fabricate framed art
+on lab walls if the image shows bare painted walls.
+
+==============================================================================
+C.3 LAB WORKTOP / SHELF SURFACE CLUTTER SWEEP (DOWNSTREAM PIPELINE REQUIRES THIS)
+==============================================================================
+
+Vision models often over-list clutter on the **central island / focal bench**
+and under-list the **same class of clutter** on **other benches**
+(perimeter wall benches, south/north bench runs, secondary workstations).
+
+You MUST treat EACH distinct lab bench worktop AND EACH visibly cluttered
+upper shelf (consistent with B.2 / structure_hint) as its own scan target:
+
+1. **Enumeration targets** (emit as `category="minor"`, `placement_type="surface"`,
+   `parent_object` = the bench / shelf object's object_id):
+   - Pipette racks / tip boxes; tube racks; well plates / microplates
+   - Clusters of flasks / beakers / bottles / solvent wash bottles
+   - Small instruments: balances, hotplates, stirrers, vortex, timers
+   - PCs / monitors / keyboards / small lab notebooks / trays / mats
+   - Each **visually separate** cluster gets its **own** object row (do not merge
+     "everything on the south bench" into one blob unless it truly reads as a
+     single indivisible smear).
+
+2. **Multi-bench parity (mandatory)**: After drafting `object_hierarchy`, compare
+   EVERY pair of bench/shelf surfaces that **look similarly busy** in the image.
+   If Bench A has ≥ N surface minors and Bench B shows comparable tabletop
+   complexity but has ≪ N, **re-scan Bench B** at higher magnification and add
+   the missing minors. Do NOT rationalize away south/perimeter benches because
+   attention stayed on the center of the image.
+
+3. **Still obey B.2**: Do not invent a fake "divider rack" object; upper-shelf
+   geometry belongs to the bench's structure_hint. Items **resting on** that
+   shelf are still valid surface minors parented to the bench.
+
+==============================================================================
+D. FINAL LAB-SPECIFIC VALIDATION CHECK
+==============================================================================
+Before returning, verify in this order:
+1. AXIS CONTRACT (A.0): the FIRST number in estimated_dimensions is W
+   (horizontal/east-west); the SECOND is D (vertical/north-south).
+   - The orientation matches the image: a visually wider room has W > D,
+     a visually taller room has D > W.
+   - The pixel ratio sanity check (A.0 step 3) holds within ±30 %.
+2. TYPICAL FOOTPRINT (A.3): treating the two numbers as long_edge /
+   short_edge, each is within ±1.5 m of the typical row for the visible
+   lab layout. In particular, do NOT declare "two parallel islands"
+   unless the strict definition in A.3 is met (one central island +
+   a wall-side bench is "one island bench + perimeter benches",
+   not two islands). When the image is ambiguous between two adjacent
+   rows, pick the SMALLER row.
+3. UPPER BOUND (A.6): if your estimate exceeds 12 m × 10 m, you can
+   count ≥ 3 separate bench banks OR the long edge is ≥ 5 bench-widths;
+   otherwise you have over-estimated.
+4. Every island bench with a visible upper-shelf strip has either
+   structure_hint="double_deck" or "double_deck_oversized".
+5. No object named "Central Divider Rack" / "Reagent Shelf" exists as a
+   separate `surface` object that supports other items — those have been
+   absorbed into the parent bench's structure_hint.
+6. Aisles between islands and walls are wide enough to satisfy A.2; if
+   not, the room must be at least the A.3 minimum.
+7. **Surface clutter parity (C.3)**: For each major lab bench / island /
+   cluttered upper shelf, count `placement_type="surface"` minors whose
+   `parent_object` points to it. If two surfaces look similarly busy in the
+   image but counts differ by an order of magnitude, fix before returning.

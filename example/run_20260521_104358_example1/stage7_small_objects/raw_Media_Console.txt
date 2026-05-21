@@ -1,0 +1,49 @@
+```json
+{
+  "parent_name": "Media_Console",
+  "planes": [
+    {
+      "plane_id": "Media_Console__top",
+      "plane_type": "top",
+      "items": [
+        {
+          "name": "Console_Book_1",
+          "item_type": "book",
+          "shape": "box",
+          "local_uv": [
+            0.3,
+            0.35
+          ],
+          "size": [
+            0.22,
+            0.15,
+            0.03
+          ],
+          "rotation_z": 0,
+          "stack_index": 0,
+          "color_hint": "Dark taupe",
+          "description": "A dark book lying flat next to the existing decor to form a cohesive cluster."
+        },
+        {
+          "name": "Console_Sphere_1",
+          "item_type": "decorative sphere",
+          "shape": "box",
+          "local_uv": [
+            0.3,
+            0.35
+          ],
+          "size": [
+            0.1,
+            0.1,
+            0.1
+          ],
+          "rotation_z": 0,
+          "stack_index": 1,
+          "color_hint": "Matte black",
+          "description": "A small dark decorative sphere resting on top of the book."
+        }
+      ]
+    }
+  ]
+}
+```

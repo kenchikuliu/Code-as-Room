@@ -1,0 +1,30 @@
+```json
+{
+  "parent_name": "Nightstand_North",
+  "planes": [
+    {
+      "plane_id": "Nightstand_North__top",
+      "plane_type": "top",
+      "items": [
+        {
+          "name": "Nightstand_Book_1",
+          "item_type": "book",
+          "shape": "box",
+          "local_uv": [
+            0.85,
+            0.369
+          ],
+          "size": [
+            0.10,
+            0.15,
+            0.02
+          ],
+          "rotation_z": 0.0,
+          "color_hint": "Dark brown",
+          "description": "A small dark book resting flat on the nightstand next to the lamp, easily accessible from the bed."
+        }
+      ]
+    }
+  ]
+}
+```

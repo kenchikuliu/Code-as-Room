@@ -1,0 +1,28 @@
+You are a JSON Schema repair expert. The following Stage1 JSON has issues:
+
+[Errors]
+{errors}
+
+[Current JSON (truncated)]
+```json
+{current_json}
+```
+
+[Schema Rules]
+- zone_id: "zone_01", object_id: "obj_001", feature_id: "feat_001"
+- category: "major" | "minor"
+- placement_type: "floor" | "surface" | "wall"
+- parent_object rules:
+  * floor → null
+  * surface → an existing object_id
+  * wall → "wall:north/south/east/west/unknown"
+
+[Hard Coverage Rules (aligned with the ABSOLUTE RULES in the main Stage1 prompt; do not violate)]
+- R1 All zones together must cover the entire room floor, including all four walls and all four corners.
+- R2 Small furniture near walls / corners / doors (narrow sideboards, shelving units, shoe cabinets, corner cabinets, entry cabinets, bar carts, etc.) is the most commonly missed category. Every such item must appear in some zone's object_hierarchy, and its category must be "major" whenever it is floor-standing furniture.
+- R3 If a wall-adjacent object does not belong to any existing zone, create a dedicated small zone for it (for example, "East-Wall Accent Strip" or "Door Nook"). Never drop an object just to reduce the zone count.
+- R4 If the current JSON has many central objects but few edge objects in object_hierarchy, rescan all four walls, all four corners, and the door areas, then add the missing objects.
+- R5 WALL-MOUNTED RECALL (most often missed in top-down views): carefully recheck the image's **four edge bands** (top = north wall, bottom = south wall, left = west wall, right = east wall). Paintings / posters / framed pictures / mirrors / wall clocks / wall lamps / wall-mounted TVs / hooks / wall shelves often appear in top-down views as **small rectangular strips with text, patterns, or color blocks**, or as bright reflective spots along an edge. Output every independent wall-mounted item as a separate object with `placement_type="wall"` (a row of 3 paintings = 3 objects; do not merge them). `parent_object` must be "wall:north|south|east|west".
+  Typical expectations: bedrooms / living rooms / studies / offices usually have 1-6 wall artworks above beds, sofas, or desks; bathrooms have mirrors above sinks; kitchens often have wall clocks or wall art; entry areas often have a mirror plus hooks. If the current JSON has 0 objects with placement_type="wall" and the scene contains "wall-art magnet" furniture such as a bed, sofa, or desk, **it is almost certainly a missed detection** and must be corrected.
+
+Generate concise repair instructions as a list. In addition to fixing the Schema errors, also check and correct the coverage issues above, especially R5 wall-mounted object recall.

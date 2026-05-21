@@ -1,0 +1,12 @@
+```json
+{
+  "parent_name": "Side_Table",
+  "planes": [
+    {
+      "plane_id": "Side_Table__top",
+      "plane_type": "top",
+      "items": []
+    }
+  ]
+}
+```

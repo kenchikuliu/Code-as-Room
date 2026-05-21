@@ -1,0 +1,4296 @@
+{
+  "room_style": {
+    "style_name": "Soft Contemporary",
+    "style_description": "The room embodies a soft contemporary aesthetic, characterized by clean lines, plush upholstery, and a soothing neutral color palette. Medium-toned wood flooring and matching cabinetry add warmth, perfectly complementing the beige and taupe textiles. The symmetrical layout and distinct functional zones create a highly organized yet deeply inviting atmosphere.",
+    "color_palette": [
+      "Beige",
+      "Taupe",
+      "Medium Brown"
+    ],
+    "mood": "Warm, serene, and inviting",
+    "era": "Contemporary",
+    "keywords": [
+      "Neutral",
+      "Symmetrical",
+      "Cozy",
+      "Wood accents",
+      "Organized"
+    ]
+  },
+  "detailed_objects": [
+    {
+      "name": "Armchair_North",
+      "object_type": "armchair",
+      "center_location": [
+        -2.75,
+        1.0,
+        0.45
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.7853981633974483
+      ],
+      "bounding_dimensions": [
+        0.8,
+        0.8,
+        0.9
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "plush_seat_cushion",
+          "relative_location": [
+            0.0,
+            -0.11,
+            -0.2
+          ],
+          "dimensions": [
+            0.54,
+            0.54,
+            0.18
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_square_arm",
+          "relative_location": [
+            -0.33,
+            -0.03,
+            -0.105
+          ],
+          "dimensions": [
+            0.14,
+            0.68,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_square_arm",
+          "relative_location": [
+            0.33,
+            -0.03,
+            -0.105
+          ],
+          "dimensions": [
+            0.14,
+            0.68,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "tall_padded_back_panel",
+          "relative_location": [
+            0.0,
+            0.32,
+            0.09
+          ],
+          "dimensions": [
+            0.8,
+            0.16,
+            0.72
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "inner_back_cushion",
+          "relative_location": [
+            0.0,
+            0.215,
+            0.04
+          ],
+          "dimensions": [
+            0.54,
+            0.1,
+            0.54
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_lower_apron",
+          "relative_location": [
+            0.0,
+            -0.34,
+            -0.305
+          ],
+          "dimensions": [
+            0.54,
+            0.08,
+            0.15
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_front_leg",
+          "relative_location": [
+            -0.27,
+            -0.28,
+            -0.405
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.09
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_front_leg",
+          "relative_location": [
+            0.27,
+            -0.28,
+            -0.405
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.09
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_rear_leg",
+          "relative_location": [
+            -0.27,
+            0.24,
+            -0.405
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.09
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_rear_leg",
+          "relative_location": [
+            0.27,
+            0.24,
+            -0.405
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.09
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "fabric",
+      "color_description": "light beige",
+      "description": "A plush, light beige fabric armchair with a square design, angled towards the center of the lounge area.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Armchair_South",
+      "object_type": "armchair",
+      "center_location": [
+        -2.75,
+        -1.0,
+        0.45
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        2.356194490192345
+      ],
+      "bounding_dimensions": [
+        0.8,
+        0.8,
+        0.9
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "plush_seat_base",
+          "relative_location": [
+            0.0,
+            -0.05,
+            -0.28
+          ],
+          "dimensions": [
+            0.72,
+            0.62,
+            0.18
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "soft_seat_cushion",
+          "relative_location": [
+            0.0,
+            -0.1,
+            -0.13
+          ],
+          "dimensions": [
+            0.56,
+            0.52,
+            0.14
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_padded_arm",
+          "relative_location": [
+            -0.34,
+            -0.02,
+            -0.16
+          ],
+          "dimensions": [
+            0.12,
+            0.74,
+            0.42
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_padded_arm",
+          "relative_location": [
+            0.34,
+            -0.02,
+            -0.16
+          ],
+          "dimensions": [
+            0.12,
+            0.74,
+            0.42
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "tall_square_backrest",
+          "relative_location": [
+            0.0,
+            0.33,
+            0.04
+          ],
+          "dimensions": [
+            0.8,
+            0.14,
+            0.82
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "inner_back_cushion",
+          "relative_location": [
+            0.0,
+            0.235,
+            0.1
+          ],
+          "dimensions": [
+            0.58,
+            0.07,
+            0.56
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_plush_apron",
+          "relative_location": [
+            0.0,
+            -0.36,
+            -0.25
+          ],
+          "dimensions": [
+            0.72,
+            0.08,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_left_short_leg",
+          "relative_location": [
+            -0.27,
+            -0.28,
+            -0.41
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_right_short_leg",
+          "relative_location": [
+            0.27,
+            -0.28,
+            -0.41
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "rear_left_short_leg",
+          "relative_location": [
+            -0.27,
+            0.26,
+            -0.41
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "rear_right_short_leg",
+          "relative_location": [
+            0.27,
+            0.26,
+            -0.41
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "fabric",
+      "color_description": "light beige",
+      "description": "A plush, light beige fabric armchair with a square design, angled towards the center of the lounge area to mirror the opposite chair.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Side_Table",
+      "object_type": "side table",
+      "center_location": [
+        -2.75,
+        0.0,
+        0.25
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "square_tabletop_slab",
+          "relative_location": [
+            0,
+            0,
+            0.225
+          ],
+          "dimensions": [
+            0.5,
+            0.5,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_left_leg",
+          "relative_location": [
+            -0.2,
+            -0.2,
+            -0.025
+          ],
+          "dimensions": [
+            0.05,
+            0.05,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_right_leg",
+          "relative_location": [
+            0.2,
+            -0.2,
+            -0.025
+          ],
+          "dimensions": [
+            0.05,
+            0.05,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_left_leg",
+          "relative_location": [
+            -0.2,
+            0.2,
+            -0.025
+          ],
+          "dimensions": [
+            0.05,
+            0.05,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_right_leg",
+          "relative_location": [
+            0.2,
+            0.2,
+            -0.025
+          ],
+          "dimensions": [
+            0.05,
+            0.05,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_apron",
+          "relative_location": [
+            0,
+            -0.225,
+            0.165
+          ],
+          "dimensions": [
+            0.4,
+            0.03,
+            0.07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_apron",
+          "relative_location": [
+            0,
+            0.225,
+            0.165
+          ],
+          "dimensions": [
+            0.4,
+            0.03,
+            0.07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_side_apron",
+          "relative_location": [
+            -0.225,
+            0,
+            0.165
+          ],
+          "dimensions": [
+            0.03,
+            0.4,
+            0.07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_side_apron",
+          "relative_location": [
+            0.225,
+            0,
+            0.165
+          ],
+          "dimensions": [
+            0.03,
+            0.4,
+            0.07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "light brown wood grain",
+      "description": "A small, square side table made of light brown wood. It has a single white rectangular object, possibly a book, resting in the center of its surface.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Floor_Lamp",
+      "object_type": "floor lamp",
+      "center_location": [
+        -3.45,
+        2.2,
+        0.8
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.4,
+        0.4,
+        1.6
+      ],
+      "parts": [
+        {
+          "shape_type": "cylinder",
+          "name": "round_brass_base",
+          "relative_location": [
+            0,
+            0,
+            -0.78
+          ],
+          "dimensions": [
+            0.32,
+            0.32,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "slender_brass_pole",
+          "relative_location": [
+            0,
+            0,
+            -0.14
+          ],
+          "dimensions": [
+            0.035,
+            0.035,
+            1.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "lower_brass_shade_ring",
+          "relative_location": [
+            0,
+            0,
+            0.49
+          ],
+          "dimensions": [
+            0.36,
+            0.36,
+            0.025
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "warm_white_glass_cylindrical_shade",
+          "relative_location": [
+            0,
+            0,
+            0.64
+          ],
+          "dimensions": [
+            0.34,
+            0.34,
+            0.3
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "inner_glowing_glass_diffuser",
+          "relative_location": [
+            0,
+            0,
+            0.64
+          ],
+          "dimensions": [
+            0.24,
+            0.24,
+            0.26
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "upper_brass_shade_ring",
+          "relative_location": [
+            0,
+            0,
+            0.79
+          ],
+          "dimensions": [
+            0.36,
+            0.36,
+            0.02
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "small_brass_top_finial",
+          "relative_location": [
+            0,
+            0,
+            0.78
+          ],
+          "dimensions": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "metal and glass/acrylic",
+      "color_description": "warm white glow with brass/gold accents",
+      "description": "A modern floor lamp with a circular, glowing warm white shade and metallic accents, positioned in the corner.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Bed",
+      "object_type": "bed",
+      "center_location": [
+        0.0,
+        1.45,
+        0.3
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        1.8,
+        2.1,
+        0.6
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "light_beige_upholstered_headboard",
+          "relative_location": [
+            0,
+            0.99,
+            0
+          ],
+          "dimensions": [
+            1.8,
+            0.12,
+            0.6
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bed_base_platform",
+          "relative_location": [
+            0,
+            -0.08,
+            -0.24
+          ],
+          "dimensions": [
+            1.72,
+            1.9,
+            0.12
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_side_rail",
+          "relative_location": [
+            -0.87,
+            -0.08,
+            -0.14
+          ],
+          "dimensions": [
+            0.06,
+            1.92,
+            0.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_side_rail",
+          "relative_location": [
+            0.87,
+            -0.08,
+            -0.14
+          ],
+          "dimensions": [
+            0.06,
+            1.92,
+            0.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_foot_rail",
+          "relative_location": [
+            0,
+            -1.01,
+            -0.14
+          ],
+          "dimensions": [
+            1.78,
+            0.08,
+            0.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "white_mattress",
+          "relative_location": [
+            0,
+            -0.08,
+            -0.07
+          ],
+          "dimensions": [
+            1.66,
+            1.82,
+            0.22
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "white_top_linen_duvet",
+          "relative_location": [
+            0,
+            -0.15,
+            0.065
+          ],
+          "dimensions": [
+            1.72,
+            1.62,
+            0.07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "taupe_folded_throw_blanket_at_foot",
+          "relative_location": [
+            0,
+            -0.76,
+            0.115
+          ],
+          "dimensions": [
+            1.72,
+            0.36,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_taupe_pillow",
+          "relative_location": [
+            -0.43,
+            0.55,
+            0.14
+          ],
+          "dimensions": [
+            0.56,
+            0.32,
+            0.12
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_taupe_pillow",
+          "relative_location": [
+            0.43,
+            0.55,
+            0.14
+          ],
+          "dimensions": [
+            0.56,
+            0.32,
+            0.12
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "center_white_pillow",
+          "relative_location": [
+            0,
+            0.72,
+            0.12
+          ],
+          "dimensions": [
+            0.62,
+            0.26,
+            0.1
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "front_left_short_bed_leg",
+          "relative_location": [
+            -0.72,
+            -0.88,
+            -0.27
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "front_right_short_bed_leg",
+          "relative_location": [
+            0.72,
+            -0.88,
+            -0.27
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "back_left_short_bed_leg",
+          "relative_location": [
+            -0.72,
+            0.72,
+            -0.27
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "back_right_short_bed_leg",
+          "relative_location": [
+            0.72,
+            0.72,
+            -0.27
+          ],
+          "dimensions": [
+            0.08,
+            0.08,
+            0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "fabric",
+      "color_description": "white bedding, taupe pillows and throw, light beige headboard",
+      "description": "A large bed with a light beige upholstered headboard, dressed in white linens with taupe pillows and a matching folded throw blanket across the foot.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Nightstand_North",
+      "object_type": "nightstand",
+      "center_location": [
+        -1.2,
+        2.3,
+        0.25
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.5,
+        0.4,
+        0.5
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "top_surface_slab",
+          "relative_location": [
+            0,
+            0,
+            0.225
+          ],
+          "dimensions": [
+            0.5,
+            0.4,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "main_wood_cabinet_body",
+          "relative_location": [
+            0,
+            0.01,
+            -0.025
+          ],
+          "dimensions": [
+            0.46,
+            0.36,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "upper_drawer_front",
+          "relative_location": [
+            0,
+            -0.19,
+            0.085
+          ],
+          "dimensions": [
+            0.42,
+            0.02,
+            0.13
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "lower_drawer_front",
+          "relative_location": [
+            0,
+            -0.19,
+            -0.085
+          ],
+          "dimensions": [
+            0.42,
+            0.02,
+            0.13
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "upper_drawer_handle",
+          "relative_location": [
+            0,
+            -0.191,
+            0.085
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.22
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "lower_drawer_handle",
+          "relative_location": [
+            0,
+            -0.191,
+            -0.085
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.22
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "recessed_toe_kick",
+          "relative_location": [
+            0,
+            -0.08,
+            -0.225
+          ],
+          "dimensions": [
+            0.36,
+            0.16,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "light brown wood grain",
+      "description": "A rectangular light brown wood nightstand. On its surface sits a circular glowing table lamp and a small dark rectangular object.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Nightstand_South",
+      "object_type": "nightstand",
+      "center_location": [
+        1.2,
+        2.3,
+        0.25
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.5,
+        0.4,
+        0.5
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "top_worktop_slab",
+          "relative_location": [
+            0,
+            0,
+            0.225
+          ],
+          "dimensions": [
+            0.5,
+            0.4,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_side_panel",
+          "relative_location": [
+            -0.235,
+            0,
+            -0.025
+          ],
+          "dimensions": [
+            0.03,
+            0.38,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_side_panel",
+          "relative_location": [
+            0.235,
+            0,
+            -0.025
+          ],
+          "dimensions": [
+            0.03,
+            0.38,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_panel",
+          "relative_location": [
+            0,
+            0.185,
+            -0.025
+          ],
+          "dimensions": [
+            0.47,
+            0.03,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_panel",
+          "relative_location": [
+            0,
+            0,
+            -0.235
+          ],
+          "dimensions": [
+            0.47,
+            0.38,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "upper_drawer_front",
+          "relative_location": [
+            0,
+            -0.1875,
+            0.08
+          ],
+          "dimensions": [
+            0.43,
+            0.025,
+            0.18
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "lower_drawer_front",
+          "relative_location": [
+            0,
+            -0.1875,
+            -0.12
+          ],
+          "dimensions": [
+            0.43,
+            0.025,
+            0.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "center_drawer_gap",
+          "relative_location": [
+            0,
+            -0.199,
+            -0.01
+          ],
+          "dimensions": [
+            0.43,
+            0.006,
+            0.015
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "upper_drawer_handle",
+          "relative_location": [
+            0,
+            -0.194,
+            0.08
+          ],
+          "dimensions": [
+            0.012,
+            0.012,
+            0.18
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "lower_drawer_handle",
+          "relative_location": [
+            0,
+            -0.194,
+            -0.12
+          ],
+          "dimensions": [
+            0.012,
+            0.012,
+            0.18
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_toe_kick",
+          "relative_location": [
+            0,
+            -0.16,
+            -0.225
+          ],
+          "dimensions": [
+            0.38,
+            0.04,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "light brown wood grain",
+      "description": "A rectangular light brown wood nightstand featuring a circular glowing table lamp and a small dark item on its top surface.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Bench",
+      "object_type": "bedroom bench",
+      "center_location": [
+        0.0,
+        0.1999999999999999,
+        0.225
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        1.2,
+        0.4,
+        0.45
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "upholstered_seat_cushion",
+          "relative_location": [
+            0,
+            0,
+            0.185
+          ],
+          "dimensions": [
+            1.2,
+            0.4,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "upholstered_base_panel",
+          "relative_location": [
+            0,
+            0,
+            -0.01
+          ],
+          "dimensions": [
+            1.08,
+            0.32,
+            0.31
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_apron",
+          "relative_location": [
+            0,
+            -0.185,
+            0.035
+          ],
+          "dimensions": [
+            1.12,
+            0.03,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_apron",
+          "relative_location": [
+            0,
+            0.185,
+            0.035
+          ],
+          "dimensions": [
+            1.12,
+            0.03,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_apron",
+          "relative_location": [
+            -0.565,
+            0,
+            0.035
+          ],
+          "dimensions": [
+            0.03,
+            0.34,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_apron",
+          "relative_location": [
+            0.565,
+            0,
+            0.035
+          ],
+          "dimensions": [
+            0.03,
+            0.34,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "front_left_short_leg",
+          "relative_location": [
+            -0.48,
+            -0.14,
+            -0.145
+          ],
+          "dimensions": [
+            0.07,
+            0.07,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "front_right_short_leg",
+          "relative_location": [
+            0.48,
+            -0.14,
+            -0.145
+          ],
+          "dimensions": [
+            0.07,
+            0.07,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "back_left_short_leg",
+          "relative_location": [
+            -0.48,
+            0.14,
+            -0.145
+          ],
+          "dimensions": [
+            0.07,
+            0.07,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "back_right_short_leg",
+          "relative_location": [
+            0.48,
+            0.14,
+            -0.145
+          ],
+          "dimensions": [
+            0.07,
+            0.07,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "fabric",
+      "color_description": "light beige with a taupe blanket",
+      "description": "A rectangular upholstered bench in a light beige color, featuring a darker taupe blanket draped over its right side.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Media_Console",
+      "object_type": "media console",
+      "center_location": [
+        0.0,
+        -2.275,
+        0.25
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        3.141592653589793
+      ],
+      "bounding_dimensions": [
+        1.8,
+        0.45,
+        0.5
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "top_worktop_slab",
+          "relative_location": [
+            0,
+            0,
+            0.225
+          ],
+          "dimensions": [
+            1.8,
+            0.45,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "main_wood_console_body",
+          "relative_location": [
+            0,
+            0,
+            -0.025
+          ],
+          "dimensions": [
+            1.76,
+            0.41,
+            0.45
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_left_door_panel",
+          "relative_location": [
+            -0.66,
+            -0.215,
+            -0.035
+          ],
+          "dimensions": [
+            0.4,
+            0.02,
+            0.34
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_mid_left_drawer_panel",
+          "relative_location": [
+            -0.22,
+            -0.215,
+            -0.035
+          ],
+          "dimensions": [
+            0.4,
+            0.02,
+            0.34
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_mid_right_drawer_panel",
+          "relative_location": [
+            0.22,
+            -0.215,
+            -0.035
+          ],
+          "dimensions": [
+            0.4,
+            0.02,
+            0.34
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_right_door_panel",
+          "relative_location": [
+            0.66,
+            -0.215,
+            -0.035
+          ],
+          "dimensions": [
+            0.4,
+            0.02,
+            0.34
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "thin_shadow_gap_between_front_panels_1",
+          "relative_location": [
+            -0.44,
+            -0.226,
+            -0.035
+          ],
+          "dimensions": [
+            0.015,
+            0.008,
+            0.35
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "thin_shadow_gap_between_front_panels_2",
+          "relative_location": [
+            0,
+            -0.226,
+            -0.035
+          ],
+          "dimensions": [
+            0.015,
+            0.008,
+            0.35
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "thin_shadow_gap_between_front_panels_3",
+          "relative_location": [
+            0.44,
+            -0.226,
+            -0.035
+          ],
+          "dimensions": [
+            0.015,
+            0.008,
+            0.35
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "left_panel_handle",
+          "relative_location": [
+            -0.66,
+            -0.216,
+            0.055
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.18
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "mid_left_panel_handle",
+          "relative_location": [
+            -0.22,
+            -0.216,
+            0.055
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.18
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "mid_right_panel_handle",
+          "relative_location": [
+            0.22,
+            -0.216,
+            0.055
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.18
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "right_panel_handle",
+          "relative_location": [
+            0.66,
+            -0.216,
+            0.055
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.18
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "recessed_toe_kick",
+          "relative_location": [
+            0,
+            -0.12,
+            -0.225
+          ],
+          "dimensions": [
+            1.55,
+            0.2,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain",
+      "description": "A long, rectangular media console made of greyish-brown wood. Its top surface holds a small cluster of dark decorative objects, including what appears to be a sculpture and a small book or tray.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Plant",
+      "object_type": "potted plant",
+      "center_location": [
+        -1.45,
+        -2.2,
+        0.4
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.5,
+        0.5,
+        0.8
+      ],
+      "parts": [
+        {
+          "shape_type": "cylinder",
+          "name": "dark_grey_circular_planter_body",
+          "relative_location": [
+            0,
+            0,
+            -0.27
+          ],
+          "dimensions": [
+            0.34,
+            0.34,
+            0.26
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "dark_grey_planter_top_rim",
+          "relative_location": [
+            0,
+            0,
+            -0.12
+          ],
+          "dimensions": [
+            0.38,
+            0.38,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "dark_soil_surface",
+          "relative_location": [
+            0,
+            0,
+            -0.09
+          ],
+          "dimensions": [
+            0.3,
+            0.3,
+            0.025
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "central_plant_stem",
+          "relative_location": [
+            0,
+            0,
+            0.035
+          ],
+          "dimensions": [
+            0.035,
+            0.035,
+            0.25
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "left_plant_stem",
+          "relative_location": [
+            -0.07,
+            0.02,
+            0.015
+          ],
+          "dimensions": [
+            0.022,
+            0.022,
+            0.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "right_plant_stem",
+          "relative_location": [
+            0.07,
+            -0.015,
+            0.015
+          ],
+          "dimensions": [
+            0.022,
+            0.022,
+            0.2
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "central_bushy_green_leaves",
+          "relative_location": [
+            0,
+            0,
+            0.18
+          ],
+          "dimensions": [
+            0.3,
+            0.3,
+            0.3
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "top_bushy_green_leaves",
+          "relative_location": [
+            0.01,
+            0.01,
+            0.28
+          ],
+          "dimensions": [
+            0.24,
+            0.24,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "left_bushy_green_leaves",
+          "relative_location": [
+            -0.11,
+            0.015,
+            0.13
+          ],
+          "dimensions": [
+            0.25,
+            0.25,
+            0.25
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "right_bushy_green_leaves",
+          "relative_location": [
+            0.11,
+            -0.01,
+            0.14
+          ],
+          "dimensions": [
+            0.25,
+            0.25,
+            0.25
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "front_bushy_green_leaves",
+          "relative_location": [
+            0,
+            -0.11,
+            0.14
+          ],
+          "dimensions": [
+            0.24,
+            0.24,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "back_bushy_green_leaves",
+          "relative_location": [
+            0.005,
+            0.11,
+            0.13
+          ],
+          "dimensions": [
+            0.24,
+            0.24,
+            0.24
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "plant and ceramic/plastic pot",
+      "color_description": "green leaves in a dark grey pot",
+      "description": "A bushy green potted plant sitting in a dark grey, circular planter in the corner of the room.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Wardrobe_East",
+      "object_type": "wardrobe",
+      "center_location": [
+        3.45,
+        0.9,
+        1.2
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        -1.5707963267948966
+      ],
+      "bounding_dimensions": [
+        2.0,
+        0.6,
+        2.4
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "left_side_panel",
+          "relative_location": [
+            -0.98,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.04,
+            0.6,
+            2.4
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_side_panel",
+          "relative_location": [
+            0.98,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.04,
+            0.6,
+            2.4
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_panel",
+          "relative_location": [
+            0,
+            0.28,
+            0
+          ],
+          "dimensions": [
+            2.0,
+            0.04,
+            2.4
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "top_panel",
+          "relative_location": [
+            0,
+            0,
+            1.18
+          ],
+          "dimensions": [
+            2.0,
+            0.6,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_panel",
+          "relative_location": [
+            0,
+            0,
+            -1.18
+          ],
+          "dimensions": [
+            2.0,
+            0.6,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_vertical_divider",
+          "relative_location": [
+            -0.34,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.04,
+            0.56,
+            2.32
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_vertical_divider",
+          "relative_location": [
+            0.46,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.04,
+            0.56,
+            2.32
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_shelf_1",
+          "relative_location": [
+            -0.66,
+            -0.005,
+            -0.55
+          ],
+          "dimensions": [
+            0.56,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_shelf_2",
+          "relative_location": [
+            -0.66,
+            -0.005,
+            0.05
+          ],
+          "dimensions": [
+            0.56,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_shelf_3",
+          "relative_location": [
+            -0.66,
+            -0.005,
+            0.65
+          ],
+          "dimensions": [
+            0.56,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_shelf_1",
+          "relative_location": [
+            0.72,
+            -0.005,
+            -0.55
+          ],
+          "dimensions": [
+            0.44,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_shelf_2",
+          "relative_location": [
+            0.72,
+            -0.005,
+            0.05
+          ],
+          "dimensions": [
+            0.44,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_shelf_3",
+          "relative_location": [
+            0.72,
+            -0.005,
+            0.65
+          ],
+          "dimensions": [
+            0.44,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "hanging_bay_upper_shelf",
+          "relative_location": [
+            0.06,
+            -0.005,
+            0.95
+          ],
+          "dimensions": [
+            0.72,
+            0.54,
+            0.03
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "hanging_rail",
+          "relative_location": [
+            0.06,
+            -0.08,
+            0.72
+          ],
+          "dimensions": [
+            0.035,
+            0.035,
+            0.68
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "hanging_clothing_left",
+          "relative_location": [
+            -0.16,
+            -0.1,
+            0.32
+          ],
+          "dimensions": [
+            0.18,
+            0.06,
+            0.72
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "hanging_clothing_center",
+          "relative_location": [
+            0.06,
+            -0.1,
+            0.27
+          ],
+          "dimensions": [
+            0.2,
+            0.06,
+            0.82
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "hanging_clothing_right",
+          "relative_location": [
+            0.28,
+            -0.1,
+            0.34
+          ],
+          "dimensions": [
+            0.17,
+            0.06,
+            0.68
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain",
+      "description": "A large, open wardrobe system made of greyish-brown wood, featuring hanging rails with visible clothing and shelving units.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Wardrobe_North",
+      "object_type": "wardrobe",
+      "center_location": [
+        3.0,
+        2.2,
+        1.2
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        1.5,
+        0.6,
+        2.4
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "left_side_panel",
+          "relative_location": [
+            -0.73,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.04,
+            0.6,
+            2.4
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_side_panel",
+          "relative_location": [
+            0.73,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.04,
+            0.6,
+            2.4
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_panel",
+          "relative_location": [
+            0,
+            0.285,
+            0
+          ],
+          "dimensions": [
+            1.5,
+            0.03,
+            2.4
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "top_panel",
+          "relative_location": [
+            0,
+            0,
+            1.18
+          ],
+          "dimensions": [
+            1.5,
+            0.6,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_panel",
+          "relative_location": [
+            0,
+            0,
+            -1.18
+          ],
+          "dimensions": [
+            1.5,
+            0.6,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "upper_shelf",
+          "relative_location": [
+            0,
+            0,
+            0.82
+          ],
+          "dimensions": [
+            1.42,
+            0.54,
+            0.035
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "lower_shelf",
+          "relative_location": [
+            0,
+            0,
+            -0.82
+          ],
+          "dimensions": [
+            1.42,
+            0.54,
+            0.035
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "hanging_clothes_rail",
+          "relative_location": [
+            0,
+            -0.03,
+            0.55
+          ],
+          "dimensions": [
+            0.035,
+            0.035,
+            1.3
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_front_stile",
+          "relative_location": [
+            -0.73,
+            -0.285,
+            0
+          ],
+          "dimensions": [
+            0.055,
+            0.03,
+            2.32
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_front_stile",
+          "relative_location": [
+            0.73,
+            -0.285,
+            0
+          ],
+          "dimensions": [
+            0.055,
+            0.03,
+            2.32
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "top_front_rail",
+          "relative_location": [
+            0,
+            -0.285,
+            1.13
+          ],
+          "dimensions": [
+            1.46,
+            0.03,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_front_rail",
+          "relative_location": [
+            0,
+            -0.285,
+            -1.13
+          ],
+          "dimensions": [
+            1.46,
+            0.03,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain",
+      "description": "An open wooden wardrobe unit in a greyish-brown finish, displaying hanging clothes on a rail.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Closet_Bench",
+      "object_type": "bench",
+      "center_location": [
+        2.75,
+        0.0,
+        0.225
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.4,
+        1.2,
+        0.45
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "wooden_bench_top_slab",
+          "relative_location": [
+            0,
+            0,
+            0.195
+          ],
+          "dimensions": [
+            0.4,
+            1.2,
+            0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_left_leg",
+          "relative_location": [
+            -0.15,
+            -0.51,
+            -0.03
+          ],
+          "dimensions": [
+            0.06,
+            0.06,
+            0.39
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_right_leg",
+          "relative_location": [
+            0.15,
+            -0.51,
+            -0.03
+          ],
+          "dimensions": [
+            0.06,
+            0.06,
+            0.39
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_left_leg",
+          "relative_location": [
+            -0.15,
+            0.51,
+            -0.03
+          ],
+          "dimensions": [
+            0.06,
+            0.06,
+            0.39
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_right_leg",
+          "relative_location": [
+            0.15,
+            0.51,
+            -0.03
+          ],
+          "dimensions": [
+            0.06,
+            0.06,
+            0.39
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_side_support_apron",
+          "relative_location": [
+            -0.18,
+            0,
+            0.11
+          ],
+          "dimensions": [
+            0.04,
+            1.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_side_support_apron",
+          "relative_location": [
+            0.18,
+            0,
+            0.11
+          ],
+          "dimensions": [
+            0.04,
+            1.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_end_support_apron",
+          "relative_location": [
+            0,
+            -0.56,
+            0.11
+          ],
+          "dimensions": [
+            0.32,
+            0.04,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_end_support_apron",
+          "relative_location": [
+            0,
+            0.56,
+            0.11
+          ],
+          "dimensions": [
+            0.32,
+            0.04,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "light brown wood grain",
+      "description": "A long, narrow wooden bench in the center of the closet. On its surface, there is a round object, possibly a hat box, and a small dark rectangular item.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Dresser",
+      "object_type": "dresser",
+      "center_location": [
+        3.5,
+        -0.8,
+        0.45
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        -1.5707963267948966
+      ],
+      "bounding_dimensions": [
+        1.2,
+        0.5,
+        0.9
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "dresser_main_carcass",
+          "relative_location": [
+            0,
+            0.015,
+            -0.035
+          ],
+          "dimensions": [
+            1.16,
+            0.46,
+            0.79
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "top_surface_slab",
+          "relative_location": [
+            0,
+            0,
+            0.42
+          ],
+          "dimensions": [
+            1.2,
+            0.5,
+            0.06
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_plinth_base",
+          "relative_location": [
+            0,
+            0.03,
+            -0.425
+          ],
+          "dimensions": [
+            1.12,
+            0.38,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_drawer_top",
+          "relative_location": [
+            0,
+            -0.235,
+            0.255
+          ],
+          "dimensions": [
+            1.08,
+            0.03,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_drawer_upper_middle",
+          "relative_location": [
+            0,
+            -0.235,
+            0.065
+          ],
+          "dimensions": [
+            1.08,
+            0.03,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_drawer_lower_middle",
+          "relative_location": [
+            0,
+            -0.235,
+            -0.125
+          ],
+          "dimensions": [
+            1.08,
+            0.03,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_drawer_bottom",
+          "relative_location": [
+            0,
+            -0.235,
+            -0.315
+          ],
+          "dimensions": [
+            1.08,
+            0.03,
+            0.16
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "drawer_gap_horizontal_1",
+          "relative_location": [
+            0,
+            -0.252,
+            0.16
+          ],
+          "dimensions": [
+            1.1,
+            0.01,
+            0.015
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "drawer_gap_horizontal_2",
+          "relative_location": [
+            0,
+            -0.252,
+            -0.03
+          ],
+          "dimensions": [
+            1.1,
+            0.01,
+            0.015
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "drawer_gap_horizontal_3",
+          "relative_location": [
+            0,
+            -0.252,
+            -0.22
+          ],
+          "dimensions": [
+            1.1,
+            0.01,
+            0.015
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "top_drawer_handle",
+          "relative_location": [
+            0,
+            -0.248,
+            0.255
+          ],
+          "dimensions": [
+            0.025,
+            0.025,
+            0.32
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "upper_middle_drawer_handle",
+          "relative_location": [
+            0,
+            -0.248,
+            0.065
+          ],
+          "dimensions": [
+            0.025,
+            0.025,
+            0.32
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "lower_middle_drawer_handle",
+          "relative_location": [
+            0,
+            -0.248,
+            -0.125
+          ],
+          "dimensions": [
+            0.025,
+            0.025,
+            0.32
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "bottom_drawer_handle",
+          "relative_location": [
+            0,
+            -0.248,
+            -0.315
+          ],
+          "dimensions": [
+            0.025,
+            0.025,
+            0.32
+          ],
+          "rotation": [
+            0,
+            1.5708,
+            0
+          ]
+        }
+      ],
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain",
+      "description": "A rectangular wooden dresser in a greyish-brown finish. Its top surface holds a small cluster of items, appearing to be bottles or cosmetics, arranged near the right edge.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Floor_Mirror",
+      "object_type": "floor mirror",
+      "center_location": [
+        3.25,
+        -2.0,
+        0.9
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        -1.5707963267948966
+      ],
+      "bounding_dimensions": [
+        0.8,
+        0.1,
+        1.8
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "left_wood_frame",
+          "relative_location": [
+            -0.37,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.06,
+            0.08,
+            1.8
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_wood_frame",
+          "relative_location": [
+            0.37,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.06,
+            0.08,
+            1.8
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "top_wood_frame",
+          "relative_location": [
+            0,
+            0,
+            0.86
+          ],
+          "dimensions": [
+            0.8,
+            0.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_wood_frame",
+          "relative_location": [
+            0,
+            0,
+            -0.86
+          ],
+          "dimensions": [
+            0.8,
+            0.08,
+            0.08
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_glass_mirror_panel",
+          "relative_location": [
+            0,
+            -0.046,
+            0
+          ],
+          "dimensions": [
+            0.68,
+            0.008,
+            1.64
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "thin_backing_panel",
+          "relative_location": [
+            0,
+            0.043,
+            0
+          ],
+          "dimensions": [
+            0.72,
+            0.01,
+            1.68
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "glass and wood",
+      "color_description": "reflective surface with a brown frame",
+      "description": "A large, rectangular floor mirror with a simple brown wooden frame, positioned in the corner of the closet.",
+      "generated": true,
+      "source_stage": "",
+      "source_object_id": "",
+      "parent_code_match_name": ""
+    },
+    {
+      "name": "Orphan_obj_004_Book",
+      "object_type": "Book",
+      "center_location": [
+        -2.75,
+        -0.08999999999999998,
+        0.55
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.22,
+        0.16,
+        0.1
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "page_block",
+          "relative_location": [
+            0.005,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.205,
+            0.145,
+            0.076
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "top_cover",
+          "relative_location": [
+            0,
+            0,
+            0.044
+          ],
+          "dimensions": [
+            0.22,
+            0.16,
+            0.012
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "bottom_cover",
+          "relative_location": [
+            0,
+            0,
+            -0.044
+          ],
+          "dimensions": [
+            0.22,
+            0.16,
+            0.012
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "spine_binding",
+          "relative_location": [
+            -0.105,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.01,
+            0.16,
+            0.1
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_page_edge",
+          "relative_location": [
+            0.109,
+            0,
+            0
+          ],
+          "dimensions": [
+            0.002,
+            0.14,
+            0.07
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "Paper/Cardboard",
+      "color_description": "White",
+      "description": "A small white book placed on top of the side table between the two armchairs in the lounge area.",
+      "generated": true,
+      "source_stage": "stage7_orphan",
+      "source_object_id": "obj_004",
+      "parent_code_match_name": "Side_Table"
+    },
+    {
+      "name": "Orphan_obj_009_Table_Lamp_North",
+      "object_type": "Lighting Fixture",
+      "center_location": [
+        -1.2,
+        2.2474999999999996,
+        0.55
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.22,
+        0.16,
+        0.1
+      ],
+      "parts": [
+        {
+          "shape_type": "cylinder",
+          "name": "gold_metal_round_base",
+          "relative_location": [
+            0,
+            0,
+            -0.044
+          ],
+          "dimensions": [
+            0.09,
+            0.07,
+            0.012
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "gold_metal_stem",
+          "relative_location": [
+            0,
+            0,
+            -0.017
+          ],
+          "dimensions": [
+            0.014,
+            0.014,
+            0.045
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "warm_glowing_glass_bulb",
+          "relative_location": [
+            0,
+            0,
+            0.011
+          ],
+          "dimensions": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "warm_yellow_glass_lampshade",
+          "relative_location": [
+            0,
+            0,
+            0.0225
+          ],
+          "dimensions": [
+            0.18,
+            0.13,
+            0.055
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "gold_metal_lower_shade_rim",
+          "relative_location": [
+            0,
+            0,
+            -0.004
+          ],
+          "dimensions": [
+            0.185,
+            0.135,
+            0.006
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "gold_metal_upper_shade_rim",
+          "relative_location": [
+            0,
+            0,
+            0.047
+          ],
+          "dimensions": [
+            0.16,
+            0.115,
+            0.006
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "gold_metal_top_finial",
+          "relative_location": [
+            0,
+            0,
+            0.041
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.018
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "Glass/Metal",
+      "color_description": "Warm yellow/Gold",
+      "description": "A glowing table lamp resting on the north nightstand next to the bed.",
+      "generated": true,
+      "source_stage": "stage7_orphan",
+      "source_object_id": "obj_009",
+      "parent_code_match_name": "Nightstand_North"
+    },
+    {
+      "name": "Orphan_obj_012_Table_Lamp_South",
+      "object_type": "Lighting Fixture",
+      "center_location": [
+        1.2,
+        2.2474999999999996,
+        0.55
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounding_dimensions": [
+        0.22,
+        0.16,
+        0.1
+      ],
+      "parts": [
+        {
+          "shape_type": "cylinder",
+          "name": "gold_metal_base",
+          "relative_location": [
+            0,
+            0,
+            -0.044
+          ],
+          "dimensions": [
+            0.085,
+            0.065,
+            0.012
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "slender_gold_stem",
+          "relative_location": [
+            0,
+            0,
+            -0.017
+          ],
+          "dimensions": [
+            0.018,
+            0.018,
+            0.055
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "warm_glowing_bulb",
+          "relative_location": [
+            0,
+            0,
+            0.006
+          ],
+          "dimensions": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "warm_yellow_glass_lampshade",
+          "relative_location": [
+            0,
+            0,
+            0.018
+          ],
+          "dimensions": [
+            0.18,
+            0.13,
+            0.05
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "small_gold_finial",
+          "relative_location": [
+            0,
+            0,
+            0.047
+          ],
+          "dimensions": [
+            0.012,
+            0.012,
+            0.012
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "Glass/Metal",
+      "color_description": "Warm yellow/Gold",
+      "description": "A glowing table lamp resting on the south nightstand next to the bed.",
+      "generated": true,
+      "source_stage": "stage7_orphan",
+      "source_object_id": "obj_012",
+      "parent_code_match_name": "Nightstand_South"
+    },
+    {
+      "name": "Orphan_obj_017_Decor_Item_Console",
+      "object_type": "Decorative Object",
+      "center_location": [
+        0.592,
+        -2.20375,
+        0.55
+      ],
+      "base_rotation": [
+        0.0,
+        0.0,
+        3.141592653589793
+      ],
+      "bounding_dimensions": [
+        0.22,
+        0.16,
+        0.1
+      ],
+      "parts": [
+        {
+          "shape_type": "box",
+          "name": "shallow_rectangular_display_tray_base",
+          "relative_location": [
+            0,
+            0,
+            -0.045
+          ],
+          "dimensions": [
+            0.2,
+            0.14,
+            0.01
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "front_tray_lip",
+          "relative_location": [
+            0,
+            -0.066,
+            -0.037
+          ],
+          "dimensions": [
+            0.2,
+            0.008,
+            0.016
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "back_tray_lip",
+          "relative_location": [
+            0,
+            0.066,
+            -0.037
+          ],
+          "dimensions": [
+            0.2,
+            0.008,
+            0.016
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "left_tray_lip",
+          "relative_location": [
+            -0.096,
+            0,
+            -0.037
+          ],
+          "dimensions": [
+            0.008,
+            0.14,
+            0.016
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "box",
+          "name": "right_tray_lip",
+          "relative_location": [
+            0.096,
+            0,
+            -0.037
+          ],
+          "dimensions": [
+            0.008,
+            0.14,
+            0.016
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "rounded_ceramic_vase_body",
+          "relative_location": [
+            -0.05,
+            -0.005,
+            -0.0125
+          ],
+          "dimensions": [
+            0.06,
+            0.06,
+            0.055
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "narrow_ceramic_vase_neck",
+          "relative_location": [
+            -0.05,
+            -0.005,
+            0.0325
+          ],
+          "dimensions": [
+            0.026,
+            0.026,
+            0.035
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cylinder",
+          "name": "short_metal_candle_holder",
+          "relative_location": [
+            0.035,
+            0.025,
+            -0.012
+          ],
+          "dimensions": [
+            0.038,
+            0.038,
+            0.056
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "sphere",
+          "name": "small_rounded_decor_orb",
+          "relative_location": [
+            0.072,
+            -0.028,
+            -0.018
+          ],
+          "dimensions": [
+            0.042,
+            0.042,
+            0.042
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "shape_type": "cone",
+          "name": "small_tapered_metal_finial",
+          "relative_location": [
+            0.035,
+            0.025,
+            0.029
+          ],
+          "dimensions": [
+            0.026,
+            0.026,
+            0.026
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "material_description": "Ceramic/Metal",
+      "color_description": "Dark gray/Black",
+      "description": "Small decorative items placed on top of the media console at the bottom of the main bedroom area.",
+      "generated": true,
+      "source_stage": "stage7_orphan",
+      "source_object_id": "obj_017",
+      "parent_code_match_name": "Media_Console"
+    }
+  ],
+  "orphan_placement_report": {
+    "added": [
+      {
+        "name": "Orphan_obj_004_Book",
+        "original_name": "Book",
+        "parent_code_match_name": "Side_Table",
+        "location": [
+          -2.75,
+          -0.08999999999999998,
+          0.55
+        ],
+        "dimensions": [
+          0.22,
+          0.16,
+          0.1
+        ]
+      },
+      {
+        "name": "Orphan_obj_009_Table_Lamp_North",
+        "original_name": "Table Lamp (North)",
+        "parent_code_match_name": "Nightstand_North",
+        "location": [
+          -1.2,
+          2.2474999999999996,
+          0.55
+        ],
+        "dimensions": [
+          0.22,
+          0.16,
+          0.1
+        ]
+      },
+      {
+        "name": "Orphan_obj_012_Table_Lamp_South",
+        "original_name": "Table Lamp (South)",
+        "parent_code_match_name": "Nightstand_South",
+        "location": [
+          1.2,
+          2.2474999999999996,
+          0.55
+        ],
+        "dimensions": [
+          0.22,
+          0.16,
+          0.1
+        ]
+      },
+      {
+        "name": "Orphan_obj_017_Decor_Item_Console",
+        "original_name": "Decor Item (Console)",
+        "parent_code_match_name": "Media_Console",
+        "location": [
+          0.592,
+          -2.20375,
+          0.55
+        ],
+        "dimensions": [
+          0.22,
+          0.16,
+          0.1
+        ]
+      }
+    ],
+    "skipped": [
+      {
+        "name": "Curtains",
+        "reason": "only surface orphans can be placed without explicit coordinates"
+      },
+      {
+        "name": "Bench",
+        "reason": "only surface orphans can be placed without explicit coordinates"
+      },
+      {
+        "name": "Area Rug",
+        "reason": "only surface orphans can be placed without explicit coordinates"
+      },
+      {
+        "name": "Built-in Wardrobe (L-shape)",
+        "reason": "only surface orphans can be placed without explicit coordinates"
+      },
+      {
+        "name": "Runner Rug",
+        "reason": "only surface orphans can be placed without explicit coordinates"
+      }
+    ]
+  },
+  "summary": {
+    "total_source_objects": 19,
+    "generated_count": 19,
+    "total_parts": 192,
+    "orphan_objects_added": 4,
+    "orphan_objects_skipped": 5,
+    "last_updated": "2026-05-21T11:16:16.046207"
+  }
+}

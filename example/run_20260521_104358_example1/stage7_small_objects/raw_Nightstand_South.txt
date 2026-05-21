@@ -1,0 +1,30 @@
+```json
+{
+  "parent_name": "Nightstand_South",
+  "planes": [
+    {
+      "plane_id": "Nightstand_South__top",
+      "plane_type": "top",
+      "items": [
+        {
+          "name": "Book_Dark_1",
+          "item_type": "book",
+          "shape": "box",
+          "local_uv": [
+            0.17,
+            0.35
+          ],
+          "size": [
+            0.10,
+            0.15,
+            0.02
+          ],
+          "rotation_z": 0.0,
+          "color_hint": "dark brown",
+          "description": "A small dark book lying flat on the left side of the nightstand, matching the dark item seen in the reference image."
+        }
+      ]
+    }
+  ]
+}
+```

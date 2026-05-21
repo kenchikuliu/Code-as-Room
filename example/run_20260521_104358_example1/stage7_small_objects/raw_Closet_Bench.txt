@@ -1,0 +1,38 @@
+```json
+{
+  "parent_name": "Closet_Bench",
+  "planes": [
+    {
+      "plane_id": "Closet_Bench__top",
+      "plane_type": "top",
+      "items": [
+        {
+          "name": "Hat_Box_1",
+          "item_type": "decorative box",
+          "shape": "cylinder",
+          "local_uv": [0.5, 0.65],
+          "size": [0.25, 0.25, 0.15],
+          "rotation_z": 0.0,
+          "color_hint": "beige",
+          "description": "A round beige hat box placed on the bench, matching the room's neutral palette."
+        },
+        {
+          "name": "Small_Dark_Box_1",
+          "item_type": "decorative box",
+          "shape": "box",
+          "local_uv": [0.5, 0.35],
+          "size": [0.20, 0.15, 0.05],
+          "rotation_z": 0.0,
+          "color_hint": "dark brown",
+          "description": "A small dark rectangular item, possibly a jewelry box or accessory case, resting on the bench."
+        }
+      ]
+    },
+    {
+      "plane_id": "Closet_Bench__seat",
+      "plane_type": "seat",
+      "items": []
+    }
+  ]
+}
+```

@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Armchair_North",
+    "x": -2.75,
+    "y": 1.0,
+    "z": 0.45,
+    "width": 0.8,
+    "depth": 0.8,
+    "height": 0.9
+  },
+  {
+    "name": "Armchair_South",
+    "x": -2.75,
+    "y": -1.0,
+    "z": 0.45,
+    "width": 0.8,
+    "depth": 0.8,
+    "height": 0.9
+  },
+  {
+    "name": "Bed",
+    "x": 0.0,
+    "y": 1.45,
+    "z": 0.3,
+    "width": 1.8,
+    "depth": 2.1,
+    "height": 0.6
+  },
+  {
+    "name": "Bench",
+    "x": 0.0,
+    "y": 0.2,
+    "z": 0.22,
+    "width": 1.2,
+    "depth": 0.4,
+    "height": 0.45
+  },
+  {
+    "name": "Closet_Bench",
+    "x": 2.45,
+    "y": 0.0,
+    "z": 0.22,
+    "width": 0.4,
+    "depth": 1.2,
+    "height": 0.45
+  },
+  {
+    "name": "Dresser",
+    "x": 3.5,
+    "y": -0.8,
+    "z": 0.45,
+    "width": 1.2,
+    "depth": 0.5,
+    "height": 0.9
+  },
+  {
+    "name": "Floor_Lamp",
+    "x": -3.45,
+    "y": 2.2,
+    "z": 0.8,
+    "width": 0.4,
+    "depth": 0.4,
+    "height": 1.6
+  },
+  {
+    "name": "Floor_Mirror",
+    "x": 3.25,
+    "y": -1.8,
+    "z": 0.9,
+    "width": 1.0,
+    "depth": 1.0,
+    "height": 1.0
+  },
+  {
+    "name": "Media_Console",
+    "x": 0.0,
+    "y": -2.28,
+    "z": 0.25,
+    "width": 1.8,
+    "depth": 0.45,
+    "height": 0.5
+  },
+  {
+    "name": "Nightstand_North",
+    "x": -1.2,
+    "y": 2.3,
+    "z": 0.25,
+    "width": 0.5,
+    "depth": 0.4,
+    "height": 0.5
+  },
+  {
+    "name": "Nightstand_South",
+    "x": 1.2,
+    "y": 2.3,
+    "z": 0.25,
+    "width": 0.5,
+    "depth": 0.4,
+    "height": 0.5
+  },
+  {
+    "name": "Partition_Closet_Header",
+    "x": 1.75,
+    "y": -1.9,
+    "z": 2.45,
+    "width": 0.1,
+    "depth": 1.2,
+    "height": 0.7
+  },
+  {
+    "name": "Partition_Closet_Main",
+    "x": 1.75,
+    "y": 0.6,
+    "z": 1.4,
+    "width": 0.1,
+    "depth": 3.8,
+    "height": 2.8
+  },
+  {
+    "name": "Partition_Lounge_Header",
+    "x": -1.75,
+    "y": 0.0,
+    "z": 2.65,
+    "width": 0.1,
+    "depth": 1.6,
+    "height": 0.3
+  },
+  {
+    "name": "Partition_Lounge_North",
+    "x": -1.75,
+    "y": 1.65,
+    "z": 1.4,
+    "width": 0.1,
+    "depth": 1.7,
+    "height": 2.8
+  },
+  {
+    "name": "Partition_Lounge_South",
+    "x": -1.75,
+    "y": -1.65,
+    "z": 1.4,
+    "width": 0.1,
+    "depth": 1.7,
+    "height": 2.8
+  },
+  {
+    "name": "Plant",
+    "x": -1.45,
+    "y": -2.2,
+    "z": 0.4,
+    "width": 0.5,
+    "depth": 0.5,
+    "height": 0.8
+  },
+  {
+    "name": "Side_Table",
+    "x": -2.75,
+    "y": 0.0,
+    "z": 0.25,
+    "width": 0.5,
+    "depth": 0.5,
+    "height": 0.5
+  },
+  {
+    "name": "Wardrobe_East",
+    "x": 3.45,
+    "y": 0.9,
+    "z": 1.2,
+    "width": 2.0,
+    "depth": 0.6,
+    "height": 2.4
+  },
+  {
+    "name": "Wardrobe_North",
+    "x": 2.7,
+    "y": 2.2,
+    "z": 1.2,
+    "width": 1.5,
+    "depth": 0.6,
+    "height": 2.4
+  },
+  {
+    "name": "Window_West",
+    "x": -3.83,
+    "y": 0.0,
+    "z": 1.4,
+    "width": 0.2,
+    "depth": 2.0,
+    "height": 2.0
+  }
+]

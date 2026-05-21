@@ -1,0 +1,445 @@
+{
+  "nodes": [
+    {
+      "id": "corner_NE",
+      "node_kind": "architecture",
+      "label": "Northeast corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "NE",
+      "is_virtual": true
+    },
+    {
+      "id": "corner_NW",
+      "node_kind": "architecture",
+      "label": "Northwest corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "NW",
+      "is_virtual": true
+    },
+    {
+      "id": "corner_SE",
+      "node_kind": "architecture",
+      "label": "Southeast corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "SE",
+      "is_virtual": true
+    },
+    {
+      "id": "corner_SW",
+      "node_kind": "architecture",
+      "label": "Southwest corner anchor (virtual)",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "corner",
+      "location": "SW",
+      "is_virtual": true
+    },
+    {
+      "id": "feat_001",
+      "node_kind": "architecture",
+      "label": "Outer boundary wall enclosing the entire space.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": ""
+    },
+    {
+      "id": "feat_002",
+      "node_kind": "architecture",
+      "label": "Partial wall separating the lounge area from the main bedroom.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": "N"
+    },
+    {
+      "id": "feat_003",
+      "node_kind": "architecture",
+      "label": "Partial wall separating the lounge area from the main bedroom.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": "S"
+    },
+    {
+      "id": "feat_004",
+      "node_kind": "architecture",
+      "label": "Large open passage between the lounge area and the main bedroom.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "doorway",
+      "location": ""
+    },
+    {
+      "id": "feat_005",
+      "node_kind": "architecture",
+      "label": "Full interior partition wall separating the main bedroom from the walk-in closet.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "wall",
+      "location": ""
+    },
+    {
+      "id": "feat_006",
+      "node_kind": "architecture",
+      "label": "Large window on the west wall in the lounge area.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "window",
+      "location": "W"
+    },
+    {
+      "id": "feat_007",
+      "node_kind": "architecture",
+      "label": "Main entrance door to the suite, located in the walk-in closet area.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "wall",
+      "arch_subtype": "door",
+      "location": "S"
+    },
+    {
+      "id": "feat_008",
+      "node_kind": "architecture",
+      "label": "Open passage connecting the main bedroom and the walk-in closet.",
+      "zone_id": "global",
+      "type": "Fixed",
+      "placement_type": "floor",
+      "arch_subtype": "doorway",
+      "location": "S"
+    },
+    {
+      "id": "obj_001",
+      "node_kind": "object",
+      "label": "Armchair (North)",
+      "zone_id": "zone_01",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_002",
+      "node_kind": "object",
+      "label": "Armchair (South)",
+      "zone_id": "zone_01",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_003",
+      "node_kind": "object",
+      "label": "Side Table",
+      "zone_id": "zone_01",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_007",
+      "node_kind": "object",
+      "label": "Bed",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_008",
+      "node_kind": "object",
+      "label": "Nightstand (North)",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_011",
+      "node_kind": "object",
+      "label": "Nightstand (South)",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_014",
+      "node_kind": "object",
+      "label": "Bench",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_016",
+      "node_kind": "object",
+      "label": "Media Console",
+      "zone_id": "zone_02",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_020",
+      "node_kind": "object",
+      "label": "Built-in Wardrobe (L-shape)",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_021",
+      "node_kind": "object",
+      "label": "Closet Bench/Island",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_024",
+      "node_kind": "object",
+      "label": "Dresser",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    },
+    {
+      "id": "obj_027",
+      "node_kind": "object",
+      "label": "Floor Mirror",
+      "zone_id": "zone_03",
+      "type": "Major",
+      "placement_type": "floor",
+      "parent_id": null
+    }
+  ],
+  "parent_edges_hint": [],
+  "arch_by_location": {
+    "wall:between lounge area and main bedroom area (north)": "feat_002",
+    "wall:n": "feat_002",
+    "wall:between lounge area and main bedroom area (south)": "feat_003",
+    "wall:s": "feat_003"
+  },
+  "corner_by_dir": {
+    "NE": "corner_NE",
+    "NW": "corner_NW",
+    "SE": "corner_SE",
+    "SW": "corner_SW"
+  },
+  "zone_meta": {
+    "zone_01": {
+      "label": "Lounge Area",
+      "function": "Relaxation and seating"
+    },
+    "zone_02": {
+      "label": "Main Bedroom Area",
+      "function": "Sleeping and resting"
+    },
+    "zone_03": {
+      "label": "Walk-in Closet / Dressing Area",
+      "function": "Clothing storage and dressing"
+    }
+  },
+  "minor_records": [
+    {
+      "id": "obj_004",
+      "label": "Book",
+      "zone_id": "zone_01",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_003",
+      "parent_label": "Side Table",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_005",
+      "label": "Floor Lamp",
+      "zone_id": "zone_01",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_006",
+      "label": "Curtains",
+      "zone_id": "zone_01",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_009",
+      "label": "Table Lamp (North)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_008",
+      "parent_label": "Nightstand (North)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_010",
+      "label": "Small Decor (North Nightstand)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_008",
+      "parent_label": "Nightstand (North)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_012",
+      "label": "Table Lamp (South)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_011",
+      "parent_label": "Nightstand (South)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_013",
+      "label": "Small Decor (South Nightstand)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_011",
+      "parent_label": "Nightstand (South)",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_015",
+      "label": "Area Rug",
+      "zone_id": "zone_02",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_017",
+      "label": "Decor Item (Console)",
+      "zone_id": "zone_02",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_016",
+      "parent_label": "Media Console",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_018",
+      "label": "Potted Plant",
+      "zone_id": "zone_02",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_019",
+      "label": "Wall Art (South)",
+      "zone_id": "zone_02",
+      "placement_type": "wall",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_022",
+      "label": "Decor Item (Closet Bench)",
+      "zone_id": "zone_03",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_021",
+      "parent_label": "Closet Bench/Island",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_023",
+      "label": "Runner Rug",
+      "zone_id": "zone_03",
+      "placement_type": "floor",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    },
+    {
+      "id": "obj_025",
+      "label": "Small Decor (Dresser)",
+      "zone_id": "zone_03",
+      "placement_type": "surface",
+      "category": "minor",
+      "parent_id": "obj_024",
+      "parent_label": "Dresser",
+      "parent_placement_type": "floor",
+      "parent_category": "major",
+      "parent_kind": "object"
+    },
+    {
+      "id": "obj_026",
+      "label": "Wall Mirror",
+      "zone_id": "zone_03",
+      "placement_type": "wall",
+      "category": "minor",
+      "parent_id": null,
+      "parent_label": null,
+      "parent_placement_type": null,
+      "parent_category": null,
+      "parent_kind": null
+    }
+  ]
+}

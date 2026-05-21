@@ -1,0 +1,64 @@
+```json
+{
+  "parent_name": "Dresser",
+  "planes": [
+    {
+      "plane_id": "Dresser__top",
+      "plane_type": "top",
+      "items": [
+        {
+          "name": "Cosmetic_Box",
+          "item_type": "decorative_box",
+          "shape": "box",
+          "local_uv": [
+            0.85,
+            0.5
+          ],
+          "size": [
+            0.15,
+            0.1,
+            0.08
+          ],
+          "rotation_z": 0,
+          "color_hint": "Taupe",
+          "description": "A small taupe decorative box for cosmetics or jewelry, placed near the edge."
+        },
+        {
+          "name": "Perfume_Bottle_1",
+          "item_type": "bottle",
+          "shape": "cylinder",
+          "local_uv": [
+            0.72,
+            0.35
+          ],
+          "size": [
+            0.05,
+            0.05,
+            0.12
+          ],
+          "rotation_z": 0,
+          "color_hint": "Clear glass with gold cap",
+          "description": "A small clear glass perfume bottle."
+        },
+        {
+          "name": "Perfume_Bottle_2",
+          "item_type": "bottle",
+          "shape": "cylinder",
+          "local_uv": [
+            0.72,
+            0.65
+          ],
+          "size": [
+            0.06,
+            0.06,
+            0.15
+          ],
+          "rotation_z": 0,
+          "color_hint": "Frosted glass",
+          "description": "A small frosted glass cosmetic bottle."
+        }
+      ]
+    }
+  ]
+}
+```

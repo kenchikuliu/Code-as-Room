@@ -1,0 +1,1291 @@
+{
+  "room_style": {
+    "style_name": "Soft Contemporary",
+    "style_description": "The room embodies a soft contemporary aesthetic, characterized by clean lines, plush upholstery, and a soothing neutral color palette. Medium-toned wood flooring and matching cabinetry add warmth, perfectly complementing the beige and taupe textiles. The symmetrical layout and distinct functional zones create a highly organized yet deeply inviting atmosphere.",
+    "color_palette": [
+      "Beige",
+      "Taupe",
+      "Medium Brown"
+    ],
+    "mood": "Warm, serene, and inviting",
+    "era": "Contemporary",
+    "keywords": [
+      "Neutral",
+      "Symmetrical",
+      "Cozy",
+      "Wood accents",
+      "Organized"
+    ]
+  },
+  "objects": [
+    {
+      "name": "Armchair_North",
+      "shape": "box",
+      "location": [
+        -2.75,
+        1.0,
+        0.45
+      ],
+      "dimensions": [
+        0.8,
+        0.8,
+        0.9
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.7853981633974483
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        45.0
+      ],
+      "material_name": "FabricMat",
+      "collection": "Zone_01_Lounge",
+      "description": "A plush, light beige fabric armchair with a square design, angled towards the center of the lounge area.",
+      "object_type": "armchair",
+      "appearance": "A plush, square-shaped armchair angled at 45 degrees towards the center of the room, featuring thick cushions and armrests.",
+      "material_description": "fabric",
+      "color_description": "light beige"
+    },
+    {
+      "name": "Armchair_South",
+      "shape": "box",
+      "location": [
+        -2.75,
+        -1.0,
+        0.45
+      ],
+      "dimensions": [
+        0.8,
+        0.8,
+        0.9
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        2.356194490192345
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        135.0
+      ],
+      "material_name": "FabricMat",
+      "collection": "Zone_01_Lounge",
+      "description": "A plush, light beige fabric armchair with a square design, angled towards the center of the lounge area to mirror the opposite chair.",
+      "object_type": "armchair",
+      "appearance": "A plush, square-shaped armchair angled at 135 degrees, mirroring the northern chair with thick cushions and armrests.",
+      "material_description": "fabric",
+      "color_description": "light beige"
+    },
+    {
+      "name": "Side_Table",
+      "shape": "box",
+      "location": [
+        -2.75,
+        0.0,
+        0.25
+      ],
+      "dimensions": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_01_Lounge",
+      "description": "A small, square side table made of light brown wood. It has a single white rectangular object, possibly a book, resting in the center of its surface.",
+      "object_type": "side table",
+      "appearance": "A small, square table positioned between the armchairs. A single white rectangular object, likely a book, rests in the center of its top surface.",
+      "material_description": "wood",
+      "color_description": "light brown wood grain"
+    },
+    {
+      "name": "Floor_Lamp",
+      "shape": "cylinder",
+      "location": [
+        -3.45,
+        2.2,
+        0.8
+      ],
+      "dimensions": [
+        0.4,
+        0.4,
+        1.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_01_Lounge",
+      "description": "A modern floor lamp with a circular, glowing warm white shade and metallic accents, positioned in the corner.",
+      "object_type": "floor lamp",
+      "appearance": "A modern lamp with a circular, ring-like glowing shade mounted on a slender stand.",
+      "material_description": "metal and glass/acrylic",
+      "color_description": "warm white glow with brass/gold accents"
+    },
+    {
+      "name": "Bed",
+      "shape": "box",
+      "location": [
+        0.0,
+        1.45,
+        0.3
+      ],
+      "dimensions": [
+        1.8,
+        2.1,
+        0.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "FabricMat",
+      "collection": "Zone_02_Bedroom",
+      "description": "A large bed with a light beige upholstered headboard, dressed in white linens with taupe pillows and a matching folded throw blanket across the foot.",
+      "object_type": "bed",
+      "appearance": "A large rectangular bed with an upholstered headboard, dressed with multiple pillows and a folded throw blanket across the foot.",
+      "material_description": "fabric",
+      "color_description": "white bedding, taupe pillows and throw, light beige headboard"
+    },
+    {
+      "name": "Nightstand_North",
+      "shape": "box",
+      "location": [
+        -1.2,
+        2.3,
+        0.25
+      ],
+      "dimensions": [
+        0.5,
+        0.4,
+        0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_02_Bedroom",
+      "description": "A rectangular light brown wood nightstand. On its surface sits a circular glowing table lamp and a small dark rectangular object.",
+      "object_type": "nightstand",
+      "appearance": "A rectangular bedside table with a drawer. On its surface sits a circular glowing table lamp and a small dark rectangular object.",
+      "material_description": "wood",
+      "color_description": "light brown wood grain"
+    },
+    {
+      "name": "Nightstand_South",
+      "shape": "box",
+      "location": [
+        1.2,
+        2.3,
+        0.25
+      ],
+      "dimensions": [
+        0.5,
+        0.4,
+        0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_02_Bedroom",
+      "description": "A rectangular light brown wood nightstand featuring a circular glowing table lamp and a small dark item on its top surface.",
+      "object_type": "nightstand",
+      "appearance": "A rectangular bedside table with a drawer. Its top surface holds a circular glowing table lamp and a small dark item.",
+      "material_description": "wood",
+      "color_description": "light brown wood grain"
+    },
+    {
+      "name": "Bench",
+      "shape": "box",
+      "location": [
+        0.0,
+        0.1999999999999999,
+        0.225
+      ],
+      "dimensions": [
+        1.2,
+        0.4,
+        0.45
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "FabricMat",
+      "collection": "Zone_02_Bedroom",
+      "description": "A rectangular upholstered bench in a light beige color, featuring a darker taupe blanket draped over its right side.",
+      "object_type": "bedroom bench",
+      "appearance": "A rectangular, upholstered bench positioned at the foot of the bed, featuring a folded blanket draped over its right side.",
+      "material_description": "fabric",
+      "color_description": "light beige with a taupe blanket"
+    },
+    {
+      "name": "Media_Console",
+      "shape": "box",
+      "location": [
+        0.0,
+        -2.275,
+        0.25
+      ],
+      "dimensions": [
+        1.8,
+        0.45,
+        0.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        3.141592653589793
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        180.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_02_Bedroom",
+      "description": "A long, rectangular media console made of greyish-brown wood. Its top surface holds a small cluster of dark decorative objects, including what appears to be a sculpture and a small book or tray.",
+      "object_type": "media console",
+      "appearance": "A long, rectangular low-profile cabinet. Its top surface holds a small cluster of dark decorative objects, including a sculptural piece and a flat rectangular item, arranged near the center.",
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain"
+    },
+    {
+      "name": "Plant",
+      "shape": "cylinder",
+      "location": [
+        -1.45,
+        -2.2,
+        0.4
+      ],
+      "dimensions": [
+        0.5,
+        0.5,
+        0.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "FabricMat",
+      "collection": "Zone_02_Bedroom",
+      "description": "A bushy green potted plant sitting in a dark grey, circular planter in the corner of the room.",
+      "object_type": "potted plant",
+      "appearance": "A bushy, round plant with dense foliage sitting in a simple cylindrical pot.",
+      "material_description": "plant and ceramic/plastic pot",
+      "color_description": "green leaves in a dark grey pot"
+    },
+    {
+      "name": "Wardrobe_East",
+      "shape": "box",
+      "location": [
+        3.45,
+        0.9,
+        1.2
+      ],
+      "dimensions": [
+        2.0,
+        0.6,
+        2.4
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -1.5707963267948966
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_03_Closet",
+      "description": "A large, open wardrobe system made of greyish-brown wood, featuring hanging rails with visible clothing and shelving units.",
+      "object_type": "wardrobe",
+      "appearance": "A large, built-in open closet system featuring hanging rails with visible clothing and shelving units.",
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain"
+    },
+    {
+      "name": "Wardrobe_North",
+      "shape": "box",
+      "location": [
+        3.0,
+        2.2,
+        1.2
+      ],
+      "dimensions": [
+        1.5,
+        0.6,
+        2.4
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_03_Closet",
+      "description": "An open wooden wardrobe unit in a greyish-brown finish, displaying hanging clothes on a rail.",
+      "object_type": "wardrobe",
+      "appearance": "A built-in open closet section featuring a hanging rail with several garments displayed.",
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain"
+    },
+    {
+      "name": "Closet_Bench",
+      "shape": "box",
+      "location": [
+        2.75,
+        0.0,
+        0.225
+      ],
+      "dimensions": [
+        0.4,
+        1.2,
+        0.45
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_03_Closet",
+      "description": "A long, narrow wooden bench in the center of the closet. On its surface, there is a round object, possibly a hat box, and a small dark rectangular item.",
+      "object_type": "bench",
+      "appearance": "A long, narrow rectangular bench acting as an island. On its surface, there is a round white object and a dark rectangular item placed near the center.",
+      "material_description": "wood",
+      "color_description": "light brown wood grain"
+    },
+    {
+      "name": "Dresser",
+      "shape": "box",
+      "location": [
+        3.5,
+        -0.8,
+        0.45
+      ],
+      "dimensions": [
+        1.2,
+        0.5,
+        0.9
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -1.5707963267948966
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "material_name": "WoodMat",
+      "collection": "Zone_03_Closet",
+      "description": "A rectangular wooden dresser in a greyish-brown finish. Its top surface holds a small cluster of items, appearing to be bottles or cosmetics, arranged near the right edge.",
+      "object_type": "dresser",
+      "appearance": "A rectangular drawer unit. Its top surface holds a small cluster of items, appearing to be bottles or cosmetics, arranged near the right side.",
+      "material_description": "wood",
+      "color_description": "greyish-brown wood grain"
+    },
+    {
+      "name": "Floor_Mirror",
+      "shape": "box",
+      "location": [
+        3.25,
+        -2.0,
+        0.9
+      ],
+      "dimensions": [
+        0.8,
+        0.1,
+        1.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -1.5707963267948966
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        -90.0
+      ],
+      "material_name": "MirrorMat",
+      "collection": "Zone_03_Closet",
+      "description": "A large, rectangular floor mirror with a simple brown wooden frame, positioned in the corner of the closet.",
+      "object_type": "floor mirror",
+      "appearance": "A large, rectangular mirror with a simple frame, leaning against or mounted on the wall.",
+      "material_description": "glass and wood",
+      "color_description": "reflective surface with a brown frame"
+    },
+    {
+      "name": "Wall_Art_South",
+      "shape": "box",
+      "location": [
+        0.0,
+        -2.475,
+        1.5
+      ],
+      "dimensions": [
+        1.2,
+        0.05,
+        0.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "ArtMat",
+      "collection": "Wall_Decorations",
+      "description": "A rectangular piece of framed wall art with a dark frame and a light-colored center, mounted low on the wall.",
+      "object_type": "framed art",
+      "appearance": "A wide, rectangular framed piece of art with a dark border and a light interior.",
+      "material_description": "wood and paper/canvas",
+      "color_description": "dark frame with a white/light grey center"
+    },
+    {
+      "name": "Wall_Mirror_East",
+      "shape": "box",
+      "location": [
+        3.725,
+        -0.8,
+        1.5
+      ],
+      "dimensions": [
+        0.05,
+        0.8,
+        1.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_degrees": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "material_name": "MirrorMat",
+      "collection": "Wall_Decorations",
+      "description": "A rectangular wall mirror mounted above the dresser, providing a reflective surface for the dressing area.",
+      "object_type": "wall mirror",
+      "appearance": "A rectangular mirror mounted flush against the wall above the dresser.",
+      "material_description": "glass",
+      "color_description": "reflective"
+    }
+  ],
+  "inventory_objects": [
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_001",
+      "name": "Armchair (North)",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Armchair_North",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_002",
+      "name": "Armchair (South)",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Armchair_South",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_003",
+      "name": "Side Table",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Side_Table",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_004",
+      "name": "Book",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_003",
+      "parent_name": "Side Table",
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Book",
+        "parent_id": "obj_003",
+        "parent_label": "Side Table",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Side_Table"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_005",
+      "name": "Floor Lamp",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Floor Lamp",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": true,
+      "code_match_name": "Floor_Lamp",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_006",
+      "name": "Curtains",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Curtains",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_007",
+      "name": "Bed",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Bed",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_008",
+      "name": "Nightstand (North)",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Nightstand_North",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_009",
+      "name": "Table Lamp (North)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_008",
+      "parent_name": "Nightstand (North)",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Table Lamp (North)",
+        "parent_id": "obj_008",
+        "parent_label": "Nightstand (North)",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Nightstand_North"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_010",
+      "name": "Small Decor (North Nightstand)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_008",
+      "parent_name": "Nightstand (North)",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Small Decor (North Nightstand)",
+        "parent_id": "obj_008",
+        "parent_label": "Nightstand (North)",
+        "parent_kind": "object"
+      },
+      "represented_in_code": true,
+      "code_match_name": "Nightstand_North",
+      "parent_code_match_name": "Nightstand_North"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_011",
+      "name": "Nightstand (South)",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Nightstand_South",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_012",
+      "name": "Table Lamp (South)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_011",
+      "parent_name": "Nightstand (South)",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Table Lamp (South)",
+        "parent_id": "obj_011",
+        "parent_label": "Nightstand (South)",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Nightstand_South"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_013",
+      "name": "Small Decor (South Nightstand)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_011",
+      "parent_name": "Nightstand (South)",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Small Decor (South Nightstand)",
+        "parent_id": "obj_011",
+        "parent_label": "Nightstand (South)",
+        "parent_kind": "object"
+      },
+      "represented_in_code": true,
+      "code_match_name": "Nightstand_South",
+      "parent_code_match_name": "Nightstand_South"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_014",
+      "name": "Bench",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_015",
+      "name": "Area Rug",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Area Rug",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_016",
+      "name": "Media Console",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Media_Console",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_017",
+      "name": "Decor Item (Console)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_016",
+      "parent_name": "Media Console",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Decor Item (Console)",
+        "parent_id": "obj_016",
+        "parent_label": "Media Console",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Media_Console"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_018",
+      "name": "Potted Plant",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Potted Plant",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": true,
+      "code_match_name": "Plant",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_019",
+      "name": "Wall Art (South)",
+      "category": "minor",
+      "placement_type": "wall",
+      "parent_object": "wall:south",
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Wall Art (South)",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": true,
+      "code_match_name": "Wall_Art_South",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_020",
+      "name": "Built-in Wardrobe (L-shape)",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_021",
+      "name": "Closet Bench/Island",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Closet_Bench",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_022",
+      "name": "Decor Item (Closet Bench)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_021",
+      "parent_name": "Closet Bench/Island",
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Decor Item (Closet Bench)",
+        "parent_id": "obj_021",
+        "parent_label": "Closet Bench/Island",
+        "parent_kind": "object"
+      },
+      "represented_in_code": true,
+      "code_match_name": "Closet_Bench",
+      "parent_code_match_name": "Closet_Bench"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_023",
+      "name": "Runner Rug",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Runner Rug",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_024",
+      "name": "Dresser",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Dresser",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_025",
+      "name": "Small Decor (Dresser)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_024",
+      "parent_name": "Dresser",
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Small Decor (Dresser)",
+        "parent_id": "obj_024",
+        "parent_label": "Dresser",
+        "parent_kind": "object"
+      },
+      "represented_in_code": true,
+      "code_match_name": "Dresser",
+      "parent_code_match_name": "Dresser"
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_026",
+      "name": "Wall Mirror",
+      "category": "minor",
+      "placement_type": "wall",
+      "parent_object": "wall:east",
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Wall Mirror",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": true,
+      "code_match_name": "Wall_Mirror_East",
+      "parent_code_match_name": null
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_027",
+      "name": "Floor Mirror",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "represented_in_code": true,
+      "code_match_name": "Floor_Mirror",
+      "parent_code_match_name": null
+    }
+  ],
+  "orphan_objects": [
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_004",
+      "name": "Book",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_003",
+      "parent_name": "Side Table",
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Book",
+        "parent_id": "obj_003",
+        "parent_label": "Side Table",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Side_Table",
+      "orphan_reason": "listed as a surface object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Book",
+      "appearance": "Small rectangular object resting flat on the surface.",
+      "material_description": "Paper/Cardboard",
+      "color_description": "White",
+      "description": "A small white book placed on top of the side table between the two armchairs in the lounge area."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_006",
+      "name": "Curtains",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Curtains",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null,
+      "orphan_reason": "listed as a floor object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Window Treatment",
+      "appearance": "Long, gathered fabric panels hanging vertically along the wall.",
+      "material_description": "Fabric",
+      "color_description": "White/Light beige",
+      "description": "Floor-length curtains covering the window along the left wall of the lounge area."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_009",
+      "name": "Table Lamp (North)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_008",
+      "parent_name": "Nightstand (North)",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Table Lamp (North)",
+        "parent_id": "obj_008",
+        "parent_label": "Nightstand (North)",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Nightstand_North",
+      "orphan_reason": "listed as a surface object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Lighting Fixture",
+      "appearance": "Circular base with a glowing ring-shaped shade.",
+      "material_description": "Glass/Metal",
+      "color_description": "Warm yellow/Gold",
+      "description": "A glowing table lamp resting on the north nightstand next to the bed."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_012",
+      "name": "Table Lamp (South)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_011",
+      "parent_name": "Nightstand (South)",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Table Lamp (South)",
+        "parent_id": "obj_011",
+        "parent_label": "Nightstand (South)",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Nightstand_South",
+      "orphan_reason": "listed as a surface object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Lighting Fixture",
+      "appearance": "Circular base with a glowing ring-shaped shade.",
+      "material_description": "Glass/Metal",
+      "color_description": "Warm yellow/Gold",
+      "description": "A glowing table lamp resting on the south nightstand next to the bed."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_014",
+      "name": "Bench",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null,
+      "orphan_reason": "listed as a floor object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Seating Furniture",
+      "appearance": "Rectangular upholstered bench with a folded blanket draped over one side.",
+      "material_description": "Fabric",
+      "color_description": "Beige/Light gray",
+      "description": "An upholstered bench positioned at the foot of the bed in the main bedroom area."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_015",
+      "name": "Area Rug",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Area Rug",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null,
+      "orphan_reason": "listed as a floor object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Floor Covering",
+      "appearance": "Large rectangular rug with a subtle textured pattern.",
+      "material_description": "Textile",
+      "color_description": "Light gray",
+      "description": "A large rectangular area rug placed under the bed and bench in the main bedroom area."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_017",
+      "name": "Decor Item (Console)",
+      "category": "minor",
+      "placement_type": "surface",
+      "parent_object": "obj_016",
+      "parent_name": "Media Console",
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Decor Item (Console)",
+        "parent_id": "obj_016",
+        "parent_label": "Media Console",
+        "parent_kind": "object"
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": "Media_Console",
+      "orphan_reason": "listed as a surface object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Decorative Object",
+      "appearance": "Small dark sculptural or decorative objects grouped together.",
+      "material_description": "Ceramic/Metal",
+      "color_description": "Dark gray/Black",
+      "description": "Small decorative items placed on top of the media console at the bottom of the main bedroom area."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_020",
+      "name": "Built-in Wardrobe (L-shape)",
+      "category": "major",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null,
+      "orphan_reason": "listed as a floor object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Storage Furniture",
+      "appearance": "Large L-shaped open closet system with hanging clothes and shelves.",
+      "material_description": "Wood",
+      "color_description": "Brown/Wood grain",
+      "description": "A large L-shaped built-in wooden wardrobe occupying the upper right corner of the walk-in closet area."
+    },
+    {
+      "source_stage": "stage1",
+      "source_object_id": "obj_023",
+      "name": "Runner Rug",
+      "category": "minor",
+      "placement_type": "floor",
+      "parent_object": null,
+      "parent_name": null,
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "structure_hint": null,
+      "stage2_minor": {
+        "label": "Runner Rug",
+        "parent_id": null,
+        "parent_label": null,
+        "parent_kind": null
+      },
+      "represented_in_code": false,
+      "code_match_name": null,
+      "parent_code_match_name": null,
+      "orphan_reason": "listed as a floor object in Stage 1/2 but absent from Stage 3/4 bbox code",
+      "object_type": "Floor Covering",
+      "appearance": "Long, narrow rectangular rug.",
+      "material_description": "Textile",
+      "color_description": "Light gray",
+      "description": "A narrow runner rug placed on the floor in the center of the walk-in closet area."
+    }
+  ],
+  "orphan_summary": {
+    "total_inventory_objects": 27,
+    "represented_inventory_objects": 18,
+    "orphan_objects": 9
+  },
+  "summary": {
+    "total_objects": 17,
+    "total_inventory_objects": 27,
+    "orphan_objects": 9,
+    "style_name": "Soft Contemporary",
+    "image_path": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/compressed_images/example1_compressed.jpg"
+  }
+}

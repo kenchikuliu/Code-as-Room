@@ -1,0 +1,48 @@
+{
+  "floor": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/stage11_texture/images/floor.png",
+  "wall": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/stage11_texture/images/wall.png",
+  "wall_art": [
+    {
+      "id": "Wall_Art_South",
+      "path": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/stage11_texture/images/art_Wall_Art_South.png",
+      "size": [
+        1.2,
+        0.8
+      ],
+      "location": [
+        0.0,
+        -2.475,
+        1.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        180.0
+      ]
+    },
+    {
+      "id": "Wall_Mirror_East",
+      "path": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/stage11_texture/images/art_Wall_Mirror_East.png",
+      "size": [
+        0.8,
+        1.0
+      ],
+      "location": [
+        3.725,
+        -0.8,
+        1.5
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -90.0
+      ]
+    }
+  ],
+  "rugs": [],
+  "texture_dir": "/Users/yangyixuan/Code-as-Room_github/agent_utils/pipeline_output/run_20260521_104358_example1/stage11_texture/images",
+  "model": [
+    "gpt-5.5"
+  ],
+  "generated_at": "2026-05-21T11:22:06.364074"
+}

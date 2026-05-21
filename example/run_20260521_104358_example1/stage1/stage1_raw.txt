@@ -1,0 +1,341 @@
+{
+  "input_summary": {
+    "image_ref": null
+  },
+  "scene_scale_understanding": {
+    "estimated_dimensions": "7.5 m × 5.0 m",
+    "scale_reference_objects": [
+      "queen bed (assumed 1.5 m wide)",
+      "Master bedroom row → ≥5.5×4.0 m"
+    ]
+  },
+  "decoupled_zones": [
+    {
+      "zone_id": "zone_01",
+      "zone_name": "Lounge Area",
+      "primary_function": "Relaxation and seating",
+      "visual_boundaries": "Defined by the left section of the room, separated by partial walls from the main bedroom area.",
+      "zone_description": "A cozy seating area featuring two armchairs facing each other with a small side table in between, situated next to a large window.",
+      "includes_objects_description": "Two armchairs, a side table, a floor lamp, and window curtains.",
+      "object_hierarchy": [
+        {
+          "object_id": "obj_001",
+          "name": "Armchair (North)",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_002",
+          "name": "Armchair (South)",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_003",
+          "name": "Side Table",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_004",
+          "name": "Book",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_003"
+        },
+        {
+          "object_id": "obj_005",
+          "name": "Floor Lamp",
+          "category": "minor",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_006",
+          "name": "Curtains",
+          "category": "minor",
+          "placement_type": "floor",
+          "parent_object": null
+        }
+      ]
+    },
+    {
+      "zone_id": "zone_02",
+      "zone_name": "Main Bedroom Area",
+      "primary_function": "Sleeping and resting",
+      "visual_boundaries": "Central portion of the room, defined by the large area rug and the placement of the bed.",
+      "zone_description": "The central sleeping area featuring a large bed, nightstands, a bench at the foot of the bed, and a media console against the south wall.",
+      "includes_objects_description": "A queen/king bed, two nightstands with lamps, a bench, a large area rug, a media console with decor, a potted plant, and wall art.",
+      "object_hierarchy": [
+        {
+          "object_id": "obj_007",
+          "name": "Bed",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_008",
+          "name": "Nightstand (North)",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_009",
+          "name": "Table Lamp (North)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_008"
+        },
+        {
+          "object_id": "obj_010",
+          "name": "Small Decor (North Nightstand)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_008"
+        },
+        {
+          "object_id": "obj_011",
+          "name": "Nightstand (South)",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_012",
+          "name": "Table Lamp (South)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_011"
+        },
+        {
+          "object_id": "obj_013",
+          "name": "Small Decor (South Nightstand)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_011"
+        },
+        {
+          "object_id": "obj_014",
+          "name": "Bench",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_015",
+          "name": "Area Rug",
+          "category": "minor",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_016",
+          "name": "Media Console",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_017",
+          "name": "Decor Item (Console)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_016"
+        },
+        {
+          "object_id": "obj_018",
+          "name": "Potted Plant",
+          "category": "minor",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_019",
+          "name": "Wall Art (South)",
+          "category": "minor",
+          "placement_type": "wall",
+          "parent_object": "wall:south"
+        }
+      ]
+    },
+    {
+      "zone_id": "zone_03",
+      "zone_name": "Walk-in Closet / Dressing Area",
+      "primary_function": "Clothing storage and dressing",
+      "visual_boundaries": "The rightmost section of the room, separated by a full partition wall with an opening.",
+      "zone_description": "A dedicated dressing area with built-in wardrobes, a central island or bench, a dresser, a mirror, and a runner rug.",
+      "includes_objects_description": "Built-in L-shaped wardrobe, a central bench/island, a runner rug, a dresser, a wall mirror, and a large floor mirror.",
+      "object_hierarchy": [
+        {
+          "object_id": "obj_020",
+          "name": "Built-in Wardrobe (L-shape)",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_021",
+          "name": "Closet Bench/Island",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_022",
+          "name": "Decor Item (Closet Bench)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_021"
+        },
+        {
+          "object_id": "obj_023",
+          "name": "Runner Rug",
+          "category": "minor",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_024",
+          "name": "Dresser",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        },
+        {
+          "object_id": "obj_025",
+          "name": "Small Decor (Dresser)",
+          "category": "minor",
+          "placement_type": "surface",
+          "parent_object": "obj_024"
+        },
+        {
+          "object_id": "obj_026",
+          "name": "Wall Mirror",
+          "category": "minor",
+          "placement_type": "wall",
+          "parent_object": "wall:east"
+        },
+        {
+          "object_id": "obj_027",
+          "name": "Floor Mirror",
+          "category": "major",
+          "placement_type": "floor",
+          "parent_object": null
+        }
+      ]
+    }
+  ],
+  "architectural_features": [
+    {
+      "feature_id": "feat_001",
+      "feature_type": "wall",
+      "description": "Outer boundary wall enclosing the entire space.",
+      "location": "Perimeter",
+      "wall_type": "boundary",
+      "thickness": "0.15 m",
+      "shape_description": "Rectangular boundary",
+      "connectivity": "Self-enclosing",
+      "separates_zones": [],
+      "openings": [
+        "feat_006",
+        "feat_007"
+      ]
+    },
+    {
+      "feature_id": "feat_002",
+      "feature_type": "wall",
+      "description": "Partial wall separating the lounge area from the main bedroom.",
+      "location": "Between Lounge Area and Main Bedroom Area (North)",
+      "wall_type": "interior_partition",
+      "thickness": "0.1 m",
+      "shape_description": "Short straight segment extending from the north boundary wall.",
+      "connectivity": "Connects to north boundary wall.",
+      "separates_zones": [
+        "zone_01",
+        "zone_02"
+      ],
+      "openings": [
+        "feat_004"
+      ]
+    },
+    {
+      "feature_id": "feat_003",
+      "feature_type": "wall",
+      "description": "Partial wall separating the lounge area from the main bedroom.",
+      "location": "Between Lounge Area and Main Bedroom Area (South)",
+      "wall_type": "interior_partition",
+      "thickness": "0.1 m",
+      "shape_description": "Short straight segment extending from the south boundary wall.",
+      "connectivity": "Connects to south boundary wall.",
+      "separates_zones": [
+        "zone_01",
+        "zone_02"
+      ],
+      "openings": [
+        "feat_004"
+      ]
+    },
+    {
+      "feature_id": "feat_004",
+      "feature_type": "doorway",
+      "description": "Large open passage between the lounge area and the main bedroom.",
+      "location": "Between partial walls feat_002 and feat_003.",
+      "on_wall": "feat_002",
+      "position_along_wall": 1.0,
+      "opening_width": 2.5,
+      "opening_height": 2.5
+    },
+    {
+      "feature_id": "feat_005",
+      "feature_type": "wall",
+      "description": "Full interior partition wall separating the main bedroom from the walk-in closet.",
+      "location": "Between Main Bedroom Area and Walk-in Closet.",
+      "wall_type": "interior_partition",
+      "thickness": "0.1 m",
+      "shape_description": "Straight segment running north-south with a doorway near the south end.",
+      "connectivity": "Connects north and south boundary walls.",
+      "separates_zones": [
+        "zone_02",
+        "zone_03"
+      ],
+      "openings": [
+        "feat_008"
+      ]
+    },
+    {
+      "feature_id": "feat_006",
+      "feature_type": "window",
+      "description": "Large window on the west wall in the lounge area.",
+      "location": "West wall",
+      "on_wall": "feat_001",
+      "position_along_wall": 0.5,
+      "opening_width": 2.0,
+      "opening_height": 2.0
+    },
+    {
+      "feature_id": "feat_007",
+      "feature_type": "door",
+      "description": "Main entrance door to the suite, located in the walk-in closet area.",
+      "location": "South wall of the walk-in closet.",
+      "on_wall": "feat_001",
+      "position_along_wall": 0.8,
+      "opening_width": 0.9,
+      "opening_height": 2.1
+    },
+    {
+      "feature_id": "feat_008",
+      "feature_type": "doorway",
+      "description": "Open passage connecting the main bedroom and the walk-in closet.",
+      "location": "South end of the partition wall feat_005.",
+      "on_wall": "feat_005",
+      "position_along_wall": 0.9,
+      "opening_width": 1.2,
+      "opening_height": 2.5
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+```json
+{
+  "parent_name": "Armchair_South",
+  "planes": [
+    {
+      "plane_id": "Armchair_South__seat",
+      "plane_type": "seat",
+      "items": []
+    }
+  ]
+}
+```

@@ -1,0 +1,2459 @@
+{
+  "scene_palette": {
+    "style_summary": "Soft contemporary bedroom suite featuring warm beige and taupe fabrics, greyish-brown wood cabinetry, and medium-warm oak flooring with subtle brass accents.",
+    "primary_metal_type": "anodized_aluminum",
+    "primary_metal_rgba": [
+      0.6,
+      0.45,
+      0.2,
+      1.0
+    ],
+    "primary_metal_roughness": 0.3,
+    "secondary_metal_type": "painted_metal",
+    "secondary_metal_rgba": [
+      0.1,
+      0.1,
+      0.1,
+      1.0
+    ],
+    "primary_wood_type": "oak",
+    "primary_wood_rgba": [
+      0.35,
+      0.27,
+      0.2,
+      1.0
+    ],
+    "primary_wood_roughness": 0.4,
+    "worktop_material_type": "wood",
+    "worktop_rgba": [
+      0.35,
+      0.27,
+      0.2,
+      1.0
+    ],
+    "worktop_roughness": 0.3,
+    "cabinet_finish_type": "wood_veneer",
+    "cabinet_rgba": [
+      0.28,
+      0.24,
+      0.2,
+      1.0
+    ],
+    "cabinet_roughness": 0.4,
+    "fabric_rgba": [
+      0.75,
+      0.72,
+      0.68,
+      1.0
+    ],
+    "fabric_roughness": 0.9,
+    "accent_rgba": [
+      0.35,
+      0.31,
+      0.27,
+      1.0
+    ],
+    "wall_rgba": [
+      0.85,
+      0.82,
+      0.78,
+      1.0
+    ],
+    "floor_rgba": [
+      0.42,
+      0.25,
+      0.15,
+      1.0
+    ],
+    "glass_handling": "transmission_full"
+  },
+  "part_materials": {
+    "Orphan_obj_017_Decor_Item_Console": {
+      "shallow_rectangular_display_tray_base": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_tray_lip": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_tray_lip": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_tray_lip": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_tray_lip": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "rounded_ceramic_vase_body": {
+        "base_color": [
+          0.85,
+          0.82,
+          0.78,
+          1.0
+        ],
+        "roughness": 0.2,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "ceramic"
+      },
+      "narrow_ceramic_vase_neck": {
+        "base_color": [
+          0.85,
+          0.82,
+          0.78,
+          1.0
+        ],
+        "roughness": 0.2,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "ceramic"
+      },
+      "short_metal_candle_holder": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "small_rounded_decor_orb": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      },
+      "small_tapered_metal_finial": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      }
+    },
+    "Armchair_North": {
+      "plush_seat_cushion": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "left_square_arm": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "right_square_arm": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "tall_padded_back_panel": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "inner_back_cushion": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_lower_apron": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "left_front_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_front_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_rear_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_rear_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Armchair_South": {
+      "plush_seat_base": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "soft_seat_cushion": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "left_padded_arm": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "right_padded_arm": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "tall_square_backrest": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "inner_back_cushion": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_plush_apron": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_left_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_right_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "rear_left_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "rear_right_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Side_Table": {
+      "square_tabletop_slab": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_left_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_right_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_left_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_right_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_side_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_side_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Floor_Lamp": {
+      "round_brass_base": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "slender_brass_pole": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "lower_brass_shade_ring": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "warm_white_glass_cylindrical_shade": {
+        "base_color": [
+          0.95,
+          0.95,
+          0.95,
+          1.0
+        ],
+        "roughness": 0.05,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "glass"
+      },
+      "inner_glowing_glass_diffuser": {
+        "base_color": [
+          1.0,
+          0.9,
+          0.8,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "emission"
+      },
+      "upper_brass_shade_ring": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "small_brass_top_finial": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      }
+    },
+    "Bed": {
+      "light_beige_upholstered_headboard": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "bed_base_platform": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "left_side_rail": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "right_side_rail": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_foot_rail": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "white_mattress": {
+        "base_color": [
+          0.9,
+          0.9,
+          0.9,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "white_top_linen_duvet": {
+        "base_color": [
+          0.9,
+          0.9,
+          0.9,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "taupe_folded_throw_blanket_at_foot": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "left_taupe_pillow": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "right_taupe_pillow": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "center_white_pillow": {
+        "base_color": [
+          0.9,
+          0.9,
+          0.9,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_left_short_bed_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_right_short_bed_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_left_short_bed_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_right_short_bed_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Nightstand_North": {
+      "top_surface_slab": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "main_wood_cabinet_body": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "upper_drawer_front": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "lower_drawer_front": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "upper_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "lower_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "recessed_toe_kick": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Closet_Bench": {
+      "wooden_bench_top_slab": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_left_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_right_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_left_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_right_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_side_support_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_side_support_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_end_support_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_end_support_apron": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Dresser": {
+      "dresser_main_carcass": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "top_surface_slab": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "bottom_plinth_base": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_drawer_top": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_drawer_upper_middle": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_drawer_lower_middle": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_drawer_bottom": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "drawer_gap_horizontal_1": {
+        "base_color": [
+          0.2,
+          0.17,
+          0.14,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.35,
+        "material_type": "painted_mdf"
+      },
+      "drawer_gap_horizontal_2": {
+        "base_color": [
+          0.2,
+          0.17,
+          0.14,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.35,
+        "material_type": "painted_mdf"
+      },
+      "drawer_gap_horizontal_3": {
+        "base_color": [
+          0.2,
+          0.17,
+          0.14,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.35,
+        "material_type": "painted_mdf"
+      },
+      "top_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "upper_middle_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "lower_middle_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "bottom_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      }
+    },
+    "Floor_Mirror": {
+      "left_wood_frame": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_wood_frame": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "top_wood_frame": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "bottom_wood_frame": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_glass_mirror_panel": {
+        "base_color": [
+          0.95,
+          0.96,
+          0.98,
+          1.0
+        ],
+        "roughness": 0.0,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "glass"
+      },
+      "thin_backing_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.35,
+        "material_type": "painted_mdf"
+      }
+    },
+    "Orphan_obj_004_Book": {
+      "page_block": {
+        "base_color": [
+          0.9,
+          0.88,
+          0.85,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "paint"
+      },
+      "top_cover": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.4,
+        "material_type": "leather"
+      },
+      "bottom_cover": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.4,
+        "material_type": "leather"
+      },
+      "spine_binding": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.6,
+        "metallic": 0.0,
+        "specular": 0.4,
+        "material_type": "leather"
+      },
+      "front_page_edge": {
+        "base_color": [
+          0.9,
+          0.88,
+          0.85,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "paint"
+      }
+    },
+    "Orphan_obj_009_Table_Lamp_North": {
+      "gold_metal_round_base": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "gold_metal_stem": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "warm_glowing_glass_bulb": {
+        "base_color": [
+          0.95,
+          0.96,
+          0.98,
+          1.0
+        ],
+        "roughness": 0.05,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "glass"
+      },
+      "warm_yellow_glass_lampshade": {
+        "base_color": [
+          0.95,
+          0.96,
+          0.98,
+          1.0
+        ],
+        "roughness": 0.05,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "glass"
+      },
+      "gold_metal_lower_shade_rim": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "gold_metal_upper_shade_rim": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "gold_metal_top_finial": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      }
+    },
+    "Orphan_obj_012_Table_Lamp_South": {
+      "gold_metal_base": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "slender_gold_stem": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "warm_glowing_bulb": {
+        "base_color": [
+          1.0,
+          0.9,
+          0.7,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "emission"
+      },
+      "warm_yellow_glass_lampshade": {
+        "base_color": [
+          0.95,
+          0.96,
+          0.98,
+          1.0
+        ],
+        "roughness": 0.05,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "glass"
+      },
+      "small_gold_finial": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      }
+    },
+    "Nightstand_South": {
+      "top_worktop_slab": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_side_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_side_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "bottom_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "upper_drawer_front": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "lower_drawer_front": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "center_drawer_gap": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      },
+      "upper_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "lower_drawer_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "front_toe_kick": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      }
+    },
+    "Bench": {
+      "upholstered_seat_cushion": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "upholstered_base_panel": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_apron": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "back_apron": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "left_apron": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "right_apron": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "front_left_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_right_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_left_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_right_short_leg": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    },
+    "Media_Console": {
+      "top_worktop_slab": {
+        "base_color": [
+          0.35,
+          0.27,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "main_wood_console_body": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_left_door_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_mid_left_drawer_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_mid_right_drawer_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "front_right_door_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "thin_shadow_gap_between_front_panels_1": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      },
+      "thin_shadow_gap_between_front_panels_2": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      },
+      "thin_shadow_gap_between_front_panels_3": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      },
+      "left_panel_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "mid_left_panel_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "mid_right_panel_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "right_panel_handle": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "recessed_toe_kick": {
+        "base_color": [
+          0.1,
+          0.1,
+          0.1,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.2,
+        "specular": 0.5,
+        "material_type": "painted_metal"
+      }
+    },
+    "Plant": {
+      "dark_grey_circular_planter_body": {
+        "base_color": [
+          0.2,
+          0.2,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.2,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "ceramic"
+      },
+      "dark_grey_planter_top_rim": {
+        "base_color": [
+          0.2,
+          0.2,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.2,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "ceramic"
+      },
+      "dark_soil_surface": {
+        "base_color": [
+          0.1,
+          0.08,
+          0.05,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "concrete"
+      },
+      "central_plant_stem": {
+        "base_color": [
+          0.2,
+          0.25,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.7,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "wood"
+      },
+      "left_plant_stem": {
+        "base_color": [
+          0.2,
+          0.25,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.7,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "wood"
+      },
+      "right_plant_stem": {
+        "base_color": [
+          0.2,
+          0.25,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.7,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "wood"
+      },
+      "central_bushy_green_leaves": {
+        "base_color": [
+          0.15,
+          0.3,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "plastic"
+      },
+      "top_bushy_green_leaves": {
+        "base_color": [
+          0.15,
+          0.3,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "plastic"
+      },
+      "left_bushy_green_leaves": {
+        "base_color": [
+          0.15,
+          0.3,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "plastic"
+      },
+      "right_bushy_green_leaves": {
+        "base_color": [
+          0.15,
+          0.3,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "plastic"
+      },
+      "front_bushy_green_leaves": {
+        "base_color": [
+          0.15,
+          0.3,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "plastic"
+      },
+      "back_bushy_green_leaves": {
+        "base_color": [
+          0.15,
+          0.3,
+          0.15,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "plastic"
+      }
+    },
+    "Wardrobe_East": {
+      "left_side_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_side_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "top_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "bottom_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_vertical_divider": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_vertical_divider": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_shelf_1": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_shelf_2": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "left_shelf_3": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_shelf_1": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_shelf_2": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_shelf_3": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "hanging_bay_upper_shelf": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "hanging_rail": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "hanging_clothing_left": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "hanging_clothing_center": {
+        "base_color": [
+          0.35,
+          0.31,
+          0.27,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      },
+      "hanging_clothing_right": {
+        "base_color": [
+          0.75,
+          0.72,
+          0.68,
+          1.0
+        ],
+        "roughness": 0.9,
+        "metallic": 0.0,
+        "specular": 0.3,
+        "material_type": "fabric"
+      }
+    },
+    "Wardrobe_North": {
+      "left_side_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_side_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "back_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "top_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "bottom_panel": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "upper_shelf": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "lower_shelf": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "hanging_clothes_rail": {
+        "base_color": [
+          0.6,
+          0.45,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.3,
+        "metallic": 0.85,
+        "specular": 0.45,
+        "material_type": "anodized_aluminum"
+      },
+      "left_front_stile": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "right_front_stile": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "top_front_rail": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      },
+      "bottom_front_rail": {
+        "base_color": [
+          0.28,
+          0.24,
+          0.2,
+          1.0
+        ],
+        "roughness": 0.4,
+        "metallic": 0.0,
+        "specular": 0.5,
+        "material_type": "wood"
+      }
+    }
+  },
+  "small_part_materials": {},
+  "floor_material": {
+    "material_type": "hardwood",
+    "base_color": [
+      0.55,
+      0.42,
+      0.28,
+      1.0
+    ],
+    "roughness": 0.35,
+    "metallic": 0.0,
+    "specular": 0.5,
+    "pattern": "plank",
+    "pattern_scale": 1.5,
+    "pattern_color2": [
+      0.45,
+      0.32,
+      0.2,
+      1.0
+    ],
+    "bump_strength": 0.12,
+    "description": "Medium warm brown hardwood planks with natural grain variation, providing a cozy foundation."
+  },
+  "wall_material": {
+    "material_type": "paint",
+    "base_color": [
+      0.92,
+      0.9,
+      0.88,
+      1.0
+    ],
+    "roughness": 0.6,
+    "metallic": 0.0,
+    "specular": 0.5,
+    "finish": "matte",
+    "bump_strength": 0.02,
+    "description": "Soft, warm off-white painted walls with a matte finish, enhancing the neutral and airy feel."
+  },
+  "summary": {
+    "total_objects": 19,
+    "total_parts": 192,
+    "total_small_items": 0,
+    "total_small_parts": 0,
+    "generated": "2026-05-21T11:21:46.585232"
+  }
+}
