@@ -33,9 +33,9 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0"></a>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="assets/icon.png" alt="Code-as-Room icon" width="150">
-</p>
+</p> -->
 
 ## Overview
 
