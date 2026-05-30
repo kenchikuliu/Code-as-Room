@@ -189,6 +189,124 @@ If Blender is not at the macOS path above, pass it to the pipeline:
 python run_pipeline.py --image example/example1.png --blender /path/to/blender
 ```
 
+## Audit a Generated Run
+
+After a run finishes, use the local audit script to verify the generated Blender
+scene without calling any model API:
+
+```bash
+python audit_run.py \
+  --run-dir <run_dir> \
+  --blender /path/to/blender \
+  --render \
+  --save-blend
+```
+
+The audit executes the final `render_output.py` in Blender and writes:
+
+- `<run_dir>/audit_report.json`: machine-readable stage, scene, camera, light,
+  material, and texture checks.
+- `<run_dir>/audit_report.html`: a compact human-readable report.
+- `<run_dir>/audit/audit_render.png`: optional quick render when `--render` is
+  passed.
+- `<run_dir>/audit/audit_scene.blend`: optional packaged scene when
+  `--save-blend` is passed.
+
+If you generated textures with an alternate Stage 12 folder, pass it explicitly:
+
+```bash
+python audit_run.py \
+  --run-dir <run_dir> \
+  --stage12-dir stage12_render_apimart \
+  --blender /path/to/blender \
+  --render
+```
+
+For a folder of generated runs, create a batch comparison report:
+
+```bash
+python batch_audit_runs.py \
+  --root <output_root> \
+  --stage12-dir stage12_render_apimart \
+  --blender /path/to/blender \
+  --fail-on-bad
+```
+
+This writes `batch_audit_report.json` and `batch_audit_report.html` under the
+chosen root. The batch report is intended for model/prompt/backend comparison:
+it aggregates pass/fail status, object/material/texture counts, floor bounds,
+semantic group counts, and coarse geometry diagnostics for every discovered
+`run_*` directory.
+
+## Package an Optimized Scene
+
+After a run passes audit, create a delivery package for viewers, editors, or
+benchmark storage:
+
+```bash
+python optimize_run.py \
+  --run-dir <run_dir> \
+  --stage12-dir stage12_render_apimart \
+  --blender /path/to/blender \
+  --render-preview \
+  --validate-glb \
+  --zip \
+  --clean
+```
+
+The package is written to `<run_dir>/optimized_scene/` by default and contains:
+
+- `scene.blend`: Blender scene rebuilt from the final generated script.
+- `scene.glb`: portable GLB export for WebGL/viewer pipelines.
+- `preview.png`: fresh top-down render when `--render-preview` is passed.
+- `scene_manifest.json`: object, material, image, light, camera, and semantic
+  group inventory from Blender.
+- `glb_validation.json`: independent Blender re-import check when
+  `--validate-glb` is passed.
+- `package_manifest.json`: package-level summary and copied source artifacts.
+- `optimized_scene.zip`: zipped delivery bundle when `--zip` is passed.
+
+The package summary uses mesh-backed semantic groups as its primary count, so
+it is comparable with `audit_report.json` geometry diagnostics.
+
+## Repair Geometry Deterministically
+
+For generated scenes that fail geometry diagnostics, run a conservative
+model-free repair pass:
+
+```bash
+python repair_run.py \
+  --run-dir <run_dir> \
+  --stage12-dir stage12_render_apimart \
+  --blender /path/to/blender \
+  --render-preview \
+  --validate-glb \
+  --zip \
+  --clean
+```
+
+The repair pass executes the final Blender script, then applies deterministic
+post-processing:
+
+- lift non-structural semantic groups that dip below the floor;
+- translate non-structural semantic groups back inside floor bounds;
+- iteratively separate coarse AABB collision candidates;
+- leave structural groups such as floor, walls, doors, windows, partitions,
+  panels, vents, and curtains untouched.
+
+Outputs are written to `<run_dir>/repaired_scene/` by default:
+
+- `repair_report.json`: initial/final diagnostics and every repair move.
+- `repair_manifest.json`: package summary and source metadata.
+- `repaired_scene.blend`: repaired Blender scene.
+- `repaired_scene.glb`: repaired GLB export.
+- `glb_validation.json`: independent re-import check when `--validate-glb` is
+  passed.
+- `repaired_preview.png`: fresh preview when `--render-preview` is passed.
+
+Clean scenes should be no-ops: `repair_count` remains `0`, while the export and
+GLB validation still run.
+
 ## Config File
 
 Instead of passing many CLI flags, copy the example config:

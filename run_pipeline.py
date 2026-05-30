@@ -492,31 +492,31 @@ class PipelineConfig:
         self.stage2_api_key = stage2_api_key
 
         # Stage7–9 & small-object dedicated LLM overrides
-        self.stage7_model =  "gemini-3.1-pro-preview-thinking"
+        self.stage7_model = stage7_model
         self.stage7_base_url = stage7_base_url
         self.stage7_api_key = stage7_api_key
 
 
-        self.stage8_model =  "gpt-5.5"
+        self.stage8_model = stage8_model
         self.stage8_base_url = stage8_base_url
         self.stage8_api_key = stage8_api_key
 
 
-        self.stage7_small_objects_model =  None
+        self.stage7_small_objects_model = stage7_small_objects_model
         self.stage7_small_objects_base_url = stage7_small_objects_base_url
         self.stage7_small_objects_api_key = stage7_small_objects_api_key
 
-        self.stage8_small_describe_model =  "gemini-3.1-pro-preview-thinking"
+        self.stage8_small_describe_model = stage8_small_describe_model
         self.stage8_small_describe_base_url = stage8_small_describe_base_url
         self.stage8_small_describe_api_key = stage8_small_describe_api_key
 
 
-        self.stage9_small_geometry_model = None
+        self.stage9_small_geometry_model = stage9_small_geometry_model
         self.stage9_small_geometry_base_url = stage9_small_geometry_base_url
         self.stage9_small_geometry_api_key = stage9_small_geometry_api_key
 
 
-        self.stage9_model =  None
+        self.stage9_model = stage9_model
         self.stage9_base_url = stage9_base_url
         self.stage9_api_key = stage9_api_key
         
@@ -1066,6 +1066,7 @@ class UnifiedPipeline:
             base_url=stage2_base_url,
             api_key=stage2_api_key,
             memory_file=self.config.memory_file,
+            max_tokens=self.config.stage2_max_tokens,
         )
         
         success, result, meta = runner.run()

@@ -1,5 +1,5 @@
 """
-Stage Texture - Real Texture Map Generation via NanoBanana (Gemini Image)
+Stage Texture - Real Texture Map Generation
 ==========================================================================
 
 Generates real texture map PNGs for floor, walls, and wall art using the
@@ -65,6 +65,7 @@ DEFAULT_IMAGE_MODEL = "gemini-3-pro-image-preview"
 DEFAULT_BASE_URL = os.environ.get("SCENEGEN_TEXTURE_BASE_URL")
 DEFAULT_API_KEY = (
     os.environ.get("SCENEGEN_TEXTURE_API_KEY")
+    or os.environ.get("APIMART_API_KEY")
     or os.environ.get("SCENEGEN_API_KEY")
     or os.environ.get("OPENAI_API_KEY")
 )
@@ -149,6 +150,145 @@ def _is_transient_network_error(err: Exception) -> bool:
         "temporarily unavailable",
     )
     return any(m in msg for m in markers)
+
+
+def _normalize_apimart_base_url(base_url: Optional[str]) -> str:
+    """Return the APIMart OpenAI-compatible v1 base URL."""
+    b = (base_url or "https://api.apimart.ai/v1").rstrip("/")
+    if b.endswith("/v1"):
+        return b
+    return f"{b}/v1"
+
+
+def _is_apimart_image_backend(model: str, base_url: Optional[str]) -> bool:
+    m = (model or "").lower()
+    b = (base_url or "").lower()
+    return m.startswith("gpt-image-") or "api.apimart.ai" in b
+
+
+def _extract_apimart_task_id(payload: dict) -> Optional[str]:
+    data = payload.get("data")
+    if isinstance(data, list) and data:
+        first = data[0]
+        if isinstance(first, dict):
+            return first.get("task_id") or first.get("id")
+    if isinstance(data, dict):
+        return data.get("task_id") or data.get("id")
+    return payload.get("task_id") or payload.get("id")
+
+
+def _extract_apimart_image_url(payload: dict) -> Optional[str]:
+    data = payload.get("data")
+    if isinstance(data, dict):
+        result = data.get("result")
+        if isinstance(result, dict):
+            images = result.get("images")
+            if isinstance(images, list) and images:
+                first = images[0]
+                if isinstance(first, dict):
+                    url = first.get("url")
+                    if isinstance(url, list) and url:
+                        return url[0]
+                    if isinstance(url, str):
+                        return url
+        # Some gateways flatten image URLs under data.
+        images = data.get("images")
+        if isinstance(images, list) and images:
+            first = images[0]
+            if isinstance(first, dict):
+                url = first.get("url")
+                if isinstance(url, list) and url:
+                    return url[0]
+                if isinstance(url, str):
+                    return url
+    return None
+
+
+def _call_apimart_image(
+    base_url: str,
+    api_key: str,
+    model: str,
+    prompt_text: str,
+    aspect_ratio: str = "1:1",
+    image_size: str = "1K",
+    timeout: int = 300,
+) -> bytes:
+    """Call APIMart's async GPT-Image-2 generation endpoint and return PNG bytes."""
+    if not api_key:
+        raise RuntimeError("APIMart API key missing; set APIMART_API_KEY or SCENEGEN_TEXTURE_API_KEY")
+
+    import requests
+    import time
+
+    root = _normalize_apimart_base_url(base_url)
+    resolution = str(image_size or "1K").lower()
+    if resolution not in {"1k", "2k", "4k"}:
+        resolution = "1k"
+
+    payload = {
+        "model": model or "gpt-image-2",
+        "prompt": prompt_text,
+        "n": 1,
+        "size": aspect_ratio or "1:1",
+        "resolution": resolution,
+    }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+
+    submit = requests.post(
+        f"{root}/images/generations",
+        headers=headers,
+        json=payload,
+        timeout=timeout,
+    )
+    if not submit.ok:
+        raise RuntimeError(f"HTTP {submit.status_code}: {submit.text[:2000]}")
+    try:
+        submit_json = submit.json()
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Invalid APIMart submit JSON: {e}\n{submit.text[:2000]}") from e
+
+    task_id = _extract_apimart_task_id(submit_json)
+    if not task_id:
+        raise ValueError(f"No APIMart task_id in response: {submit.text[:1500]}")
+
+    deadline = time.time() + max(60, timeout)
+    time.sleep(10.0)
+    last_text = ""
+    while time.time() < deadline:
+        poll = requests.get(
+            f"{root}/tasks/{task_id}",
+            headers={"Authorization": f"Bearer {api_key}"},
+            timeout=min(60, timeout),
+        )
+        last_text = poll.text[:2000]
+        if not poll.ok:
+            raise RuntimeError(f"HTTP {poll.status_code}: {last_text}")
+        try:
+            task_json = poll.json()
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Invalid APIMart task JSON: {e}\n{last_text}") from e
+
+        data = task_json.get("data")
+        status = None
+        if isinstance(data, dict):
+            status = str(data.get("status") or "").lower()
+        if status == "completed":
+            image_url = _extract_apimart_image_url(task_json)
+            if not image_url:
+                raise ValueError(f"APIMart task completed without image URL: {last_text}")
+            img = requests.get(image_url, timeout=timeout)
+            if not img.ok:
+                raise RuntimeError(f"Image download HTTP {img.status_code}: {img.text[:500]}")
+            return img.content
+        if status == "failed":
+            raise RuntimeError(f"APIMart task failed: {last_text}")
+
+        time.sleep(5.0)
+
+    raise TimeoutError(f"APIMart task timed out: {task_id}; last={last_text}")
 
 
 # Object types that count as wall art (matched case-insensitively as substrings).
@@ -1153,15 +1293,26 @@ class StageTextureRunner:
 
         for attempt in range(1, retries + 1):
             try:
-                img_bytes = _call_gemini_image(
-                    base_url=self.texture_base_url,
-                    api_key=self.texture_api_key,
-                    model=self.texture_model,
-                    prompt_text=active_prompt,
-                    aspect_ratio=aspect_ratio or self.aspect_ratio,
-                    image_size=self.image_size,
-                    timeout=timeout_s,
-                )
+                if _is_apimart_image_backend(self.texture_model, self.texture_base_url):
+                    img_bytes = _call_apimart_image(
+                        base_url=self.texture_base_url,
+                        api_key=self.texture_api_key,
+                        model=self.texture_model,
+                        prompt_text=active_prompt,
+                        aspect_ratio=aspect_ratio or self.aspect_ratio,
+                        image_size=self.image_size,
+                        timeout=timeout_s,
+                    )
+                else:
+                    img_bytes = _call_gemini_image(
+                        base_url=self.texture_base_url,
+                        api_key=self.texture_api_key,
+                        model=self.texture_model,
+                        prompt_text=active_prompt,
+                        aspect_ratio=aspect_ratio or self.aspect_ratio,
+                        image_size=self.image_size,
+                        timeout=timeout_s,
+                    )
                 Path(filepath).write_bytes(img_bytes)
                 tier_tag = f" (fallback tier {tier}/{total_tiers - 1})" if tier > 0 else ""
                 serial_tag = " [recovery]" if serial_pass else ""
@@ -1279,12 +1430,22 @@ class StageTextureRunner:
             ))
 
         results: Dict[str, str] = {}
-        if not GEMINI_IMAGE_AVAILABLE:
+        use_apimart = _is_apimart_image_backend(self.texture_model, self.texture_base_url)
+        if use_apimart and not self.texture_api_key:
+            self._log(
+                "APIMart image backend selected, but no API key is set "
+                "(set APIMART_API_KEY or pass --api-key).",
+                "error",
+            )
+            return results
+        if not use_apimart and not GEMINI_IMAGE_AVAILABLE:
             self._log("_call_gemini_image unavailable, skipping generation", "error")
             return results
 
         self._log(
-            f"Generating {len(tasks)} textures ({self.parallel} parallel, "
+            f"Generating {len(tasks)} textures via "
+            f"{'APIMart' if use_apimart else 'Gemini image'} "
+            f"({self.parallel} parallel, "
             f"up to {self.max_retries} retries each)...",
             "step",
         )
@@ -1316,7 +1477,7 @@ class StageTextureRunner:
                 f"pass, retrying serially (1-at-a-time, longer timeout)...",
                 "warning",
             )
-            recovery_retries = max(self.max_retries, 5)
+            recovery_retries = self.max_retries if use_apimart else max(self.max_retries, 5)
             recovery_timeout = 600  # give the slow server twice as long per call
             import time as _time
             for (name, prompt, fp, ar, fb_chain) in failed_tasks:
@@ -2100,7 +2261,7 @@ def apply_rug_textures():
                 type="result",
                 content=code,
                 metadata={
-                    "title": "Stage Texture - NanoBanana real textures",
+                    "title": "Stage Texture - real texture maps",
                     "summary": (
                         f"floor+wall"
                         f"{'+' + str(len(self.wall_arts)) + 'art' if self.wall_arts else ''}"
@@ -2112,7 +2273,7 @@ def apply_rug_textures():
                     "texture_dir": os.path.abspath(self.images_dir),
                     "image_path": self.image_path,
                 },
-                tags=["stage11_texture", "blender_code", "nanobanana", "textures"],
+                tags=["stage11_texture", "blender_code", "textures"],
             )
             self._log("Saved to Memory", "success")
 
@@ -2123,7 +2284,7 @@ def apply_rug_textures():
     # ------------------------------------------------------------------
     def run(self) -> Tuple[bool, Optional[str]]:
         print("\n" + "=" * 60)
-        print("🖼️  Stage Texture - Real Texture Generation (nanobanana)")
+        print("🖼️  Stage Texture - Real Texture Generation")
         print("=" * 60)
 
         if not self._load_data():
@@ -2149,7 +2310,7 @@ def apply_rug_textures():
 # =============================================================================
 def _parse_args():
     p = argparse.ArgumentParser(
-        description="Stage Texture - generate real texture maps via nanobanana "
+        description="Stage Texture - generate real texture maps via image backends "
                     "and inject them into the Stage 10 Blender script."
     )
     p.add_argument("--image", help="Reference image path (optional, pulled from Memory if absent)")

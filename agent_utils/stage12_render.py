@@ -740,6 +740,8 @@ Analyze shadows, highlights, and visible light fixtures to determine:
         # paint the upper walls/ceiling, dim enough that LLM's interior
         # lamps still register as warm focal lights.
         sky_strength = 0.25
+        camera_ortho_scale = max(sw, sd) * 1.12
+        camera_z = max(h + 6.0, max(sw, sd) * 1.2)
 
         return f'''def setup_lighting_and_render():
     import bpy
@@ -765,11 +767,7 @@ Analyze shadows, highlights, and visible light fixtures to determine:
         scene.render.engine = 'BLENDER_EEVEE_NEXT'
 
     for obj in list(bpy.data.objects):
-        if obj.type == 'LIGHT' and (
-            obj.name.startswith('stage11_light_')
-            or obj.name.startswith('stage11_portal_')
-            or obj.name.startswith('stage11_sun_')
-        ):
+        if obj.type == 'LIGHT':
             bpy.data.objects.remove(obj, do_unlink=True)
 
     light_sources = {repr(light_sources)}
@@ -924,7 +922,21 @@ Analyze shadows, highlights, and visible light fixtures to determine:
     if hasattr(scene.view_settings, 'exposure'):
         scene.view_settings.exposure = -0.3
     scene.render.resolution_x = 1024
-    scene.render.resolution_y = 1024'''
+    scene.render.resolution_y = 1024
+
+    cam = scene.camera
+    if cam is None or cam.type != 'CAMERA':
+        bpy.ops.object.camera_add(location=(0, 0, {camera_z:.3f}), rotation=(0, 0, 0))
+        cam = bpy.context.object
+    else:
+        cam.location = (0, 0, {camera_z:.3f})
+        cam.rotation_euler = (0, 0, 0)
+    cam.name = 'Camera'
+    cam.data.type = 'ORTHO'
+    cam.data.ortho_scale = {camera_ortho_scale:.3f}
+    cam.data.clip_start = 0.01
+    cam.data.clip_end = 1000.0
+    scene.camera = cam'''
 
     def _inject_lighting_function(self, lighting_func: str) -> str:
         """Insert a lighting function and call it from run_layout_engine()."""
