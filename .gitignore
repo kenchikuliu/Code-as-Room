@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+
+# Local/generated reproductions outside the committed web demo.
+repro_outputs/
+agent_utils/repro_outputs/
+example/run_*/stage12_render/repro_*.png
+example/run_*/stage12_render/repro_scene.blend
+
+# Local verification screenshots.
+web_demo/verification-*.png
+web_demo/image2_outputs/image2_projection_manifest.json
+
+# Local browser/auth/session artifacts.
+*.sock
+auth.json
