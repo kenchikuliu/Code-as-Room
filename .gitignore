@@ -10,6 +10,7 @@ example/run_*/stage12_render/repro_scene.blend
 # Local verification screenshots.
 web_demo/verification-*.png
 web_demo/image2_outputs/image2_projection_manifest.json
+web_demo/tripo_assets/
 
 # Local browser/auth/session artifacts.
 *.sock

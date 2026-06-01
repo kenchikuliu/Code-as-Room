@@ -32,3 +32,23 @@ process only:
 ```powershell
 powershell -ExecutionPolicy Bypass -File web_demo\run_image2_with_prompt.ps1
 ```
+
+## Tripo Object Assets
+
+The next fidelity step is to generate high-quality single-object GLBs first,
+then place those assets back into the room and optionally retexture them from
+the final room render.
+
+Generate one object asset with Tripo:
+
+```powershell
+$env:TRIPO_API_KEY="your-tripo-key"
+python web_demo\tripo_object_pipeline.py --asset lounge_armchair
+```
+
+Outputs are written under `web_demo/tripo_assets/`, which is ignored by git.
+To replace the current low-poly armchair groups with that asset:
+
+```powershell
+python web_demo\place_tripo_asset_in_scene.py
+```
