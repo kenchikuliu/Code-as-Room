@@ -7,8 +7,10 @@ image2 render-mapping path:
 
 1. Generate or reuse a polished interior render.
 2. Project the render back onto floor and object surfaces.
-3. Apply separate wall textures with vertical UV mapping.
-4. Package the mapped GLB into the local HTML viewer.
+3. Apply semantic object textures for wood, bedding, upholstery, stone,
+   ceramic, and dark furniture, tinted from the room render.
+4. Apply separate wall textures with vertical UV mapping.
+5. Package the mapped GLB into the local HTML viewer.
 
 To rebuild the static page after changing assets:
 

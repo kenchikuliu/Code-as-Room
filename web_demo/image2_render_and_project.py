@@ -34,6 +34,15 @@ WALL_PROMPTS = {
     "wall_panel": "Seamless soft taupe upholstered acoustic wall panel material, fine woven fabric, subtle seams, premium interior finish, no furniture, no text, square texture.",
 }
 
+OBJECT_PROMPTS = {
+    "object_wood": "Seamless premium walnut furniture wood veneer material, subtle linear grain, modern bedroom cabinetry, no object, no text, square PBR color texture.",
+    "object_bedding": "Seamless warm ivory cotton bedding fabric material, soft woven threads, subtle quilted variation, no object, no text, square PBR color texture.",
+    "object_upholstery": "Seamless greige boucle upholstery fabric material, fine woven texture, premium lounge chair textile, no object, no text, square PBR color texture.",
+    "object_stone": "Seamless warm limestone and travertine counter surface material, subtle veins, premium interior stone, no object, no text, square PBR color texture.",
+    "object_ceramic": "Seamless matte warm white ceramic decor material, subtle speckled glaze, no object, no text, square PBR color texture.",
+    "object_dark": "Seamless dark stained oak furniture material, low sheen, fine wood grain, no object, no text, square PBR color texture.",
+}
+
 
 def normalize_base_url(base_url: str | None) -> str:
     root = (base_url or "https://api.apimart.ai/v1").rstrip("/")
@@ -428,12 +437,128 @@ def upholstered_panel_texture(seed: int, size: int = 512) -> Image.Image:
     return image.filter(ImageFilter.GaussianBlur(radius=0.2))
 
 
+def wood_veneer_texture(seed: int, size: int = 384, dark: bool = False) -> Image.Image:
+    rng = np.random.default_rng(seed)
+    base = np.array((92, 58, 36) if dark else (126, 82, 49), dtype=np.float32)
+    yy, xx = np.mgrid[0:size, 0:size]
+    wave = 13 * np.sin((xx + 5 * np.sin(yy / 31.0)) / 18.0) + 5 * np.sin(xx / 5.5)
+    noise = rng.normal(0, 8, (size, size, 1))
+    arr = np.clip(base + wave[:, :, None] + noise, 0, 255).astype(np.uint8)
+    image = Image.fromarray(arr).filter(ImageFilter.GaussianBlur(radius=0.25))
+    draw = ImageDraw.Draw(image, "RGBA")
+    plank_w = size // 6
+    for x in range(0, size, plank_w):
+        draw.line([x, 0, x, size], fill=(42, 28, 20, 52), width=2)
+        draw.line([x + 2, 0, x + 2, size], fill=(190, 139, 93, 22), width=1)
+    for _ in range(30):
+        y = int(rng.integers(0, size))
+        color = (45, 30, 21, int(rng.integers(18, 42)))
+        draw.line([0, y, size, y + int(rng.integers(-4, 5))], fill=color, width=1)
+    return image
+
+
+def woven_fabric_texture(seed: int, size: int = 384, base: tuple[int, int, int] = (214, 207, 193)) -> Image.Image:
+    rng = np.random.default_rng(seed)
+    arr = np.zeros((size, size, 3), dtype=np.uint8)
+    base_arr = np.array(base, dtype=np.int16)
+    yy, xx = np.mgrid[0:size, 0:size]
+    weave = ((xx % 8) < 3).astype(np.int16) * 8 + ((yy % 7) < 3).astype(np.int16) * -7
+    noise = rng.normal(0, 5, (size, size, 1))
+    arr[:, :, :] = np.clip(base_arr + weave[:, :, None] + noise, 0, 255).astype(np.uint8)
+    image = Image.fromarray(arr).filter(ImageFilter.GaussianBlur(radius=0.18))
+    draw = ImageDraw.Draw(image, "RGBA")
+    for i in range(0, size, 12):
+        draw.line([0, i, size, i], fill=(95, 88, 78, 18), width=1)
+        draw.line([i, 0, i, size], fill=(255, 250, 240, 14), width=1)
+    return image
+
+
+def stone_surface_texture(seed: int, size: int = 384) -> Image.Image:
+    rng = np.random.default_rng(seed)
+    image = plaster_texture(seed, size, base=(192, 180, 160)).filter(ImageFilter.GaussianBlur(radius=0.35))
+    draw = ImageDraw.Draw(image, "RGBA")
+    for _ in range(24):
+        x0 = int(rng.integers(0, size))
+        y0 = int(rng.integers(0, size))
+        points = []
+        for step in range(0, 120, 12):
+            points.append((x0 + step, y0 + int(13 * np.sin((step + x0) / 22.0))))
+        draw.line(points, fill=(104, 94, 82, int(rng.integers(18, 38))), width=1)
+    return image.filter(ImageFilter.GaussianBlur(radius=0.18))
+
+
+def ceramic_speckle_texture(seed: int, size: int = 256) -> Image.Image:
+    rng = np.random.default_rng(seed)
+    image = plaster_texture(seed, size, base=(221, 216, 204)).filter(ImageFilter.GaussianBlur(radius=0.2))
+    draw = ImageDraw.Draw(image, "RGBA")
+    for _ in range(900):
+        x = int(rng.integers(0, size))
+        y = int(rng.integers(0, size))
+        tone = int(rng.integers(110, 170))
+        draw.point((x, y), fill=(tone, tone - 4, tone - 12, int(rng.integers(16, 48))))
+    return image.filter(ImageFilter.GaussianBlur(radius=0.12))
+
+
 def fallback_wall_texture(name: str) -> Image.Image:
     if name == "wall_accent":
         return wood_slat_texture(34)
     if name == "wall_panel":
         return upholstered_panel_texture(35)
     return plaster_texture(33)
+
+
+def fallback_object_texture(name: str) -> Image.Image:
+    if name == "object_wood":
+        return wood_veneer_texture(44)
+    if name == "object_dark":
+        return wood_veneer_texture(45, dark=True)
+    if name == "object_bedding":
+        return woven_fabric_texture(46, base=(224, 220, 211))
+    if name == "object_upholstery":
+        return woven_fabric_texture(47, base=(181, 171, 157))
+    if name == "object_stone":
+        return stone_surface_texture(48)
+    if name == "object_ceramic":
+        return ceramic_speckle_texture(49)
+    return woven_fabric_texture(50)
+
+
+def generate_named_textures(
+    args: argparse.Namespace,
+    output_dir: Path,
+    prompts: dict[str, str],
+    fallback_fn,
+    *,
+    subdir: str,
+) -> dict[str, Any]:
+    texture_dir = output_dir / subdir
+    texture_dir.mkdir(parents=True, exist_ok=True)
+    key = api_key_from_env(args.api_key_env)
+    manifest: dict[str, Any] = {"textures": {}, "used_api": False}
+
+    for name, prompt in prompts.items():
+        path = texture_dir / f"{name}.png"
+        info: dict[str, Any]
+        if key:
+            try:
+                info = generate_text_image2(args, prompt, path)
+                manifest["used_api"] = bool(manifest["used_api"] or info.get("used_api"))
+            except Exception as exc:
+                image = fallback_fn(name)
+                image.save(path)
+                info = {
+                    "output": str(path),
+                    "used_api": False,
+                    "mode": f"fallback_{subdir}_texture_after_error",
+                    "error": f"{type(exc).__name__}: {exc}",
+                }
+        else:
+            image = fallback_fn(name)
+            image.save(path)
+            info = {"output": str(path), "used_api": False, "mode": f"fallback_{subdir}_texture"}
+        info["prompt"] = prompt
+        manifest["textures"][name] = info
+    return manifest
 
 
 def generate_text_image2(
@@ -477,27 +602,14 @@ def generate_text_image2(
 
 
 def generate_wall_textures(args: argparse.Namespace, output_dir: Path) -> dict[str, Any]:
-    wall_dir = output_dir / "wall_textures"
-    wall_dir.mkdir(parents=True, exist_ok=True)
-    key = api_key_from_env(args.api_key_env)
-    manifest: dict[str, Any] = {"textures": {}, "used_api": False}
-
-    for name, prompt in WALL_PROMPTS.items():
-        path = wall_dir / f"{name}.png"
-        info: dict[str, Any]
-        if key:
-            info = generate_text_image2(args, prompt, path)
-            manifest["used_api"] = bool(manifest["used_api"] or info.get("used_api"))
-        else:
-            image = fallback_wall_texture(name)
-            image.save(path)
-            info = {"output": str(path), "used_api": False, "mode": "fallback_procedural_wall_texture"}
-        info["prompt"] = prompt
-        manifest["textures"][name] = info
-    return manifest
+    return generate_named_textures(args, output_dir, WALL_PROMPTS, fallback_wall_texture, subdir="wall_textures")
 
 
-def load_texture(path: Path, fallback: Image.Image) -> Image.Image:
+def generate_object_textures(args: argparse.Namespace, output_dir: Path) -> dict[str, Any]:
+    return generate_named_textures(args, output_dir, OBJECT_PROMPTS, fallback_object_texture, subdir="object_textures")
+
+
+def load_texture(path: Path | None, fallback: Image.Image) -> Image.Image:
     if path and path.is_file():
         return Image.open(path).convert("RGB")
     return fallback.convert("RGB")
@@ -598,6 +710,8 @@ def classify_material(node_name: str, geom_name: str, world_bounds: np.ndarray |
         return "glass"
     if "soil" in name:
         return "soil"
+    if any(token in name for token in ("pot_rim", "pot_base", "vase", "ceramic", "decor_box", "decor_sphere")):
+        return "object_ceramic"
     if "plant" in name or "foliage" in name or "leaf" in name:
         return "foliage"
     if any(token in name for token in ("metal", "handle", "knob", "rail", "pole", "stem", "spike", "cap")):
@@ -605,12 +719,17 @@ def classify_material(node_name: str, geom_name: str, world_bounds: np.ndarray |
     if any(token in name for token in ("floor", "rug", "carpet", "runner")):
         return "room_projection"
     if any(token in name for token in ("pillow", "sheet", "duvet", "blanket", "mattress", "bedding")):
-        return "object_crop"
+        return "object_bedding"
+    if any(token in name for token in ("sofa", "armchair", "seat", "cushion", "bench", "chair", "ottoman")):
+        return "object_upholstery"
+    if any(token in name for token in ("counter", "stone", "vanity", "plinth", "kitchen", "surface")):
+        return "object_stone"
+    if any(token in name for token in ("black", "media", "screen", "tv", "closet", "wardrobe")):
+        return "object_dark"
     if any(
         token in name
         for token in (
             "bed",
-            "wardrobe",
             "cabinet",
             "shelf",
             "drawer",
@@ -618,19 +737,16 @@ def classify_material(node_name: str, geom_name: str, world_bounds: np.ndarray |
             "console",
             "table",
             "desk",
-            "armchair",
-            "bench",
-            "chair",
-            "vanity",
-            "counter",
+            "headboard",
+            "frame",
         )
     ):
-        return "object_crop"
+        return "object_wood"
     if world_bounds is not None:
         ext = world_bounds[1] - world_bounds[0]
         footprint = float(max(ext[0], 0.0) * max(ext[2], 0.0))
         if footprint > 0.03:
-            return "object_crop"
+            return "object_ceramic"
     return "soft_fabric"
 
 
@@ -736,6 +852,118 @@ def crop_material_from_projection(
     return material, local_uv, (left, top, right, bottom)
 
 
+def projection_crop_box_from_uv(
+    projection_image: Image.Image,
+    uv: np.ndarray,
+    *,
+    pad_scale: float = 0.58,
+) -> tuple[int, int, int, int]:
+    if len(uv) == 0:
+        return (0, 0, projection_image.width, projection_image.height)
+    uv_clamped = np.clip(uv, 0.0, 1.0)
+    min_uv = uv_clamped.min(axis=0)
+    max_uv = uv_clamped.max(axis=0)
+    span_uv = np.maximum(max_uv - min_uv, 0.012)
+    center = (min_uv + max_uv) * 0.5
+    min_uv = np.clip(center - span_uv * pad_scale, 0.0, 1.0)
+    max_uv = np.clip(center + span_uv * pad_scale, 0.0, 1.0)
+
+    width, height = projection_image.size
+    left = int(np.floor(min_uv[0] * (width - 1)))
+    right = int(np.ceil(max_uv[0] * (width - 1))) + 1
+    top = int(np.floor(min_uv[1] * (height - 1)))
+    bottom = int(np.ceil(max_uv[1] * (height - 1))) + 1
+    left = max(0, min(width - 1, left))
+    right = max(left + 2, min(width, right))
+    top = max(0, min(height - 1, top))
+    bottom = max(top + 2, min(height, bottom))
+    return (left, top, right, bottom)
+
+
+def projection_tint_from_uv(
+    projection_image: Image.Image,
+    uv: np.ndarray,
+    fallback: tuple[int, int, int],
+) -> tuple[tuple[int, int, int], tuple[int, int, int, int]]:
+    box = projection_crop_box_from_uv(projection_image, uv)
+    crop = projection_image.crop(box).convert("RGB")
+    arr = np.asarray(crop, dtype=np.uint8)
+    brightness = arr.mean(axis=2)
+    mask = (brightness > 28) & (brightness < 245)
+    if not mask.any():
+        return fallback, box
+    color = np.median(arr[mask], axis=0)
+    color = np.clip(color, 38, 235).astype(np.uint8)
+    return (int(color[0]), int(color[1]), int(color[2])), box
+
+
+def tint_texture(base: Image.Image, tint: tuple[int, int, int], strength: float) -> Image.Image:
+    image = base.convert("RGB").resize((192, 192), Image.Resampling.LANCZOS)
+    arr = np.asarray(image, dtype=np.float32)
+    mean = np.maximum(arr.mean(axis=(0, 1), keepdims=True), 1.0)
+    target = np.array(tint, dtype=np.float32).reshape((1, 1, 3))
+    shifted = arr * (target / mean)
+    out = arr * (1.0 - strength) + shifted * strength
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
+
+
+def semantic_object_uv(mesh: trimesh.Trimesh, category: str) -> np.ndarray:
+    uv = full_uv(mesh)
+    tile = {
+        "object_wood": 1.8,
+        "object_dark": 1.6,
+        "object_bedding": 1.25,
+        "object_upholstery": 1.45,
+        "object_stone": 1.2,
+        "object_ceramic": 1.0,
+    }.get(category, 1.0)
+    return (uv * tile).astype(np.float32)
+
+
+def semantic_object_material(
+    mesh: trimesh.Trimesh,
+    category: str,
+    object_textures: dict[str, Path],
+    projection_image: Image.Image,
+    atlas_uv: np.ndarray,
+    material_name: str,
+) -> tuple[PBRMaterial, np.ndarray, tuple[int, int, int], tuple[int, int, int, int]]:
+    fallback_color = {
+        "object_wood": (126, 82, 49),
+        "object_dark": (70, 48, 35),
+        "object_bedding": (224, 220, 211),
+        "object_upholstery": (181, 171, 157),
+        "object_stone": (192, 180, 160),
+        "object_ceramic": (221, 216, 204),
+    }.get(category, (190, 185, 174))
+    tint, crop_box = projection_tint_from_uv(projection_image, atlas_uv, fallback_color)
+    base = load_texture(object_textures.get(category), fallback_object_texture(category))
+    strength = {
+        "object_wood": 0.28,
+        "object_dark": 0.22,
+        "object_bedding": 0.42,
+        "object_upholstery": 0.38,
+        "object_stone": 0.24,
+        "object_ceramic": 0.30,
+    }.get(category, 0.3)
+    image = tint_texture(base, tint, strength)
+    uv = semantic_object_uv(mesh, category)
+    material = PBRMaterial(
+        name=material_name,
+        baseColorTexture=image,
+        baseColorFactor=[255, 255, 255, 255],
+        roughnessFactor={
+            "object_stone": 0.48,
+            "object_ceramic": 0.62,
+            "object_wood": 0.58,
+            "object_dark": 0.55,
+        }.get(category, 0.84),
+        metallicFactor=0.0,
+        doubleSided=True,
+    )
+    return material, uv, tint, crop_box
+
+
 def full_uv(mesh: trimesh.Trimesh) -> np.ndarray:
     vertices = np.asarray(mesh.vertices)
     if len(vertices) == 0:
@@ -779,6 +1007,7 @@ def project_render_to_glb(
     model_path: Path,
     projected_texture: Path,
     wall_textures: dict[str, Path],
+    object_textures: dict[str, Path],
     output_path: Path,
     *,
     flip_v: bool,
@@ -789,6 +1018,7 @@ def project_render_to_glb(
     projection_image = Image.open(projected_texture).convert("RGB")
     counts: dict[str, int] = {}
     crop_boxes: dict[str, tuple[int, int, int, int]] = {}
+    object_tints: dict[str, dict[str, Any]] = {}
     feature_panels: list[dict[str, Any]] = []
 
     for node_name in scene.graph.nodes_geometry:
@@ -813,6 +1043,22 @@ def project_render_to_glb(
             )
             crop_boxes[node_name] = crop_box
             mesh.visual = TextureVisuals(uv=uv, material=material)
+        elif category.startswith("object_"):
+            atlas_uv = projected_uv_from_world(world, bounds, flip_v=flip_v)
+            material, uv, tint, crop_box = semantic_object_material(
+                mesh,
+                category,
+                object_textures,
+                projection_image,
+                atlas_uv,
+                f"{category}_{len(object_tints):03d}",
+            )
+            object_tints[node_name] = {
+                "category": category,
+                "tint": tint,
+                "crop_box": crop_box,
+            }
+            mesh.visual = TextureVisuals(uv=uv, material=material)
         elif category.startswith("wall_"):
             uv = wall_uv_from_world(world, wbounds, category)
             mesh.visual = TextureVisuals(uv=uv, material=materials[category])
@@ -834,6 +1080,8 @@ def project_render_to_glb(
         "materials": counts,
         "object_crop_count": len(crop_boxes),
         "object_crop_boxes": crop_boxes,
+        "semantic_object_count": len(object_tints),
+        "semantic_object_tints": object_tints,
         "feature_panels": feature_panels,
         "size_bytes": output_path.stat().st_size,
     }
@@ -874,9 +1122,15 @@ def main() -> None:
 
     image_manifest = generate_image2_render(args, args.reference_render, final_render)
     wall_manifest = generate_wall_textures(args, args.out_dir)
+    object_manifest = generate_object_textures(args, args.out_dir)
     wall_paths = {
         key: Path(value["output"])
         for key, value in wall_manifest["textures"].items()
+        if isinstance(value, dict) and value.get("output")
+    }
+    object_paths = {
+        key: Path(value["output"])
+        for key, value in object_manifest["textures"].items()
         if isinstance(value, dict) and value.get("output")
     }
 
@@ -884,11 +1138,12 @@ def main() -> None:
     bounds = scene.bounds.astype(np.float64)
     room_aspect = float((bounds[1, 0] - bounds[0, 0]) / max(bounds[1, 2] - bounds[0, 2], 1e-6))
     texture_manifest = prepare_projection_texture(final_render, projection_texture, room_aspect, args.texture_width)
-    model_manifest = project_render_to_glb(args.model, projection_texture, wall_paths, mapped_glb, flip_v=args.flip_v)
+    model_manifest = project_render_to_glb(args.model, projection_texture, wall_paths, object_paths, mapped_glb, flip_v=args.flip_v)
 
     manifest = {
         "image2": image_manifest,
         "wall_textures": wall_manifest,
+        "object_textures": object_manifest,
         "projection_texture": texture_manifest,
         "model": model_manifest,
     }

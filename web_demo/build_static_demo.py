@@ -23,7 +23,7 @@ SAMPLE_DEFS = [
         "badge": "Render-mapped GLB",
         "objects": "300",
         "meshes": "250",
-        "textures": "1 atlas",
+        "textures": "semantic",
         "orbit": "0deg 0deg 11m",
         "fov": "30deg",
         "exposure": "1.0",
